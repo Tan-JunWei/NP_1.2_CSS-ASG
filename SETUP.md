@@ -5,7 +5,7 @@ This is just some instructions before we get started on the project, please foll
 1. Clone this repository in a directory of your choice
     ```bash
     git clone https://github.com/Tan-JunWei/NP_1.2_CSS-ASG.git
-    cd css-asg
+    cd NP_1.2_CSS-ASG
     ```
 
 2. Install necessary dependencies
@@ -18,7 +18,7 @@ This is just some instructions before we get started on the project, please foll
     - Right click `node_modules` folder > `properties`
     - You should see `15,596` Files and `1,589` Folders
 <div align="center">
-  <img align="center" width="300" src="./admin_pics/node_modules.png" alt="Example" />
+  <img align="center" width="400" src="./admin_pics/node_modules.png" alt="Example" />
   <h4>node_modules</h4>
 </div>
 
