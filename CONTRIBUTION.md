@@ -1,20 +1,24 @@
 # Contributing
 
 ## Development
-> [!IMPORTANT]\
+> [!IMPORTANT]
 > Please regularly pull changes from the remote repository to your local repository to keep it up to date!!
-> Use either terminal or VS code GUI
+> 
+> Use either terminal or VS Code GUI
 
-### CLI
+## Git Pull
 
+### CLI Approach (Terminal)
+- Navigate to correct directory then run:
 ```bash
 git pull
 ```
 
-### GUI
-
+### VS Code GUI Approach
+-  Navigate to `Source Control` in VS Code
+-  Click `Pull`
 <div align="center">
-  <img align="center" width="700" src="./admin_pics/VSCode_Pull.png" alt="Example" />
+  <img align="center" width="900" src="./admin_pics/VSCode_Pull.png" alt="Example" />
   <h4>Git pull in VS Code</h4>
 </div>
 
@@ -22,26 +26,44 @@ git pull
 
 Try to follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification for commit messages, using the following prefixes:
 
-- `feat`: for new features/functionalities (e.g. Enhanced parts or new capabilities)
-- `fix`: for bug fixes/issues (e.g. Something that wasn't working correctly has been fixed)
-- `refactor`: for code refactoring (i.e. neither fixes a bug nor adds a feature. Refactoring usually improves the readability, maintainability, or performance of the code without altering its behavior)
-- `chore`: routine tasks, such as dependency updates, or miscellaneous changes that don't fit the other prefixes (e.g. Cleaning up unused files, improving documentation like `README.md`)
+> [!TIP]
+>
+>- **`feat`**: For new features or functionalities  
+  _Example: Adding new capabilities or enhancing parts of the app_
+>
+>- **`fix`**: For bug fixes or resolving issues  
+  _Example: Fixing something that wasn't working correctly_
+>
+>- **`refactor`**: For improving code without changing its behavior  
+  _Example: Refactoring for better readability or performance (no new features or bug fixes)_
+>
+>- **`chore`**: For routine tasks or maintenance  
+  _Example: Cleaning up files, updating dependencies, or improving documentation (like `README.md`)_
+
 
 ### Why Follow This Convention?
 
 - Clarity: Each prefix gives a clear indication of the type of change made.
 - Consistency: Helps everyone working on the project understand what each commit does, even without reading the full commit message.
 
-Examples:
-
+### Commit messages examples
 ```bash
 git commit -m "chore: Add new dependency (package-name)"
 git commit -m "feat: Add new button component (component-name)"
 git commit -m "fix: Resolve rendering bug in (component-name)"
 ```
 
+### Commit messages in VS Code
+
+1. Navigate to `Source Control` in VS Code
+2. Type the commit message in the `Message` field
+3. Click `Commit`
+4. Click `Sync`
+
+`Sync` in VS Code synchronizes your **local** repository with the **remote** repository, pushing your commits and pulling any changes from the remote.
+
 <div align="center">
-  <img align="center" width="700" src="./admin_pics/VSCode_Commit.png" alt="Example" />
+  <img align="center" width="900" src="./admin_pics/VSCode_Commit.png" alt="Example" />
   <h4>Git commit message in VS Code</h4>
 </div>
 
