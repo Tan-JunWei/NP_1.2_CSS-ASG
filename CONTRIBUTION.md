@@ -22,7 +22,7 @@ git pull
   <h4>Git pull in VS Code</h4>
 </div>
 
-## Committing
+## Committing (Git Commit)
 
 Try to follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification for commit messages, using the following prefixes:
 
@@ -67,34 +67,44 @@ git commit -m "fix: Resolve rendering bug in (component-name)"
   <h4>Git commit message in VS Code</h4>
 </div>
 
-<!-- 1. Ensure that you are on the `dev` branch when working on new changes. Pull the latest changes before working on new
+## Branching & Pull Requests 
+
+1. Ensure that you are on the `dev` branch when working on new changes. Pull (`git pull`) the latest changes before working on new
    changes.
-   ```bash
-   git checkout -b dev
-   ```
+<div align="center">
+  <img align="center" width="900" src="./admin_pics/VSCode_DevBranch.png" alt="Example" />
+  <h4>dev Branch check</h4>
+</div>
+
+> [!IMPORTANT]
+> - Refer to image above. Bottom left corner should show `dev` instead of `master` when you're working on a feature (Good practice)
+> - Remember to `git pull` before you work on your features
+
 2. Make your changes
+
 3. Stage your changes
-   ```bash
-   # Adding a specific file:
-   git add (file-name)
+  ```bash
+  # To add a specific file:
+  git add <file-name>
 
-    # Adding all files:
-    git add .
-   ```
+  # To add all files that have been changed:
+  git add .
+  ```
+  
+  - You may skip this step if you're using VS Code GUI. 
+
 4. Commit and push your changes
-   ```bash
-    git commit -m "chore: Add new dependency (package-name)"
-    git push
-    ```
-5. Create a pull request on GitHub to merge your changes into the `main` branch. Ensure that all status checks pass AND
-   that someone else has reviewed your changes before merging.
+  ```bash
+  git commit -m "feat: add navigation bar"
+  git push
+  ```
 
-   Creating PR:
+  - If you're using VS Code GUI, ensure that you enter an appropriate git commit message in the `Message` field. Then click `Commit` and subsequently `Sync`.
 
-   ![image](https://github.com/Kairos-T/CSS/assets/80029462/2b358465-081d-4a45-a184-ac3c7ce4381c)
-
-   Editing PR details:
-   ![image](https://github.com/Kairos-T/CSS/assets/80029462/5e9c2a37-50ca-4cc6-bc63-e64f513d7a5a)
-
-   Checks (Request review - or... let them know somewhere else)
-   ![image](https://github.com/Kairos-T/CSS/assets/80029462/5a66fccf-3934-4e2f-80fd-9339222d6182) -->
+5. Create a pull request (PR) on GitHub to merge your changes into the `main` branch. Ensure that all status checks pass AND that someone else has reviewed your changes before merging.
+  
+  #### Creating PR
+  <div align="center">
+    <img align="center" width="900" src="./admin_pics/" alt="Example" />
+    <h4>Creating PR</h4>
+  </div>
