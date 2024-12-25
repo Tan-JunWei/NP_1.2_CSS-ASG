@@ -18,7 +18,7 @@ This is just some instructions before we get started on the project, please foll
     - Right click `node_modules` folder > `properties`
     - You should see `15,596` Files and `1,589` Folders
 <div align="center">
-  <img align="center" width="700" src="./admin_pics/node_modules.png" alt="Example" />
+  <img align="center" width="300" src="./admin_pics/node_modules.png" alt="Example" />
   <h4>node_modules</h4>
 </div>
 
@@ -26,3 +26,7 @@ This is just some instructions before we get started on the project, please foll
     ```bash
     npm run dev
     ```
+
+5. If you are able to execute each step correctly, yippee!
+
+6. Please wait patiently until I create another file (`CONTRIBUTION.md`) to streamline development processes 😳.
