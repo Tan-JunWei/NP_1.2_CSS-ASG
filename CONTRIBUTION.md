@@ -77,7 +77,7 @@ git commit -m "fix: Resolve rendering bug in (component-name)"
 </div>
 
 > [!IMPORTANT]
-> - Refer to image above. Bottom left corner should show `dev` instead of `master` when you're working on a feature (Good practice)
+> - Refer to image above above, bottom left corner should show `dev` instead of `master` when you're working on a feature (Good practice to not work directly on main/master branch)
 > - Remember to `git pull` before you work on your features
 
 2. Make your changes
@@ -101,10 +101,54 @@ git commit -m "fix: Resolve rendering bug in (component-name)"
 
   - If you're using VS Code GUI, ensure that you enter an appropriate git commit message in the `Message` field. Then click `Commit` and subsequently `Sync`.
 
-5. Create a pull request (PR) on GitHub to merge your changes into the `main` branch. Ensure that all status checks pass AND that someone else has reviewed your changes before merging.
+5. Create a pull request (PR) on GitHub to merge your changes into the `main` branch. Ensure that all status checks pass.
   
   #### Creating PR
   <div align="center">
-    <img align="center" width="900" src="./admin_pics/" alt="Example" />
-    <h4>Creating PR</h4>
+    <img align="center" width="900" src="./admin_pics/GitHub_PR.png" alt="Example" />
+    <h4>Compare and Create PR in GitHub</h4>
   </div>
+
+  <div align="center">
+    <img align="center" width="900" src="./admin_pics/GitHub_PR creation.png" alt="Example" />
+    <h4>Creating PR (can add description if the feature you're working on is complicated)</h4>
+  </div>
+
+  <div align="center">
+    <img align="center" width="900" src="./admin_pics/GitHub_merge PR.png" alt="Example" />
+    <h4>Merge PR</h4>
+  </div>
+
+  <div align="center">
+    <img align="center" width="900" src="./admin_pics/GitHub_Sucessful PR.png" alt="Example" />
+    <h4>PR merged successfully</h4>
+  </div>
+
+### Merge Conflicts
+> [CAUTION] 
+> Merge conflicts may occur when 2 (or more) parties modify the same part of the code in conflicting ways. 
+> During a merge conflict, GitHub/Git will highlight the conflicting code in the file(s).
+
+Example conflict message: 
+```
+This branch has conflicts that must be resolved.
+```
+
+### Steps to resolve conflicts in GitHub
+1. In the PR, click `Resolve Conflicts`.
+
+2. Decide which version to keep, or try to merge changes. Remove the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`).
+
+3. Once you've resolved the conflict, click `Mark as Resolved`. 
+
+4. After marking the conflict as resolved, GitHub prompts you to commit the resolution. Click `Commit Merge` to finalize.
+
+5. If all conflicts are resolved and status checks pass, you can now merge the PR.
+
+
+This is what ChatGPT says (We're so cooked):
+
+<div align="center">
+  <img align="center" width="900" src="./admin_pics/ChatGPT_Merge Conflicts.png" alt="Example" />
+  <h4>PR merged successfully</h4>
+</div>
