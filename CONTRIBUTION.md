@@ -125,7 +125,7 @@ git commit -m "fix: Resolve rendering bug in (component-name)"
   </div>
 
 ### Merge Conflicts
-> [CAUTION] 
+> [!CAUTION] 
 > Merge conflicts may occur when 2 (or more) parties modify the same part of the code in conflicting ways. 
 > During a merge conflict, GitHub/Git will highlight the conflicting code in the file(s).
 
@@ -135,20 +135,23 @@ This branch has conflicts that must be resolved.
 ```
 
 ### Steps to resolve conflicts in GitHub
-1. In the PR, click `Resolve Conflicts`.
+> [!NOTE]
+> Unfortunately I don't have any images to show this as I've not gotten a merge conflict so far (thank god). Let's hope we won't have any too 🙏
+  
+> [!TIP]
+> 1. In the PR, click `Resolve Conflicts`.
+>
+> 2. Decide which version to keep, or try to merge changes. Remove the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`).
+>
+> 3. Once you've resolved the conflict, click `Mark as Resolved`. 
+>
+> 4. After marking the conflict as resolved, GitHub prompts you to commit the resolution. Click `Commit Merge` to finalize.
+>
+> 5. If all conflicts are resolved and status checks pass, you can now merge the PR.
 
-2. Decide which version to keep, or try to merge changes. Remove the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`).
-
-3. Once you've resolved the conflict, click `Mark as Resolved`. 
-
-4. After marking the conflict as resolved, GitHub prompts you to commit the resolution. Click `Commit Merge` to finalize.
-
-5. If all conflicts are resolved and status checks pass, you can now merge the PR.
-
-
-This is what ChatGPT says (We're so cooked):
+Thanks for reading to the end, this is what ChatGPT says (We're so cooked):
 
 <div align="center">
-  <img align="center" width="900" src="./admin_pics/ChatGPT_Merge Conflicts.png" alt="Example" />
-  <h4>PR merged successfully</h4>
+  <img align="center" width="800" src="./admin_pics/ChatGPT_Merge Conflicts.png" alt="Example" />
+  <h4>That's it I'm reporting ChatGPT</h4>
 </div>

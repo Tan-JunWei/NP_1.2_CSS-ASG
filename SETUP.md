@@ -30,3 +30,8 @@ This is just some instructions before we get started on the project, please foll
 5. If you are able to execute each step correctly, yippee!
 
 6. Please wait patiently until I create another file (`CONTRIBUTION.md`) to streamline development processes 😳.
+
+> [!NOTE]
+> Edit: `CONTRIBUTION.md` is up and running. 
+>
+> Check it here: [CONTRIBUTION.md](https://github.com/Tan-JunWei/NP_1.2_CSS-ASG/blob/master/CONTRIBUTION.md)
