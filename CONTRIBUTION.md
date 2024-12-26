@@ -136,8 +136,72 @@ This branch has conflicts that must be resolved.
 
 ### Steps to resolve conflicts in GitHub
 > [!NOTE]
-> Unfortunately I don't have any images to show this as I've not gotten a merge conflict so far (thank god). Let's hope we won't have any too 🙏
-  
+> Merge conflicts can be solved in either VS Code or GitHub itself.
+
+### Resolving merge conflicts in VS Code
+
+> [!TIP]
+> 1. A merge conflict message will be highlighted. Open the file with a conflict. It will have three parts:
+>
+> ```
+> <<<<<<< HEAD: Your current branch's code.
+> =======: Divider between versions.
+> >>>>>> branch-name: The code from the branch you're merging.
+> ```
+>
+> <div align="center">
+>   <img align="center" width="900" src="./admin_pics/VSCode_Merge Conflict 1.png" alt="Example" />
+>   <h4>How a merge conflict looks like in VS Code</h4>
+> </div>
+>
+> You can either click on `Compare Changes` or `Resolve in Merge Editor`. Both should highlight the line(s) that contain the conflict.
+>
+> 2. The image below shows how the 2 interfaces look like. 
+> You can decide which version to keep, or try to merge changes. Remove the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`).
+>
+> <div align="center">
+>   <img align="center" width="900" src="./admin_pics/VSCode_Merge Conflict 2_compare changes.png" alt="Example" />
+>   <h4>Compare changes</h4>
+> </div>
+>
+> <div align="center">
+>   <img align="center" width="900" src="./admin_pics/VSCode_Merge Conflict 3_merge editor.png" alt="Example" />
+>   <h4>Merge Editor</h4>
+> </div>
+>
+> 3. Below shows an example of combining changes (the conflict occurs on Line 5, so I made changes there)
+>
+> <div align="center">
+>   <img align="center" width="900" src="./admin_pics/VSCode_Merge Conflict 4_combine.png" alt="Example" />
+>   <h4>Combine changes</h4>
+> </div>
+>
+> 4. You make get a message `The file contains unhandled conflicts` even after you changed tried to resolve the merge conflict. 
+> If you are confident that what you're doing is correct, click on `Complete with Conflicts`. If you're unsure you can do that too but appoint another teammate to check afterwards.
+>
+> <div align="center">
+>   <img align="center" width="900" src="./admin_pics/VSCode_Merge Conflict 5.png" alt="Example" />
+>   <h4>Complete the merge</h4>
+> </div>
+>
+> 5. In GitHub, navigate to the `dev` branch. You'll see that the branch is `n` commits behind `main`.
+>
+> <div align="center">
+>   <img align="center" width="900" src="./admin_pics/GitHub_Merge Conflict 6.png" alt="Example" />
+>   <h4>dev branch</h4>
+> </div>
+>
+> 6. Navigate to `Pull Requests` at the top. Compare `main` with `dev`, and create a pull request (PR). Merge the PR afterwards (Refer to PR section if unsure)
+>
+> <div align="center">
+>   <img align="center" width="900" src="./admin_pics/GitHub_Merge Conflict 7.png" alt="Example" />
+>   <h4>Complete the merge</h4>
+> </div>
+
+### Resolving merge conflicts in GitHub
+
+(no experience with this yet, the instructions below are from online sources)
+
 > [!TIP]
 > 1. In the PR, click `Resolve Conflicts`.
 >
