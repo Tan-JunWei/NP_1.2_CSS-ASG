@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './Gallery.css'; // Ensure to include the CSS in a separate file or inline
+import './gallery.css'; // Ensure to include the CSS in a separate file or inline
 
 const Gallery = () => {
   const sliderRef = useRef(null);
