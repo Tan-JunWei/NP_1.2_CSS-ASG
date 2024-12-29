@@ -3,6 +3,7 @@
 import Gallery from "@/app/UI/carousel/carousel";
 import styles from "./page.module.css";
 import Singapore3D from "@/app/singapore3D"; 
+import GoogleMap from "@/app/googleMap";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Singapore3D />
         {/* <CarouselComponent /> - To be fixed. */}
         <Gallery />
+        <GoogleMap />
       </div>
   );
 }
