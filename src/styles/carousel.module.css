@@ -15,7 +15,7 @@
 	scroll-snap-type: unset;
 }
 
-li {
+.listitem {
 	scroll-snap-align: center;
 	display: inline-block;
 	border-radius: 3px;

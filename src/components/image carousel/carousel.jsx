@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './gallery.css'; // Ensure to include the CSS in a separate file or inline
+import styles from '@/src/styles/Carousel.module.css';
 
 const Gallery = () => {
   const sliderRef = useRef(null);
@@ -10,7 +10,7 @@ const Gallery = () => {
   const handleMouseDown = (e) => {
     const slider = sliderRef.current;
     setIsDown(true);
-    slider.classList.add('active');
+    slider.classList.add(styles.active); // Use the scoped class
     setStartX(e.pageX - slider.offsetLeft);
     setScrollLeft(slider.scrollLeft);
   };
@@ -18,13 +18,13 @@ const Gallery = () => {
   const handleMouseLeave = () => {
     const slider = sliderRef.current;
     setIsDown(false);
-    slider.classList.remove('active');
+    slider.classList.remove(styles.active); // Use the scoped class
   };
 
   const handleMouseUp = () => {
     const slider = sliderRef.current;
     setIsDown(false);
-    slider.classList.remove('active');
+    slider.classList.remove(styles.active); // Use the scoped class
   };
 
   const handleMouseMove = (e) => {
@@ -39,18 +39,18 @@ const Gallery = () => {
 
   return (
     <ul
-      className="gallery"
+      className={styles.gallery} // Use the scoped class
       ref={sliderRef}
       onMouseDown={handleMouseDown}
       onMouseLeave={handleMouseLeave}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
     >
-      <li style={{ background: '#f6bd60' }}></li>
-      <li style={{ background: '#f7ede2' }}></li>
-      <li style={{ background: '#f5cac3' }}></li>
-      <li style={{ background: '#84a59d' }}></li>
-      <li style={{ background: '#f28482' }}></li>
+      <li className={styles.listitem} style={{ background: '#f6bd60' }}></li>
+      <li className={styles.listitem} style={{ background: '#f7ede2' }}></li>
+      <li className={styles.listitem} style={{ background: '#f5cac3' }}></li>
+      <li className={styles.listitem} style={{ background: '#84a59d' }}></li>
+      <li className={styles.listitem} style={{ background: '#f28482' }}></li>
     </ul>
   );
 };
