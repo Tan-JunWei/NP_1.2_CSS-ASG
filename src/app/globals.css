@@ -4,9 +4,9 @@
 
 /* Store all common styles under :root */
 :root{
-  --font-primary: 'Playfair Display', 'Times New Roman';
-  --primary-color: #fe924a; /* May need to change to slightly darker (Header abit hard to read) */
-  --secondary-color: #512863; /* check src/pages/history.module.css to view an example of how colors can be used by other pages */
+  --primary-font: 'Playfair Display', 'Times New Roman';
+  --primary-color: #e9792f; 
+  /* --secondary-color: ; */
 }
 
 * {
@@ -17,6 +17,6 @@
 
 h1 {
   text-align: center;
-  font-family: var(--font-primary);
-  color: var(--primary-color);
+  font-family: var(--primary-font);
+  /* color: var(--primary-color); */
 }
