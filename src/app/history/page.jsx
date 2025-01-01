@@ -4,7 +4,6 @@ export default function History() {
     return (
         <div>
             <h1 className={styles.header}>History</h1>
-            <p className={styles.paragraph}>Testing CSS imports (JW)</p>
         </div>
     );
 }
