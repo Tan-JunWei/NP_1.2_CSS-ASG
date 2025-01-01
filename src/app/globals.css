@@ -5,6 +5,7 @@
 /* Store all common styles under :root */
 :root{
   --primary-font: 'Playfair Display', 'Times New Roman';
+  --secondary-font: 'Lato', 'Arial';
   --primary-color: #e9792f; 
   /* --secondary-color: ; */
 }
