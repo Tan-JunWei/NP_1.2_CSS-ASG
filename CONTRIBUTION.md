@@ -5,6 +5,14 @@
 > Please regularly pull changes from the remote repository to your local repository to keep it up to date!!
 > 
 > Use either terminal or VS Code GUI
+>
+>## Next.js app directory organization best practices
+>
+>Store your files in the following directories:
+>- `public/`: static assets like images
+>- `src/app`: pages (e.g. "`History`" page should go under `src/app/history`)
+>- `src/components`: reusable UI components like navbar (e.g. `src/components/navbar`)
+>- `src/styles`: CSS styles for the `.jsx` files (e.g. for a `navbar` component, the corresponding CSS stylesheet should be under `src/styles/navbar.module.css`.
 
 ## Git Pull
 
