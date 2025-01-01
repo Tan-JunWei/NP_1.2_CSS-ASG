@@ -1,0 +1,26 @@
+/* This is stylesheet is for the about page. Made by Ryan Tan*/
+
+.header{
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: solid grey 1px;
+    margin: 50px;
+}
+
+.main{
+    font-size: 50px;
+    font-family: var(--font-primary);
+    font-weight: bold;
+    text-align: left;
+    margin-left: 50px;
+}
+
+#mainimage {
+    margin: 50px;
+}
+
+.p{
+    font-family: var(--font-secondary);
+    margin: 50px;
+}
