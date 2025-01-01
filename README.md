@@ -1,33 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CSS (Client-Side-Scripting) -- README.md WIP
 
-## Getting Started
+CSS is a module in Semester 1.2 of the Cybersecurity and Digital Forensics (CSF) course in Ngee Ann Polytechnic (NP). 
+This module introduces the fundamentals of Client-Side Scripting, covering core web development technologies such as HTML, CSS, and JavaScript. 
+It emphasizes building interactive web applications, fostering skills in front-end design and user experience.
 
-First, run the development server:
+This GitHub repository contains the codebase developed for the module's assignment, where teams are tasked with creating a functional web application prototype using **Next.js**—a React-based framework. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Contributors
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This website is built by: Tan Jun Wei, Ryan Low Chee Yang, Ryan Tan Jia Jun and Jo Hanson Mok as part of our CSS final assessment.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Contribution Details
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The development of this web application involved a collaborative effort. Below is a breakdown of the pages and their primary contributors:
 
 ## Deploy on Vercel
 
