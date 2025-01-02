@@ -26,6 +26,7 @@
 
 .navlinks {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10px 0;
@@ -70,9 +71,48 @@
     width: 100%;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
 
+.hamburger svg{
+    color: white;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .navlogo h1 {
+    .navlinks {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #444;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  
+    .show {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+}
+
+/* 
+@media (max-width: 768px) {
+    .hamburger{
+        display: block;
+        padding-top: 10px;
+        margin-left: 10px;
+        z-index: 10;
+    }
+
+    /* .navlogo h1 {
         font-size: 20px;
     }
 
@@ -87,8 +127,8 @@
         justify-content: flex-start; 
         width: 100%;
         padding: 10px 20px;
-    }
-}
+    } */
+/* }
 
 @media (max-width: 480px) {
     .navlogo img {
@@ -100,4 +140,4 @@
         font-size: 14px;
         padding: 8px 15px;
     }
-}
+} */ 
