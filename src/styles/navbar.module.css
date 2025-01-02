@@ -2,15 +2,16 @@
     background-color: var(--primary-color);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Enables wrapping for smaller screens */
+    justify-content: center;
+    flex-wrap: wrap; 
     padding: 0px 15px;
+    gap: 50px;
 }
 
 .navlogo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .navlogo h1 {
@@ -29,12 +30,13 @@
     align-items: center;
     padding: 10px 0;
     flex-wrap: wrap; 
+    gap: 15px;
 }
 
 .navitem {
     display: flex;
     align-items: center;
-    gap: 15px; /* Gap between icon and text */
+    gap: 10px; /* Gap between icon and text */
     font-size: 20px;
     font-weight: 500;
     font-family: var(--primary-font);
@@ -60,7 +62,8 @@
 }
 
 .navitem:hover{
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    cursor: pointer;
 }
 
 .navitem:hover::after {
