@@ -3,8 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
     flex-wrap: wrap; /* Enables wrapping for smaller screens */
+    padding: 0px 15px;
 }
 
 .navlogo {
@@ -28,13 +28,13 @@
     justify-content: center;
     align-items: center;
     padding: 10px 0;
-    flex-wrap: wrap; /* Wrap links if necessary */
+    flex-wrap: wrap; 
 }
 
 .navitem {
     display: flex;
     align-items: center;
-    gap: 10px; /* Gap between icon and text */
+    gap: 15px; /* Gap between icon and text */
     font-size: 20px;
     font-weight: 500;
     font-family: var(--primary-font);
@@ -43,14 +43,28 @@
     padding: 10px 15px;
     text-decoration: none;
     margin: 5px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     border: none;
+    position: relative;
 }
 
-.navitem:hover {
-    background-color: #f1f1f1;
-    color: #333;
-    transform: translateY(-3px);
+.navitem::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Change to 'right: 0' for underline from the right */
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; 
+    transition: width 0.3s ease;
+}
+
+.navitem:hover{
+    transform: translateY(-2px);
+}
+
+.navitem:hover::after {
+    width: 100%;
 }
 
 
