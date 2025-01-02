@@ -5,7 +5,6 @@ import styles from "@/src/styles/Navbar.module.css";
 import Image from "next/image";
 
 /* Importing icons from react-icons */
-import { IconContext } from "react-icons"; /* for styling icons */
 import { FaHome, FaHistory, FaInfoCircle} from 'react-icons/fa';
 import { GiKnifeFork } from "react-icons/gi";
 import { PiChefHatBold } from "react-icons/pi";
@@ -36,7 +35,7 @@ export default function Navbar() {
         </Link>
 
         <Link className={styles.navitem} href="/favourites">
-          <PiChefHatBold style= {{fontSize: '20px'}}/> Our Top Choices
+          <PiChefHatBold style= {{fontSize: '20px'}}/> Our Favourites
         </Link>
 
         <Link className={styles.navitem} href="/about">
