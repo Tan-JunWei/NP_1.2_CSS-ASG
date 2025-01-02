@@ -1,6 +1,6 @@
 'use client';
 
-import Gallery from "@/src/components/image carousel/carousel";
+// import Gallery from "@/src/components/image carousel/carousel"; - TO BE REPLACED
 import styles from "./page.module.css";
 import GoogleMap from "@/src/components/google map/googlemap";
 
