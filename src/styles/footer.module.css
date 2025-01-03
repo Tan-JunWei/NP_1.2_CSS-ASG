@@ -1,0 +1,87 @@
+.sectionPadding {
+    padding: 2rem 5rem;
+}
+
+.footerContainer {
+    background-color: var(--primary-color);
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.footerLinksSection {
+    width: 150px;
+    margin: 1rem 2rem 1rem 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
+}
+
+.footerLinksSection a{
+    color: rgb(219, 217, 217);
+    text-decoration: none;
+}
+
+.footerLinksSection a p, .footerLinksSection a svg {
+    transition: all 0.4s ease;
+}
+
+.footerLinksSection a p{
+    font-weight: 500;
+}
+
+.footerLinksSection a p:hover {
+    transform: translateX(8px);
+    font-weight: 700;
+    color: white;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.socialMedia svg {
+    font-size: 35px;
+}
+
+.socialMedia svg:hover {
+    color: white;
+}
+
+.footerLinksSection h4 {
+    font-size: 20px;
+    line-height: 17px;
+    margin-bottom: 1.5rem;
+}
+
+.footerLinksSection p {
+    font-size: 16px;
+    line-height: 15px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.footerCopyright p {
+    margin-top: 3rem;
+    font-size: 16px;
+    line-height: 15px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
