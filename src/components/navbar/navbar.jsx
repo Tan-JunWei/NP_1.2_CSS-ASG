@@ -10,6 +10,7 @@ import { FaHome, FaHistory, FaInfoCircle} from 'react-icons/fa';
 import { GiKnifeFork } from "react-icons/gi";
 import { PiChefHatBold } from "react-icons/pi";
 import { RxHamburgerMenu } from "react-icons/rx"; /* Hambuger menu icon */
+import { AiOutlineClose } from "react-icons/ai"; /* Close (X) icon */
 
 export default function Navbar() {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -30,28 +31,32 @@ export default function Navbar() {
 
       <div className={`${styles.navlinks}  ${hamburgerOpen ? styles.show : ""}`}>
         <Link className={styles.navitem} href="/">
-          <FaHome style= {{fontSize: '20px'}}/> Home
+          <FaHome /> Home
         </Link>
         
         <Link className={styles.navitem} href="/recipes">
-          <GiKnifeFork style= {{fontSize: '20px'}}/> Recipes
+          <GiKnifeFork /> Recipes
         </Link>
 
         <Link className={styles.navitem} href="/history">
-          <FaHistory style= {{fontSize: '20px'}}/> History
+          <FaHistory /> History
         </Link>
 
         <Link className={styles.navitem} href="/favourites">
-          <PiChefHatBold style= {{fontSize: '20px'}}/> Our Favourites
+          <PiChefHatBold /> Our Favourites
         </Link>
 
         <Link className={styles.navitem} href="/about">
-          <FaInfoCircle style= {{fontSize: '20px'}}/> About
+          <FaInfoCircle /> About
         </Link>
       </div>
 
       <div className={styles.hamburger} onClick={toggleHamburger}>
-        <RxHamburgerMenu style= {{fontSize: '30px'}}/>
+        {hamburgerOpen ? (
+          <AiOutlineClose style={{ fontSize: '30px' }} />
+        ) : (
+          <RxHamburgerMenu style={{ fontSize: '30px' }} />
+        )}
       </div>
     </nav>
   );

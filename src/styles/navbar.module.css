@@ -5,7 +5,7 @@
     justify-content: center;
     flex-wrap: wrap; 
     padding: 0px 15px;
-    gap: 50px;
+    gap: 5vw;
 }
 
 .navlogo {
@@ -31,7 +31,7 @@
     align-items: center;
     padding: 10px 0;
     flex-wrap: wrap; 
-    gap: 15px;
+    gap: 0.8vw;
 }
 
 .navitem {
@@ -74,6 +74,11 @@
 .hamburger {
     display: none;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+    transform: scale(1.1);
 }
 
 .hamburger svg{
@@ -82,62 +87,68 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 10px 25px;
+    }
+
     .navlinks {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: #444;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-  
-    .show {
-      display: flex;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-}
-
-/* 
-@media (max-width: 768px) {
-    .hamburger{
-        display: block;
-        padding-top: 10px;
-        margin-left: 10px;
-        z-index: 10;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #522685;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 5px;
     }
 
-    /* .navlogo h1 {
+    .navitem{
+        font-size: 18px;
+    }
+
+    .navitem svg {
         font-size: 20px;
     }
 
-    .navlinks {
-        flex-direction: column; 
-        align-items: flex-start;
-        width: 100%; 
-        padding: 0;
+    .show {
+        display: flex;
+    }
+  
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        gap: 4vw;
+        padding: 10px 0px;
+    }
+
+    .navlinks{
+        gap: 0.6vw;
+    }
+
+    .navitem svg {
+        font-size: 15px;
+    }
+
+    .navlogo h1 {
+        font-size: 20px;
     }
 
     .navitem {
-        justify-content: flex-start; 
-        width: 100%;
-        padding: 10px 20px;
-    } */
-/* }
-
-@media (max-width: 480px) {
-    .navlogo img {
-        width: 30px;
-        height: 30px;
+        font-size: 18px;
+        padding: 5px 8px;
+        margin: 3px;
+        gap: 5px;
     }
+}
 
-    .navitem {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-} */ 
+
+
+
