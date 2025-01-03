@@ -74,6 +74,11 @@
 .hamburger {
     display: none;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+    transform: scale(1.1);
 }
 
 .hamburger svg{
@@ -87,41 +92,55 @@
         padding: 10px 25px;
     }
 
+    .navbar {
+        justify-content: space-between;
+        padding: 10px 25px;
+    }
+
     .navlinks {
-      display: none;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: #522685;
-      padding: 10px 15px;
-      border-radius: 5px;
-      margin-right: 5px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #522685;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 5px;
     }
 
     .navitem{
         font-size: 18px;
     }
 
+    .navitem svg {
+        font-size: 20px;
+    }
+
+
     .show {
-      display: flex;
+        display: flex;
     }
   
     .hamburger {
-      display: block;
+        display: block;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .navbar {
-        gap: 3.5vw;
-        padding: 10px 10px;
+        gap: 4vw;
+        padding: 10px 0px;
     }
 
     .navlinks{
-        gap: 0vw;
+        gap: 0.6vw;
+    }
+
+    .navitem svg {
+        font-size: 15px;
     }
 
     .navlogo h1 {
@@ -131,7 +150,11 @@
     .navitem {
         font-size: 18px;
         padding: 5px 8px;
-        margin: 0px;
+        margin: 3px;
         gap: 5px;
     }
 }
+
+
+
+
