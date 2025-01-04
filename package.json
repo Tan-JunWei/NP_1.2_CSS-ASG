@@ -11,6 +11,7 @@
   "dependencies": {
     "3d-carousel-js": "^1.1.6",
     "bootstrap": "^5.3.3",
+    "classnames": "^2.5.1",
     "next": "^15.1.1-canary.23",
     "react": "^18",
     "react-bootstrap": "^2.10.7",

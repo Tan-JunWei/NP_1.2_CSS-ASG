@@ -1,9 +1,12 @@
+/* Responsive navigation bar (Navbar) component done by: Tan Jun Wei */
+
 "use client"; // treat this file as a client side code
 
 import Link from "next/link";
 import styles from "@/src/styles/Navbar.module.css";
 import Image from "next/image";
 import { useState } from "react";
+import classNames from 'classnames';
 
 /* Importing icons from react-icons */
 import { FaHome, FaHistory, FaInfoCircle} from 'react-icons/fa';
@@ -20,7 +23,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={classNames(styles.navbar, 'fixed-navbar')}>
       {/* Website Icon */}
       <div className={styles.navlogo}>
         <Link href="/">
@@ -42,8 +45,8 @@ export default function Navbar() {
           <FaHistory /> History
         </Link>
 
-        <Link className={styles.navitem} href="/favourites">
-          <PiChefHatBold /> Our Favourites
+        <Link className={styles.navitem} href="/top-picks">
+          <PiChefHatBold /> Top Picks
         </Link>
 
         <Link className={styles.navitem} href="/about">
