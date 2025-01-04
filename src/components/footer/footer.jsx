@@ -1,3 +1,5 @@
+/* Responsive footer component done by: Tan Jun Wei */
+
 import { FaFacebook } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -12,65 +14,54 @@ export default function Footer() {
 				<div className={styles.footerLinks}>
 
 					<div className={styles.footerLinksSection}>
-						<h4>For Business</h4>
+						<h4>About</h4>
 
-						<a href="#">
-							<p>Employer</p>
-						</a>
-
-						<a href="#">
-							<p>Health Plan</p>
-						</a>
-
-						<a href="#">
-							<p>Individual</p>
-						</a>
-					</div>
-
-					<div className={styles.footerLinksSection}>
-						<h4>Resources</h4>
-
-						<a href="#">
-							<p>Resource Center</p>
-						</a>
-
-						<a href="#">
-							<p>Testimonials</p>
-						</a>
-
-						<a href="#">
-							<p>STV</p>
-						</a>
-					</div>
-
-					<div className={styles.footerLinksSection}>
-						<h4>Company</h4>
-						<a href="#">
+						<a href="/about">
 							<p>About Us</p>
 						</a>
 
-						<a href="#">
-							<p>Press</p>
+						<a href="/">
+							<p>FAQ</p>
 						</a>
 
-						<a href="#">
-							<p>Careers</p>
-						</a>
-
-						<a href="#">
+						<a href="/about">
 							<p>Contact</p>
+						</a>
+					</div>
+
+					<div className={styles.footerLinksSection}>
+						<h4>Food</h4>
+
+						<a href="/recipes">
+							<p>All recipes</p>
+						</a>
+
+						<a href="/top-picks">
+							<p>Top Picks</p>
+						</a>
+
+					</div>
+
+					<div className={styles.footerLinksSection}>
+						<h4>Food History</h4>
+						<a href="/history">
+							<p>SG Food History</p>
+						</a>
+
+						<a href="/history">
+							<p>Culinary Traditions</p>
 						</a>
 					</div>
 
 					<div className={styles.footerLinksSection}>
 						<h4>Follow Us</h4>
 						<div className={styles.socialMedia}>
-							<a href="#">
-								<FaFacebook />
+							<a href="https://github.com/Tan-JunWei/NP_1.2_CSS-ASG.git">
+								<BsGithub />
 							</a>
 
 							<a href="#">
-								<BsGithub />
+								<FaFacebook />
 							</a>
 
 							<a href="#">
@@ -85,7 +76,8 @@ export default function Footer() {
 
 				</div>
 
-				<hr />
+				{/* Divider */}
+				<div className={styles.footerHR}/>
 
 				<div className={styles.footerCopyright}>
 					<p>
