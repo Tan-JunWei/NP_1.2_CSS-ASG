@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "Vegan Tacos",
+      "tags": ["Vegan", "Mexican", "Gluten-Free"],
+      "ingredients": ["Taco Shell", "Lettuce", "Vegan Cheese"],
+      "description": "A delicious vegan alternative to classic tacos."
+    },
+    {
+      "id": 2,
+      "title": "Chicken Curry",
+      "tags": ["Non-Vegan", "Indian", "Spicy"],
+      "ingredients": ["Chicken", "Curry Powder", "Rice"],
+      "description": "A flavorful and spicy chicken curry dish."
+    },
+    {
+      "id": 3,
+      "title": "Pasta Primavera",
+      "tags": ["Vegetarian", "Italian"],
+      "ingredients": ["Pasta", "Bell Peppers", "Zucchini"],
+      "description": "A fresh and healthy pasta dish with colorful vegetables."
+    }
+]
+  
