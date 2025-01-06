@@ -1,23 +1,64 @@
 [
     {
       "id": 1,
-      "title": "Vegan Tacos",
-      "tags": ["Vegan", "Mexican", "Gluten-Free"],
-      "ingredients": ["Taco Shell", "Lettuce", "Vegan Cheese"],
-      "description": "A delicious vegan alternative to classic tacos."
+      "title": "Hainanese Chicken Rice",
+      "tags": ["Hard", "Chinese", "Hawker Favourites"],
+      "ingredients": [
+        "1 (4 pound) whole chicken",
+        "3 cloves garlic",
+        "2 (1-inch) pieces fresh ginger root, peeled",
+        "2 green onions",
+        "½ teaspoon salt",
+        "2 tablespoons sesame oil",
+        "3 tablespoons vegetable oil",
+        "1 tablespoon sesame oil",
+        "2 shallots, finely chopped",
+        "5 cloves garlic, minced",
+        "1 (1-inch) piece fresh ginger root, peeled and chopped",
+        "½ cup chopped cilantro",
+        "4 cups chicken stock",
+        "½ teaspoon salt",
+        "3 cups long grain rice, rinsed and drained",
+        "cilantro sprigs",
+        "sliced green onion",
+        "1 cucumber, thinly sliced",
+        "2 fresh tomatoes, chopped"
+      ],
+      "image": "/food images/hainanese_chicken_rice.png", 
+      "description": "Singapore's iconic dish featuring tender poached chicken served with fragrant rice. A must-try for all foodies!"
     },
     {
       "id": 2,
-      "title": "Chicken Curry",
-      "tags": ["Non-Vegan", "Indian", "Spicy"],
-      "ingredients": ["Chicken", "Curry Powder", "Rice"],
-      "description": "A flavorful and spicy chicken curry dish."
+      "title": "Chilli Crab",
+      "tags": ["Hard", "Seafood", "National Dish", "Spicy"],
+      "ingredients": [
+        "1 tablespoon (8g) cornstarch",
+        "2 tablespoons (30g) water",
+        "7 tablespoons (104ml) peanut oil",
+        "2 to 3 whole shallots, minced (about 1/2 cup)",
+        "1 1/2-inch knob ginger, grated (about 2 tablespoons)",
+        "6 medium garlic cloves, minced (about 2 tablespoons)",
+        "4 Thai chiles, minced",
+        "2 whole live Mud or Dungeness crabs (about 1 pound each), prepared (see notes)",
+        "2 cups (500ml) homemade or store-bought low-sodium chicken broth",
+        "1/4 cup (66g) tomato paste",
+        "1/2 cup (125ml) hot-sweet chili sauce (see notes)",
+        "Salt, to taste",
+        "Sugar, to taste",
+        "1 large egg, beaten",
+        "1/2 cup thinly sliced green onions",
+        "1 cup fresh cilantro leaves",
+        "Rice or steamed buns to serve on side"
+      ],
+      "image": "/food images/chilli_crab.png",
+      "description": "A Singapore classic featuring crabs deep-fried in a sweet, savoury and spicy gravy. Best enjoyed with mantou buns."
     },
     {
       "id": 3,
-      "title": "Pasta Primavera",
-      "tags": ["Vegetarian", "Italian"],
+      "title": "Char Kway Teow",
+      "tags": ["Medium", "Chinese", "Hawker Favourites"],
       "ingredients": ["Pasta", "Bell Peppers", "Zucchini"],
+      "image": "/food images/char_kway_teow.jpg",
       "description": "A fresh and healthy pasta dish with colorful vegetables."
     }
 ]

@@ -40,6 +40,13 @@
     line-height: 1.5;
 }
 
+.recipeImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}  
+
 /* Responsive Design */
 @media (max-width: 600px) {
     .container {
