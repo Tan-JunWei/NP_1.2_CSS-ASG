@@ -9,6 +9,11 @@ export default function Recipes() {
       <div>
         {recipes.map((recipe) => (
           <div key={recipe.id} className={styles.recipeCard}>
+            <img
+              src={recipe.image}
+              alt={recipe.title}
+              className={styles.recipeImage}
+            />
             <h2>{recipe.title}</h2>
             <p>
               <strong>Description:</strong> {recipe.description}
