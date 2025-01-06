@@ -31,3 +31,9 @@ export default function Recipes() {
   );
 };
 
+// Links for recipes (JSON doesn't support comments)
+// Chicken Rice: https://www.allrecipes.com/recipe/70667/singapore-chicken-rice
+// Chilli Crab: https://www.seriouseats.com/singaporean-singapore-chili-crab-recipe
+// Char Kway Teow: https://www.marionskitchen.com/char-kway-teow
+// Laksa: https://tasty.co/recipe/singapore-laksa
+
