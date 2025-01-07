@@ -1,0 +1,15 @@
+/* src/app/loading.module.css */
+.loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    flex-direction: column;
+  }
+  
+  .loaderGif {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+  }
+  
