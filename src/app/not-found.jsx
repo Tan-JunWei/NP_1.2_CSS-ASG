@@ -1,25 +1,63 @@
 'use client'; 
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+import styles from "@/src/styles/pages/not-found.module.css";
 
-export default function Test404() {
+const messages = [
+  "Oops! Looks like you're lost.",
+  "404: The page you're looking for doesn't exist.",
+  "Well, this is awkward...",
+  "The page is missing, but you're still awesome!",
+  "Are you sure this is where you wanted to go?",
+];
+
+const images = [
+  "/about/Placeholder.png", // Replace with actual image paths
+  "/about/Placeholder.png",
+  "/about/Placeholder.png",
+  "/about/Placeholder.png",
+  "/about/Placeholder.png",
+];
+
+export default function NotFound() {
+  const [randomImage, setRandomImage] = useState("");
+  const [randomMessage, setRandomMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Generate a random image and message every time the page loads
+    const image = images[Math.floor(Math.random() * images.length)];
+    const message = messages[Math.floor(Math.random() * messages.length)];
+    const img = new Image();
+    img.src = image;
+    img.onload = () => {
+      setRandomImage(image);
+      setRandomMessage(message);
+      setIsLoading(false);
+    };
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className={styles.loaderContainer}>
+        <div className={styles.loader}></div>
+        <p className={styles.loadingText}>Loading...</p>
+      </div>
+    );
+  }
+
   return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h1 style={{ fontSize: "3rem", color: "red" }}>404 - Page Not Found</h1>
-      <p style={{ fontSize: "1.5rem" }}>
-        Oops! The page you're looking for doesn't exist.
-      </p>
+    <div className={styles.container}>
+      {randomImage && (
+        <img 
+          src={randomImage} 
+          alt="404" 
+          className={styles.image}
+        />
+      )}
+      <p className={styles.message}>{randomMessage}</p>
       <button 
-        style={{ 
-          marginTop: "20px", 
-          padding: "10px 20px", 
-          fontSize: "1rem", 
-          backgroundColor: "blue", 
-          color: "white", 
-          border: "none", 
-          borderRadius: "5px", 
-          cursor: "pointer" 
-        }}
+        className={styles.button}
         onClick={() => window.location.href = "/"}
       >
         Back to Home
