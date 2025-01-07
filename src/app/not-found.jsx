@@ -22,29 +22,14 @@ const images = [
 export default function NotFound() {
   const [randomImage, setRandomImage] = useState("");
   const [randomMessage, setRandomMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Generate a random image and message every time the page loads
     const image = images[Math.floor(Math.random() * images.length)];
     const message = messages[Math.floor(Math.random() * messages.length)];
-    const img = new Image();
-    img.src = image;
-    img.onload = () => {
-      setRandomImage(image);
-      setRandomMessage(message);
-      setIsLoading(false);
-    };
+    setRandomImage(image);
+    setRandomMessage(message);
   }, []);
-
-  if (isLoading) {
-    return (
-      <div className={styles.loaderContainer}>
-        <div className={styles.loader}></div>
-        <p className={styles.loadingText}>Loading...</p>
-      </div>
-    );
-  }
 
   return (
     <div className={styles.container}>
