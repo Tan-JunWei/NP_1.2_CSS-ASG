@@ -7,8 +7,9 @@
 :root{
     --primary-font: 'Playfair Display', 'Times New Roman';
     --secondary-font: 'Lato', 'Arial';
-    --primary-color: #67369F; /* Trying purple instead as orange didn't look good */
+    /* --primary-color: ; TODO: Experiment with different colors */
     /* --secondary-color: ; */
+    --primary-font-color: #333; /* for color of any text, unless it's for a specific purpose/look */
 }
 
 * {
