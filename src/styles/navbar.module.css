@@ -10,10 +10,11 @@
     gap: 5vw;
 }
 
-.navlogo {
+.navlogolink {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
 }
 
 .navlogo h1 {
