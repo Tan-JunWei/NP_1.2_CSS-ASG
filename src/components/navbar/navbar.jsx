@@ -26,10 +26,10 @@ export default function Navbar() {
     <nav className={classNames(styles.navbar, 'fixed-navbar')}>
       {/* Website Icon */}
       <div className={styles.navlogo}>
-        <Link href="/">
-          <Image src="/website logo.jpg" alt="logo" width={50} height={50} />
+        <Link href="/" className={styles.navlogolink}>
+          <Image src="/nav-website logo.png" alt="logo" width={50} height={50} />
+          <h1>Plateful</h1>
         </Link>
-        <h1>Plateful</h1>
       </div>
 
       <div className={`${styles.navlinks}  ${hamburgerOpen ? styles.show : ""}`}>
