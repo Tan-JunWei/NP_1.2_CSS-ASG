@@ -27,3 +27,42 @@
     padding-bottom: 20px ;
 }
 
+/* Responsive stuff */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .main {
+        font-size: 30px;
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    #mainimage {
+        margin-left: 50px;
+        margin-top: 10px;
+        width: 200px;
+    }
+
+    .p {
+        margin: 20px;
+        font-size: 18px;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    .p {
+        font-size: 16px;
+        margin: 10px;
+        text-align: justify;
+    }
+}
