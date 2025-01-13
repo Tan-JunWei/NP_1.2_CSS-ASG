@@ -1,10 +1,10 @@
 // About page, made by Ryan Tan :D
 
-import ControlledCarousel from '@/src/components/image carousel/about_carousel';
-import styles from '@/src/styles/pages/about.module.css'
+import Carousel from '@/src/components/image carousel/about_carousel';
 import Image from 'next/image';
-import { StaticCopyUsage } from 'three';
+// import { StaticCopyUsage } from 'three';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from '@/src/styles/pages/about.module.css'
 
 export default function About() {
     return (
@@ -20,14 +20,14 @@ export default function About() {
             height={150}
             alt="PLACEHOLDER"/>
             <p className={styles.p}>
-            Welcome to Savor & Spice, a food blog dedicated to celebrating the joy of cooking, eating, and exploring diverse cuisines. 
+            Welcome to Plateful, a food blog dedicated to celebrating the joy of cooking, eating, and exploring diverse cuisines. 
             Whether you're a seasoned chef or a kitchen newbie, you'll find inspiration in our collection of flavorful recipes, cooking tips, and food stories from around the world. 
             Join us as we share the art of creating delicious dishes and the memories they inspire. 
             Let’s make every meal an adventure!
             </p>
 
             <h2 className={styles.main}>Meet the team!</h2>
-            <ControlledCarousel></ControlledCarousel>
+            <Carousel></Carousel>
         </div>
     );
 }
