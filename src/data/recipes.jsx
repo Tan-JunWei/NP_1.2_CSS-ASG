@@ -85,7 +85,7 @@ const dishes = [
   {
       id: 4,
       title: "Laksa",
-      tags: ["Medium", "Peranakan", "Hawker Favourites"],
+      tags: ["Medium", "Peranakan", "Hawker Favourites", "Spicy"],
       ingredients: [
         "4 king prawns, de-shelled",
         "½ tablespoon (8g) palm sugar",
@@ -198,18 +198,26 @@ const dishes = [
   {
       id: 9,
       title: "Nasi Lemak",
-      tags: ["Easy", "Malaysian", "Hawker Favourites"],
+      tags: ["Easy", "Malaysian", "Hawker Favourites", "Spicy"],
       ingredients: [
-        "2 cups (500g) jasmine rice",
-        "2 pandan leaves, knotted",
-        "1 cup (250ml) coconut milk",
-        "1 teaspoon (6g) salt",
-        "Sambal chili sauce for serving",
-        "Fried ikan bilis (anchovies) and peanuts",
-        "Hard-boiled eggs, halved",
-        "Slices of cucumber",
-        "Fried chicken or ikan bilis sambal (optional)"
-      ], // Nasi Lemak recipe: https://www.tasteasianfood.com/nasi-lemak/
+        "1½ cups (375g) jasmine rice",
+        "1½ cups (375g) coconut milk",
+        "1 lemongrass stalk",
+        "½ cup (75g) fried peanuts, to serve",
+        "2 hard boiled eggs, halved, to serve",
+        "1 cup (150g) sliced cucumber, to serve",
+        "4 pieces ayam goreng (Malaysian Fried Chicken)",
+        "10 dried long red chillies",
+        "2 fresh long red chillies",
+        "2 red shallots (50g), roughly chopped",
+        "1 garlic clove (5g), chopped",
+        "1 teaspoon (5g) shrimp paste",
+        "¼ cup (63ml) peanut oil",
+        "½ cup (75g) dried anchovies (ikan bilis)",
+        "1 small red onion (50g), sliced into rings",
+        "1 tablespoon (15g) brown sugar",
+        "1 tablespoon (15g) tamarind puree"
+      ], // Nasi Lemak recipe: https://www.marionskitchen.com/nasi-lemak/
       image: "/food images/nasi_lemak.png", 
       description: "A fragrant coconut rice dish served with sambal, crispy anchovies, peanuts, and accompaniments like fried chicken or egg."
   },
