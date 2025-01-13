@@ -9,21 +9,26 @@ export default function Recipes() {
       <div>
         {recipes.map((recipe) => (
           <div key={recipe.id} className={styles.recipeCard}>
+            <div className={styles.recipeText}>
+              <h2>{recipe.title}</h2>
+              <p>
+                {recipe.description}
+              </p>
+
+              <div className={styles.tags}>
+                {recipe.tags.map((tag, index) => (
+                  <span key={index} className={styles.tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
             <img
               src={recipe.image}
               alt={recipe.title}
               className={styles.recipeImage}
             />
-            <h2>{recipe.title}</h2>
-            <p>
-              <strong>Description:</strong> {recipe.description}
-            </p>
-            <p>
-              <strong>Tags:</strong> {recipe.tags.join(", ")}
-            </p>
-            <p>
-              <strong>Ingredients:</strong> {recipe.ingredients.join(", ")}
-            </p>
           </div>
         ))}
       </div>
