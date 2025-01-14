@@ -53,12 +53,57 @@
 .tag {
     display: inline-block;
     padding: 8px 16px;
+    color: white;
     background-color: #f0f0f0;
     border: 1px solid #ccc; 
     border-radius: 20px; 
     font-size: 14px;
     cursor: default; 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
+    transition: background-color 0.3s ease; 
+}
+
+.tag-hard {
+    background-color: #AA1E22; /* Hard */
+}
+
+.tag-medium {
+    background-color: #E16A2A; /* Medium */
+}
+
+.tag-easy {
+    background-color: #339651; /* Easy */
+}
+
+.tag-chinese {
+    background-color: #344CB7; /* Chinese */
+}
+
+.tag-seafood {
+    background-color: #7A319F; /* Seafood */
+}
+
+.tag-spicy {
+    background-color: #CC225E; /* Spicy */
+}
+
+.tag-peranakan {
+    background-color: #092063; /* Peranakan */
+}
+
+.tag-indian {
+    background-color: #28579C; /* Indian */
+}
+
+.tag-malaysian {
+    background-color: #5c4791; /* Malaysian */
+}
+
+.tag-hawker-favourites {
+    background-color: #0a807c; /* Hawker Favourites */
+}
+
+.tag-teochew {
+    background-color: #6B4932; /* Teochew */
 }
   
 .recipeImage {
