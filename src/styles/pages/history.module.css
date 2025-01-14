@@ -13,7 +13,7 @@
     color: var(--primary-font-color);
     font-family: var(--primary-font);
     text-align: left;
-    padding-left: 50px;
+    padding-left: 100px;
     margin-top: 50px; /* Adds more space above the subheader */
     margin-bottom: 20px;
     
@@ -21,7 +21,7 @@
 }
 /* Scoped styles for ul and li */
 .list {
-    padding-left: 50px;
+    padding-left: 100px;
     margin: 0 0 20px;
     list-style-type: disc; /* You can use circle, square, or none if needed */
 }
@@ -32,3 +32,27 @@
     color: var(--primary-font-color); /* Matches the primary color */
 }
 
+.pageWrapper {
+    display: flex; /* Aligns the vertical bar and content side by side */
+}
+
+.verticalBar {
+    width: 5px; /* Thickness of the vertical bar */
+    background-color: #ff6600; /* Color of the bar */
+    margin-right: 20px; /* Space between the bar and the content */
+}
+
+.contentWrapper {
+    flex: 1; /* Makes the content take up the remaining width */
+}
+.section {
+    margin-bottom: 40px; /* Adds spacing between sections */
+}
+.image {
+    width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintains aspect ratio */
+    margin-top: 15px;
+    margin-bottom: 15px; /* Adds space above and below images */
+    border-radius: 8px; /* Adds rounded corners to images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}

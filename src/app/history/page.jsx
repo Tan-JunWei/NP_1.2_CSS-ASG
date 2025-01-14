@@ -3,8 +3,11 @@ import styles from "@/src/styles/pages/history.module.css"
 export default function History() {
     return (
 <div className={styles.container}>
-            <h1 className={styles.header}>The History of Food</h1>
+    <h1 className={styles.header}>The History of Food</h1>
 
+    <div className={styles.pageWrapper}>
+        <div className={styles.verticalBar}></div>
+        <div className={styles.contentWrapper}>
             <section className={styles.section}>
                 <h2 className={styles.subheader}>Before 10,000 BCE</h2>
                 <ul className={styles.list}>
@@ -107,6 +110,8 @@ export default function History() {
                 </ul>
             </section>
         </div>
+    </div>
+</div>
         
     );
 }
