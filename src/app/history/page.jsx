@@ -4,7 +4,7 @@ export default function History() {
     return (
         <div>
             <h1 className={styles.header}>History</h1>
-            <h2>Before 10,000 BCE</h2>
+            <h2 className={styles.subheader}>Before 10,000 BCE</h2>
             <ul>
                 <li>Early humans relied on hunting, fishing, and gathering wild plants. Diets were regional, based on local flora and fauna.</li>
                 <li>Tools for hunting and food preparation emerged, such as flint knives and grinding stones.</li>
