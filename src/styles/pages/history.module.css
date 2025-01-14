@@ -12,8 +12,8 @@
 .subheader {
     color: var(--primary-font-color);
     font-family: var(--primary-font);
-    text-align: center;
-    padding-left: 10px;
+    text-align: left;
+    padding-left: 50px;
     margin-top: 50px; /* Adds more space above the subheader */
     margin-bottom: 20px;
     
