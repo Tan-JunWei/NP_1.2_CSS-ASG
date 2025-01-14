@@ -1,8 +1,9 @@
-/* General Styles */
+/* Responsive Recipes page styles done by: Tan Jun Wei */
+
 .container {
-    max-width: 800px;
+    max-width: 950px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 30px;
     font-family: "Arial", sans-serif;
     color: #333;
 }
@@ -21,25 +22,32 @@
     gap: 30px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 16px;
-    margin: 16px 0;
+    padding: 20px;
+    margin: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .recipeCard:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.recipeCard h2 {
+.recipeText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipeText h2 {
     font-size: 1.5rem;
+    font-weight: 800;
     margin: 0 0 10px 0;
     color: #34495e;
 }
 
-.recipeCard p {
+.recipeText p {
     margin: 5px 0;
     line-height: 1.5;
 }
@@ -47,7 +55,7 @@
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; 
+    gap: 6px; 
 }
   
 .tag {
@@ -58,77 +66,95 @@
     border: 1px solid #ccc; 
     border-radius: 20px; 
     font-size: 14px;
-    cursor: default; 
-    transition: background-color 0.3s ease; 
+    font-weight: 550;
+    transition: all 0.5s ease; 
+}
+
+.tag:hover {
+    opacity: 0.9;
 }
 
 .tag-hard {
-    background-color: #AA1E22; /* Hard */
+    background-color: #AA1E22; 
 }
 
 .tag-medium {
-    background-color: #E16A2A; /* Medium */
+    background-color: #E16A2A; 
 }
 
 .tag-easy {
-    background-color: #339651; /* Easy */
+    background-color: #339651; 
 }
 
 .tag-chinese {
-    background-color: #344CB7; /* Chinese */
+    background-color: #344CB7;
 }
 
 .tag-seafood {
-    background-color: #7A319F; /* Seafood */
+    background-color: #7A319F;
 }
 
 .tag-spicy {
-    background-color: #CC225E; /* Spicy */
+    background-color: #CC225E;
 }
 
 .tag-peranakan {
-    background-color: #092063; /* Peranakan */
+    background-color: #092063; 
 }
 
 .tag-indian {
-    background-color: #28579C; /* Indian */
+    background-color: #28579C; 
 }
 
 .tag-malaysian {
-    background-color: #5c4791; /* Malaysian */
+    background-color: #5c4791;
 }
 
 .tag-hawker-favourites {
-    background-color: #0a807c; /* Hawker Favourites */
+    background-color: #0a807c; 
 }
 
 .tag-teochew {
-    background-color: #6B4932; /* Teochew */
+    background-color: #6B4932; 
 }
   
 .recipeImage {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 8px;
-    margin-bottom: 16px;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
-
-    .container h1 {
-        font-size: 2rem;
-    }
-
+@media (max-width: 480px) {
     .recipeCard {
-        padding: 12px;
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .recipeCard h2 {
-        font-size: 1.2rem;
+    .recipeText {
+        gap: 20px;
+    }
+
+    .recipeImage {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
     }
 }
-  
+
+@media (min-width:480px) and (max-width: 768px) {
+    .recipeCard {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .recipeText {
+        gap: 30px;
+    }
+
+    .recipeImage {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
