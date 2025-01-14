@@ -34,11 +34,12 @@
 
 .pageWrapper {
     display: flex; /* Aligns the vertical bar and content side by side */
+    margin-left: 40px; 
 }
 
 .verticalBar {
     width: 5px; /* Thickness of the vertical bar */
-    background-color: #ff6600; /* Color of the bar */
+    background-color: var(--primary-color); /* Color of the bar */
     margin-right: 20px; /* Space between the bar and the content */
 }
 
