@@ -31,30 +31,6 @@ const dishes = [
   },
   {
       id: 2,
-      title: "Chilli Crab",
-      tags: ["Hard", "Seafood", "National Dish", "Spicy"],
-      ingredients: [
-        "1 tablespoon (15g) cornstarch",
-        "2 tablespoons (30g) water",
-        "7 tablespoons (100g) peanut oil",
-        "2 to 3 whole shallots, minced (about ½ cup)",
-        "1 ½-inch knob ginger, grated (about 2 tablespoons)",
-        "6 medium garlic cloves, minced (about 2 tablespoons)",
-        "4 Thai chiles, minced",
-        "2 whole live Mud or Dungeness crabs (about 1 pound each), prepared (see notes)",
-        "2 cups (500g) homemade or store-bought low-sodium chicken broth",
-        "¼ cup (63g) tomato paste",
-        "½ cup (125g) hot-sweet chili sauce (see notes)",
-        "1 large egg, beaten",
-        "½ cup (125g) thinly sliced green onions",
-        "1 cup (250g) fresh cilantro leaves",
-        "Rice or steamed buns (Mantou) to serve on side"
-      ], // Chilli Crab recipe: https://www.seriouseats.com/singaporean-singapore-chili-crab-recipe
-      image: "/food images/chilli_crab.png",
-      description: "A Singapore classic featuring crabs deep-fried in a sweet, savoury and spicy gravy. Best enjoyed with mantou buns."
-  },
-  {
-      id: 3,
       title: "Char Kway Teow",
       tags: ["Medium", "Chinese", "Hawker Favourites"],
       ingredients: [
@@ -83,9 +59,35 @@ const dishes = [
       description: "A stir-fried flat noodle dish, featuring a savory-sweet blend of soy sauce, garlic, and lard, traditionally served on betel or banana leaves."
   },
   {
+      id: 3,
+      title: "Nasi Lemak",
+      tags: ["Easy", "Malaysian", "Hawker Favourites", "Spicy"],
+      ingredients: [
+        "1½ cups (375g) jasmine rice",
+        "1½ cups (375g) coconut milk",
+        "1 lemongrass stalk",
+        "½ cup (75g) fried peanuts, to serve",
+        "2 hard boiled eggs, halved, to serve",
+        "1 cup (150g) sliced cucumber, to serve",
+        "4 pieces ayam goreng (Malaysian Fried Chicken)",
+        "10 dried long red chillies",
+        "2 fresh long red chillies",
+        "2 red shallots (50g), roughly chopped",
+        "1 garlic clove (5g), chopped",
+        "1 teaspoon (5g) shrimp paste",
+        "¼ cup (63ml) peanut oil",
+        "½ cup (75g) dried anchovies (ikan bilis)",
+        "1 small red onion (50g), sliced into rings",
+        "1 tablespoon (15g) brown sugar",
+        "1 tablespoon (15g) tamarind puree"
+      ], // Nasi Lemak recipe: https://www.marionskitchen.com/nasi-lemak/
+      image: "/food images/nasi_lemak.png", 
+      description: "A fragrant coconut rice dish served with sambal, crispy anchovies, peanuts, and accompaniments like fried chicken or egg."
+  },
+  {
       id: 4,
       title: "Laksa",
-      tags: ["Medium", "Peranakan", "Hawker Favourites", "Spicy"],
+      tags: ["Medium", "Peranakan", "Hawker Favourites", "Seafood", "Spicy"],
       ingredients: [
         "4 king prawns, de-shelled",
         "½ tablespoon (8g) palm sugar",
@@ -121,7 +123,7 @@ const dishes = [
   {
     id: 5,
     title: "Kaya Toast with Soft-Boiled Eggs",
-    tags: ["Easy", "Breakfast Favourites"],
+    tags: ["Easy", "Hawker Favourites"],
     ingredients: [
       "6 fresh eggs at room temperature",
       "6 cups (1500ml) water",
@@ -135,6 +137,27 @@ const dishes = [
   },
   {
     id: 6,
+    title: "Satay",
+    tags: ["Medium", "Malaysian", "Hawker Favourites"],
+    ingredients: [
+      "1 large red onion, chopped",
+      "2 large garlic cloves, chopped",
+      "3 stalks lemon grass, chopped",
+      "½ cup (125g) soy sauce",
+      "1 tablespoon (15g) peanut oil",
+      "1 tablespoon (15g) ground turmeric",
+      "1½ teaspoons (7.5g) brown sugar",
+      "1 teaspoon (5g) ground cumin",
+      "1 teaspoon (5g) ground ginger",
+      "Salt and black pepper to taste",
+      "1 pound (0.45kg) skinless, boneless chicken breast halves, pounded thin",
+      "12 wooden or bamboo skewers"
+    ], // Satay recipe: https://www.allrecipes.com/recipe/201914/singapore-satay/
+    image: "/food images/satay.jpg", 
+    description: "Grilled skewers of marinated meat served with peanut sauce, a staple in Southeast Asian street food."
+  },
+  {
+    id: 7,
     title: "Roti Prata",
     tags: ["Easy", "Indian", "Hawker Favourites"],
     ingredients: [
@@ -151,7 +174,31 @@ const dishes = [
     description: "A local-favourite Indian flatbread dish, usually served with different types of curry."
   },
   {
-    id: 7,
+    id: 8,
+    title: "Chilli Crab",
+    tags: ["Hard", "Seafood", "Spicy"],
+    ingredients: [
+      "1 tablespoon (15g) cornstarch",
+      "2 tablespoons (30g) water",
+      "7 tablespoons (100g) peanut oil",
+      "2 to 3 whole shallots, minced (about ½ cup)",
+      "1 ½-inch knob ginger, grated (about 2 tablespoons)",
+      "6 medium garlic cloves, minced (about 2 tablespoons)",
+      "4 Thai chiles, minced",
+      "2 whole live Mud or Dungeness crabs (about 1 pound each), prepared (see notes)",
+      "2 cups (500g) homemade or store-bought low-sodium chicken broth",
+      "¼ cup (63g) tomato paste",
+      "½ cup (125g) hot-sweet chili sauce (see notes)",
+      "1 large egg, beaten",
+      "½ cup (125g) thinly sliced green onions",
+      "1 cup (250g) fresh cilantro leaves",
+      "Rice or steamed buns (Mantou) to serve on side"
+    ], // Chilli Crab recipe: https://www.seriouseats.com/singaporean-singapore-chili-crab-recipe
+    image: "/food images/chilli_crab.png",
+    description: "A Singapore classic featuring crabs deep-fried in a sweet, savoury and spicy gravy. Best enjoyed with mantou buns."
+},
+  {
+    id: 9,
     title: "Bak Chor Mee (Minced Pork Noodles)",
     tags: ["Easy", "Teochew", "Hawker Favourites"],
     ingredients: [
@@ -173,53 +220,6 @@ const dishes = [
     ], // Bak Chor Mee recipe: https://themeatmen.sg/recipes/bak-chor-mee/
     image: "/food images/bak_chor_mee.png", 
     description: "A savoury Singaporean noodle dish topped with minced pork, meatballs, and tangy vinegar sauce."
-  },
-  {
-    id: 8,
-    title: "Satay",
-    tags: ["Medium", "Malaysian", "Hawker Favourites"],
-    ingredients: [
-      "1 large red onion, chopped",
-      "2 large garlic cloves, chopped",
-      "3 stalks lemon grass, chopped",
-      "½ cup (125g) soy sauce",
-      "1 tablespoon (15g) peanut oil",
-      "1 tablespoon (15g) ground turmeric",
-      "1½ teaspoons (7.5g) brown sugar",
-      "1 teaspoon (5g) ground cumin",
-      "1 teaspoon (5g) ground ginger",
-      "Salt and black pepper to taste",
-      "1 pound (0.45kg) skinless, boneless chicken breast halves, pounded thin",
-      "12 wooden or bamboo skewers"
-    ], // Satay recipe: https://www.allrecipes.com/recipe/201914/singapore-satay/
-    image: "/food images/satay.jpg", 
-    description: "Grilled skewers of marinated meat served with peanut sauce, a staple in Southeast Asian street food."
-  },
-  {
-      id: 9,
-      title: "Nasi Lemak",
-      tags: ["Easy", "Malaysian", "Hawker Favourites", "Spicy"],
-      ingredients: [
-        "1½ cups (375g) jasmine rice",
-        "1½ cups (375g) coconut milk",
-        "1 lemongrass stalk",
-        "½ cup (75g) fried peanuts, to serve",
-        "2 hard boiled eggs, halved, to serve",
-        "1 cup (150g) sliced cucumber, to serve",
-        "4 pieces ayam goreng (Malaysian Fried Chicken)",
-        "10 dried long red chillies",
-        "2 fresh long red chillies",
-        "2 red shallots (50g), roughly chopped",
-        "1 garlic clove (5g), chopped",
-        "1 teaspoon (5g) shrimp paste",
-        "¼ cup (63ml) peanut oil",
-        "½ cup (75g) dried anchovies (ikan bilis)",
-        "1 small red onion (50g), sliced into rings",
-        "1 tablespoon (15g) brown sugar",
-        "1 tablespoon (15g) tamarind puree"
-      ], // Nasi Lemak recipe: https://www.marionskitchen.com/nasi-lemak/
-      image: "/food images/nasi_lemak.png", 
-      description: "A fragrant coconut rice dish served with sambal, crispy anchovies, peanuts, and accompaniments like fried chicken or egg."
   },
   {
       id: 10,
