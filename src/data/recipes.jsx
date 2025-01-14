@@ -222,27 +222,29 @@ const dishes = [
     description: "A savoury Singaporean noodle dish topped with minced pork, meatballs, and tangy vinegar sauce."
   },
   {
-      id: 10,
-      title: "Mee Siam",
-      tags: ["Medium", "Peranakan", "Hawker Favourites"],
-      ingredients: [
-        "250g rice vermicelli noodles",
-        "2 tablespoons (30g) tamarind paste",
-        "3 tablespoons (45g) sugar",
-        "3 tablespoons (45g) fish sauce",
-        "2 tablespoons (30g) oil",
-        "3 cloves garlic, minced",
-        "2 shallots, finely chopped",
-        "2 cups (500ml) chicken stock",
-        "1 tablespoon (15g) chili paste",
-        "1 block (150g) firm tofu, sliced and fried",
-        "1 hard-boiled egg, halved",
-        "Bean sprouts, blanched",
-        "Lime wedges for garnish",
-        "Chopped chives for garnish"
-      ], // Mee Siam recipe: https://www.tasteasianfood.com/mee-siam/
-      image: "/food images/mee_siam.png", 
-      description: "A tangy and spicy noodle dish featuring rice vermicelli, tofu, eggs, and a zesty tamarind-based gravy."
+    "id": 10,
+    "title": "Chicken Tikka Masala",
+    "tags": ["Medium", "Indian"],
+    "ingredients": [
+      "2 tablespoons (30g) ghee",
+      "1 onion, finely chopped",
+      "4 cloves garlic, minced",
+      "1 tablespoon (15g) ground cumin",
+      "1 teaspoon (5g) salt, or more to taste",
+      "1 teaspoon (5g) ground ginger",
+      "1 teaspoon (5g) cayenne pepper",
+      "½ teaspoon (2.5g) ground cinnamon",
+      "¼ teaspoon (1.25g) ground turmeric",
+      "1 can (400g) tomato sauce",
+      "1 cup (250g) heavy whipping cream",
+      "1 tablespoon (15g) white sugar, or more to taste",
+      "2 teaspoons (10g) paprika",
+      "1 tablespoon (15g) vegetable oil",
+      "4 skinless, boneless chicken breast halves, cut into bite-size pieces",
+      "½ teaspoon (2.5g) curry powder"
+    ],
+    "image": "/food images/chicken_tikka_masala.jpg",
+    "description": "A rich and creamy Indian curry featuring tender chicken pieces in a spiced tomato-based sauce."
   }
 ];
 

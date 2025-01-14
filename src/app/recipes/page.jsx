@@ -1,3 +1,5 @@
+/* Responsive Recipe page done by: Tan Jun Wei */
+
 import React from "react";
 import recipes from "@/src/data/recipes"; // Import the recipes data
 import styles from "@/src/styles/pages/recipes.module.css";
@@ -10,10 +12,12 @@ export default function Recipes() {
         {recipes.map((recipe) => (
           <div key={recipe.id} className={styles.recipeCard}>
             <div className={styles.recipeText}>
-              <h2>{recipe.title}</h2>
-              <p>
-                {recipe.description}
-              </p>
+              <div className={styles.recipeDescription}>
+                <h2>{recipe.title}</h2>
+                <p>
+                  {recipe.description}
+                </p>
+              </div>
 
               <div className={styles.tags}>
                 {recipe.tags.map((tag, index) => (
