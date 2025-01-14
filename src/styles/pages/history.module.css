@@ -38,7 +38,7 @@
 }
 
 .verticalBar {
-    width: 5px; /* Thickness of the vertical bar */
+    width: 16px; /* Thickness of the vertical bar */
     background-color: var(--primary-color); /* Color of the bar */
     margin-right: 20px; /* Space between the bar and the content */
 }
