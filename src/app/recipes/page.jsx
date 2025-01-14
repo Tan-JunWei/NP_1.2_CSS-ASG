@@ -17,7 +17,10 @@ export default function Recipes() {
 
               <div className={styles.tags}>
                 {recipe.tags.map((tag, index) => (
-                  <span key={index} className={styles.tag}>
+                  <span
+                    key={index}
+                    className={`${styles.tag} ${styles[`tag-${tag.toLowerCase().replace(/\s/g, '-')}`]}`}
+                  >
                     {tag}
                   </span>
                 ))}
