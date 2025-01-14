@@ -19,7 +19,7 @@
 }
 /* Scoped styles for ul and li */
 .list {
-    padding-left: 20px;
+    padding-left: 50px;
     margin: 0 0 20px;
     list-style-type: disc; /* You can use circle, square, or none if needed */
 }
