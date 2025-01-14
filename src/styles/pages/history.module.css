@@ -17,3 +17,16 @@
     
 
 }
+/* Scoped styles for ul and li */
+.list {
+    padding-left: 20px;
+    margin: 0 0 20px;
+    list-style-type: disc; /* You can use circle, square, or none if needed */
+}
+
+.listItem {
+    margin-bottom: 10px;
+    line-height: 1.6; /* Improves readability */
+    color: var(--primary-font-color); /* Matches the primary color */
+}
+
