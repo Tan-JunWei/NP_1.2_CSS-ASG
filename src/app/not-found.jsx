@@ -3,50 +3,55 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/src/styles/pages/not-found.module.css";
 
-const messages = [
-  "Oops! Looks like you're lost.",
-  "404: The page you're looking for doesn't exist.",
-  "Well, this is awkward...",
-  "The page is missing, but you're still awesome!",
-  "Are you sure this is where you wanted to go?",
-];
-
-const images = [
-  "/about/Placeholder.png", // Replace with actual image paths
-  "/about/Placeholder.png",
-  "/about/Placeholder.png",
-  "/about/Placeholder.png",
-  "/about/Placeholder.png",
+const items = [
+  { image: "/404/spilled-milk.png", 
+    message: `Don't cry over spilled milk... unless it's yours, then go ahead and have a good cry. But seriously, it's just milk. We'll clean it up. 
+    Eventually.`
+  }, 
+  { image: "/404/vending.png", 
+    message: `Out of order and out of snacks! Looks like you're out of luck, my friend. No chips, no candy, just pure disappointment. 
+    Guess you’ll have to snack on your hopes and dreams for now!`
+  },
+  { image: "/404/broken-egg.png", 
+    message: `This is egg-straordinary broken... in a bad way. Seems like someone didn't handle things with care. Now we're just left with a scrambled
+    situation.`
+  }
 ];
 
 export default function NotFound() {
-  const [randomImage, setRandomImage] = useState("");
-  const [randomMessage, setRandomMessage] = useState("");
+  const [currentItem, setCurrentItem] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Generate a random image and message every time the page loads
-    const image = images[Math.floor(Math.random() * images.length)];
-    const message = messages[Math.floor(Math.random() * messages.length)];
-    setRandomImage(image);
-    setRandomMessage(message);
+    const randomIndex = Math.floor(Math.random() * items.length);
+    setCurrentItem(items[randomIndex]);
   }, []);
+
+  const handleImageLoad = () => {
+    setIsLoaded(true); // Once the images are loaded, set isLoaded to true
+  };
 
   return (
     <div className={styles.container}>
-      {randomImage && (
-        <img 
-          src={randomImage} 
-          alt="404" 
-          className={styles.image}
-        />
+      {currentItem && (
+        <>
+          <img 
+            src={currentItem.image} 
+            alt="404" 
+            className={styles.image}
+            onLoad={handleImageLoad}
+          />
+          <p className={styles.message}>{currentItem.message}</p>
+        </>
       )}
-      <p className={styles.message}>{randomMessage}</p>
-      <button 
-        className={styles.button}
-        onClick={() => window.location.href = "/"}
-      >
-        Back to Home
-      </button>
+      {isLoaded && (
+        <button 
+          className={styles.button}
+          onClick={() => window.location.href = "/"}
+        >
+          Back to Home
+        </button>
+      )}
     </div>
   );
 }

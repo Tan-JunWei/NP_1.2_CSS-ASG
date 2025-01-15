@@ -33,14 +33,16 @@
 
 .container {
   text-align: center;
-  margin-top: 100px;
   padding: 20px;
+  margin: 50px auto;
 }
 
+
 .image {
-  max-width: 30%;
-  height: auto;
-  margin-bottom: 20px;
+  width: 400px;
+  height: 400px;
+  object-fit: cover; 
+  margin: 0 auto; 
 }
 
 .button {
