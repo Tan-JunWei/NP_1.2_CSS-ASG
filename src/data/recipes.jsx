@@ -32,7 +32,7 @@ const dishes = [
   {
       id: 2,
       title: "Char Kway Teow",
-      tags: ["Medium", "Chinese", "Hawker Favourites"],
+      tags: ["Medium", "Chinese", "Hawker Favourites", "Seafood"],
       ingredients: [
         "2 tablespoons (30g) vegetable oil, plus 1 extra tablespoon",
         "4 garlic cloves, roughly chopped",
