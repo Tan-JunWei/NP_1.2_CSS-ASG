@@ -5,37 +5,25 @@
 import React from "react";
 import { useState } from "react";
 import recipes from "@/src/data/recipes"; // Import the recipes data
+import CustomDropdown from "@/src/components/dropdown/dropdown"; 
 import styles from "@/src/styles/pages/recipes.module.css";
 
 export default function Recipes() {
-  const [selectedTag, setSelectedTag] = useState("All");
 
-  const filteredRecipes = 
-    selectedTag === "All"
-      ? recipes
-      : recipes.filter((recipe) => recipe.tags.includes(selectedTag));
+
+  const [selectedTag, setSelectedTag] = useState('All Categories');
+
+  const filteredRecipes = selectedTag === "All Categories"
+    ? recipes // Show all recipes if "All Categories" is selected
+    : recipes.filter((recipe) =>
+        recipe.tags.some((tag) => tag.toLowerCase() === selectedTag.toLowerCase())
+      );
 
   return (
     <div className={styles.container}>
       <h1>Recipe List</h1>
 
-      <select
-        value={selectedTag}
-        onChange={(e) => setSelectedTag(e.target.value)}
-      >
-        <option value="All">All</option>
-        <option value="Hard">Hard</option>
-        <option value="Medium">Medium</option>
-        <option value="Easy">Easy</option>
-        <option value="Hawker Favourites">Hawker Favourites</option>
-        <option value="Chinese">Chinese</option>
-        <option value="Malaysian">Malaysian</option>
-        <option value="Indian">Indian</option>
-        <option value="Peranakan">Peranakan</option>
-        <option value="Teochew">Teochew</option>
-        <option value="Seafood">Seafood</option>
-        <option value="Spicy">Spicy</option>
-      </select>
+      <CustomDropdown selectedTag={selectedTag} setSelectedTag={setSelectedTag} />
 
       <div>
         {filteredRecipes.map((recipe) => (
