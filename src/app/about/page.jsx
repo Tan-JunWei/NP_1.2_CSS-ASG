@@ -3,7 +3,6 @@
 import Carousel from '@/src/components/image carousel/about_carousel';
 import Image from 'next/image';
 // import { StaticCopyUsage } from 'three';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '@/src/styles/pages/about.module.css'
 
 export default function About() {

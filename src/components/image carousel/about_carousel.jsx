@@ -1,105 +1,104 @@
+//Done by Ryan Tan. Commit history of this page bout to go crazy
 'use client';
 
-import React, { useRef, useState } from 'react';
-import styles from "@/src/components/image carousel/about_carousel.css";
-import Image from 'next/image';
+import { useRef, useEffect } from 'react';
+import styles from "@/src/components/image carousel/about_carousel.module.css"
+//! I have no idea what i'm doing.
+//swiper stuff
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
+//css for swiper
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { fill } from 'three/src/extras/TextureUtils';
 
-const GallerySlider = () => {
-  const sliderRef = useRef(null);
-  const [isDown, setIsDown] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
 
-  const handleMouseDown = (e) => {
-    const slider = sliderRef.current;
-    setIsDown(true);
-    slider.classList.add('active');
-    setStartX(e.pageX - slider.offsetLeft);
-    setScrollLeft(slider.scrollLeft);
-  };
 
-  const handleMouseLeave = () => {
-    setIsDown(false);
-    sliderRef.current.classList.remove('active');
-  };
-
-  const handleMouseUp = () => {
-    setIsDown(false);
-    sliderRef.current.classList.remove('active');
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const slider = sliderRef.current;
-    const x = e.pageX - slider.offsetLeft;
-    const SCROLL_SPEED = 3;
-    const walk = (x - startX) * SCROLL_SPEED;
-    slider.scrollLeft = scrollLeft - walk;
-  };
-
-  return (
-    <ul
-      className="gallery"
-      ref={sliderRef}
-      onMouseDown={handleMouseDown}
-      onMouseLeave={handleMouseLeave}
-      onMouseUp={handleMouseUp}
-      onMouseMove={handleMouseMove}
-    >
-      <li style={{ background: '#f7ede2' }}>
-     
-        <Image
-        className='image'
-        src="/about/Placeholder.png"
-        width={200}
-        height={150}
-        alt="PLACEHOLDER"/>
-           <div className="text">
-           <h3>Hi, I'm Ryan Tan!</h3>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.           
+const CarouselSlider = () => {
+    return (
+        <>
+        <Swiper
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        navigation={true}
+        pagination={false}
+        mousewheel={false}
+        keyboard={true}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+        className={styles.mySwiper}
+        >
+          <SwiperSlide>
+          <div className={styles.carditem}>
+            <img
+            className={styles.images}
+            src="/about/placeholder.png" //! To be replaced!
+            width={500}
+            height={500}
+            alt="Ryan Tan"
+            />
+            <div className="cardtext">
+            <h2 className={styles.username}>Ryan Tan</h2>
+            <p className={styles.user_description}>
+            Hi there! I'm Ryan Tan, one of the four passionate foodies behind this blog.
+            I love sharing tips and tricks that bring a personal touch to the kitchen.
+            Whether I’m experimenting with new ingredients or perfecting classic dishes,
+            I’m always looking for ways to make food approachable, fun, and delicious.  
             </p>
-           </div>
-           
-            </li>
-            <li style={{ background: '#f7ede2' }}>
-     
-      <Image
-      className='image'
-      src="/about/Placeholder.png"
-      width={200}
-      height={150}
-      alt="PLACEHOLDER"/>
-          <div className="text">
-          <h3>Lorem ipsum dolor sit amet</h3>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+            </div>
           </div>
-          </li>
-          <li style={{ background: '#f7ede2' }}>
-     
-        <Image
-        className='image'
-        src="/about/Placeholder.png"
-        width={200}
-        height={150}
-        alt="PLACEHOLDER"/>
-           <div className="text">
-           <h3>Lorem ipsum dolor sit amet</h3>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-           </div>
-           
-            </li>
-      
-      
-     
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className={styles.carditem}>
+            <img
+            className={styles.images}
+            src="/about/Placeholder.png"  //! To be replaced
+            width={500}
+            height={500}
+            alt="Jun Wei"
+            />
+            <div className="cardtext">
+            <h2 className={styles.username}>Tan Jun Wei</h2>
+            <p className={styles.user_description}>uwu owo xd</p>
+            </div>
+          </div>
+          </SwiperSlide>
+          <SwiperSlide><div className={styles.carditem}>
+            <img
+            className={styles.images}
+            src="/about/Placeholder.png" //! To be replaced
+            width={500}
+            height={500}
+            alt="Jo Hanson"
+            />
+            <div className="cardtext">
+            <h2 className={styles.username}>Jo Hanson</h2>
+            <p className={styles.user_description}>uwu owo xd</p>
+            </div>
+          </div>
+          </SwiperSlide>
+          <SwiperSlide>
+          <div className={styles.carditem}>
+            <img
+            className={styles.images}
+            src="/about/Placeholder.png"
+            width={500}
+            height={500}
+            alt="Ryan Low"
+            />
+            <div className="cardtext">
+            <h2 className={styles.username}>Ryan Low</h2>
+            <p className={styles.user_description}>uwu owo xd</p>
+            </div>
+          </div>
+          </SwiperSlide>
+        </Swiper>
+        </>
+    );
+  };
 
-    </ul>
-  );
-};
 
-export default GallerySlider;
+export default CarouselSlider;

@@ -1,59 +1,22 @@
-.loaderContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f9f9f9;
-  flex-direction: column;
-}
-
-.loader {
-  border: 8px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 8px solid #67369f; /* Primary color */
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-}
-
-.loadingText {
-  font-family: var(--primary-font);
-  margin-top: 15px;
-  color: #67369f;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .container {
-  text-align: center;
-  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;  
   padding: 20px;
+  margin: 50px auto;
+}
+
+.message {
+  text-align: center;  
+  margin: 0 auto; 
+  line-height: 1.5;  
+  font-size: 18px;  
+  padding: 0 20px;  
 }
 
 .image {
-  max-width: 30%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: blue;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: darkblue;
+  width: 400px;
+  height: 400px;
+  object-fit: cover; 
+  margin: 0 auto; 
 }
