@@ -1,4 +1,4 @@
-/* Dropdown component for filtering recipes by category done by: Tan Jun Wei */
+/* Dropdown component (for filtering recipes by category) done by: Tan Jun Wei */
 
 import React, { useState } from 'react';
 import styles from '@/src/styles/dropdown.module.css';
@@ -33,21 +33,23 @@ const Dropdown = ({ selectedTag, setSelectedTag }) => {
     <div className={styles.customDropdown}>
       <div className={styles.selectedItem} onClick={toggleDropdown}>
         {selectedTag || 'Select Category'}
-        <span className={styles.arrow}>{isOpen ? '▲' : '▼'}</span>
+        <span className={`${styles.arrow} ${isOpen ? styles.open : ''}`}>
+          ▼
+        </span>
       </div>
-      {isOpen && (
-        <div className={styles.dropdownOptions}>
-          {options.map((option) => (
-            <div
-              key={option}
-              className={styles.option}
-              onClick={() => handleSelect(option)}
-            >
-              {option}
-            </div>
-          ))}
-        </div>
-      )}
+      <div
+        className={`${styles.dropdownOptions} ${isOpen ? styles.open : ''}`}
+      >
+        {options.map((option) => (
+          <div
+            key={option}
+            className={styles.option}
+            onClick={() => handleSelect(option)}
+          >
+            {option}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

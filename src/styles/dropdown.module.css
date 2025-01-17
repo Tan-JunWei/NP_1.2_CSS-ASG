@@ -1,10 +1,12 @@
+/* Dropdown Menu (for filtering recipes) done by: Tan Jun Wei */
+
 .customDropdown {
     position: relative;
     width: 200px;
     font-family: Arial, sans-serif;
-  }
-  
-  .selectedItem {
+}
+
+.selectedItem {
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -12,32 +14,50 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .selectedItem:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .arrow {
+    transition: background-color 0.3s ease;
+}
+
+.selectedItem:hover {
+    background-color: #eaf4f5;
+}
+
+.arrow {
     font-size: 12px;
-  }
-  
-  .dropdownOptions {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    z-index: 10;
-  }
-  
-  .option {
+    transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg); /* Flip the arrow when dropdown is open */
+}
+
+.dropdownOptions {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow: hidden;
+  transform-origin: top;
+  opacity: 0;
+  transform: scaleY(0); /* Initially collapsed */
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.dropdownOptions.open {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.option {
     padding: 10px;
     cursor: pointer;
-  }
-  
-  .option:hover {
-    background-color: #f0f0f0;
-  }
+}
+
+.option:hover {
+    background-color: #eaf4f5;
+}
   
