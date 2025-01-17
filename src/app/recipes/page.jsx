@@ -2,28 +2,54 @@
 
 "use client";
 
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import recipes from "@/src/data/recipes"; // Import the recipes data
 import CustomDropdown from "@/src/components/dropdown/dropdown"; 
 import styles from "@/src/styles/pages/recipes.module.css";
+import { FaSearch } from "react-icons/fa";
 
 export default function Recipes() {
-
-
+  // Dropdown menu 
   const [selectedTag, setSelectedTag] = useState('All Categories');
+  // Search bar
+  const [searchQuery, setSearchQuery] = useState(''); 
 
-  const filteredRecipes = selectedTag === "All Categories"
-    ? recipes // Show all recipes if "All Categories" is selected
-    : recipes.filter((recipe) =>
-        recipe.tags.some((tag) => tag.toLowerCase() === selectedTag.toLowerCase())
-      );
+  const filteredRecipes = recipes.filter((recipe) => {
+    const matchesTag = selectedTag === "All Categories" 
+    || recipe.tags.some((tag) => tag.toLowerCase() === selectedTag.toLowerCase());
+    
+    const matchesSearch = recipe.title.toLowerCase().includes(searchQuery.toLowerCase()) 
+    || recipe.description.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    return matchesTag && matchesSearch; // Filtered recipes should include query + tag
+  });
+
+  let filterText = "Showing all results";
+  if (selectedTag !== "All Categories" && searchQuery) {
+    filterText = `Showing results in category '${selectedTag}' that contain '${searchQuery}'`;
+  } else if (selectedTag !== "All Categories") {
+    filterText = `Showing results in category '${selectedTag}'`;
+  } else if (searchQuery) {
+    filterText = `Showing results that contain '${searchQuery}'`;
+  }
 
   return (
     <div className={styles.container}>
       <h1>Recipe List</h1>
 
-      <CustomDropdown selectedTag={selectedTag} setSelectedTag={setSelectedTag} />
+      <div className={styles.filterContainer}>
+        <input 
+          type="text" 
+          placeholder="Search recipes..." 
+          value={searchQuery} 
+          onChange={(e) => setSearchQuery(e.target.value)} 
+          className={styles.searchBar}
+        />
+        
+        <CustomDropdown selectedTag={selectedTag} setSelectedTag={setSelectedTag} />
+      </div>
+
+      <p className={styles.filterText}>{filterText}</p>
 
       <div>
         {filteredRecipes.map((recipe) => (
