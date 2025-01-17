@@ -6,7 +6,7 @@ export default function Loading() {
   return (
     <div className={styles.loaderContainer}>
       <img
-        src="/loading.gif" // Replace with the path to your GIF
+        src="/loading.gif"
         alt="Loading..."
         className={styles.loaderGif}
       />
