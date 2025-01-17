@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "@/src/styles/pages/not-found.module.css";
+import Button from '@mui/material/Button';
+import Image from 'next/image';
 
 const items = [
   { image: "/404/spilled-milk.png", 
@@ -35,22 +37,42 @@ export default function NotFound() {
     <div className={styles.container}>
       {currentItem && (
         <>
-          <img 
-            src={currentItem.image} 
-            alt="404" 
+          <Image
+            src={currentItem.image}
+            alt="404"
+            width={400} 
+            height={400} 
+            onLoadingComplete={handleImageLoad} 
             className={styles.image}
-            onLoad={handleImageLoad}
           />
           <p className={styles.message}>{currentItem.message}</p>
         </>
       )}
       {isLoaded && (
-        <button 
-          className={styles.button}
+        <Button 
+          variant="contained" 
+          sx={{
+            textTransform: 'none',
+            color: 'white',
+            backgroundColor: 'var(--primary-color)',
+            border: '3px solid var(--primary-color)',
+            borderRadius: '8px',
+            padding: '8px 16px',
+            fontSize: '16px',
+            fontWeight: 'bold',
+            width: 'auto',
+            margin: '24px auto 0',
+            transition: 'background-color 0.3s ease, border-color 0.3s ease',
+            '&:hover': {
+              backgroundColor: 'white',
+              border: '3px solid var(--primary-color)',
+              color: 'var(--primary-color)',
+            },
+          }}
           onClick={() => window.location.href = "/"}
         >
           Back to Home
-        </button>
+        </Button>
       )}
     </div>
   );
