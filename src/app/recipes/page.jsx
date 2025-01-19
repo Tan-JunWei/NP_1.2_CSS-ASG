@@ -2,11 +2,11 @@
 
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 import recipes from "@/src/data/recipes"; // Import the recipes data
-import CustomDropdown from "@/src/components/dropdown/dropdown"; 
+import CustomDropdown from "@/src/components/dropdown/dropdown";
 import styles from "@/src/styles/pages/recipes.module.css";
-import { FaSearch } from "react-icons/fa";
 
 export default function Recipes() {
   // Dropdown menu 
@@ -53,33 +53,38 @@ export default function Recipes() {
 
       <div>
         {filteredRecipes.map((recipe) => (
-          <div key={recipe.id} className={styles.recipeCard}>
-            <div className={styles.recipeText}>
-              <div className={styles.recipeDescription}>
-                <h2>{recipe.title}</h2>
-                <p>
-                  {recipe.description}
-                </p>
+          <Link
+            href={`/recipes/${recipe.title.toLowerCase().replace(/\s/g, "-")}`} // Create a URL slug from the recipe title
+            key={recipe.id}
+          >
+            <div key={recipe.id} className={styles.recipeCard}>
+              <div className={styles.recipeText}>
+                <div className={styles.recipeDescription}>
+                  <h2>{recipe.title}</h2>
+                  <p>
+                    {recipe.description}
+                  </p>
+                </div>
+
+                <div className={styles.tags}>
+                  {recipe.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className={`${styles.tag} ${styles[`tag-${tag.toLowerCase().replace(/\s/g, '-')}`]}`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              <div className={styles.tags}>
-                {recipe.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className={`${styles.tag} ${styles[`tag-${tag.toLowerCase().replace(/\s/g, '-')}`]}`}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <img
+                src={recipe.image}
+                alt={recipe.title}
+                className={styles.recipeImage}
+              />
             </div>
-
-            <img
-              src={recipe.image}
-              alt={recipe.title}
-              className={styles.recipeImage}
-            />
-          </div>
+        </Link>
         ))}
       </div>
     </div>
