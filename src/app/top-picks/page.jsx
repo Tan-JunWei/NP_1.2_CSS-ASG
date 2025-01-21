@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "@/src/styles/pages/top-picks.module.css";
 
 const Page = () => {
+  const API_KEY = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
   const columnCount = 5;
   const scrollSpeeds = [3, 2, 1.5, 2, 3];
   const imageFolder = "/top-picks";
@@ -61,7 +62,7 @@ const Page = () => {
       const res = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
-          Authorization: `Bearer YOUR_OPENAI_API_KEY`,
+          Authorization: `Bearer ${API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
