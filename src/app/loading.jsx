@@ -1,4 +1,5 @@
-// src/app/loading.js
+/* Loading animation done by: Ryan Low Chee Yang */
+
 import React from "react";
 import styles from "@/src/styles/pages/loading.module.css";
 

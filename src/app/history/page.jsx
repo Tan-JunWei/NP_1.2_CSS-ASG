@@ -1,3 +1,5 @@
+/* History page done by: Jo Hanson Mok */
+
 import styles from "@/src/styles/pages/history.module.css"
 
 export default function History() {
