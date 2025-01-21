@@ -1,3 +1,5 @@
+/* Individual Recipe page done by: Tan Jun Wei */
+
 import recipes from '@/src/data/recipes';
 import { notFound } from 'next/navigation';
 

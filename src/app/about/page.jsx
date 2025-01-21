@@ -1,4 +1,4 @@
-// About page, made by Ryan Tan :D
+/* About page done by: Ryan Tan Jia Jun */
 
 import Carousel from '@/src/components/image carousel/about_carousel';
 import Image from 'next/image';

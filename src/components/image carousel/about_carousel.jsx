@@ -1,10 +1,9 @@
-//Done by Ryan Tan. Commit history of this page bout to go crazy
+/* Image Carousel component done by: Ryan Tan Jia Jun */
+
 'use client';
 
 import { useRef, useEffect } from 'react';
-import styles from "@/src/components/image carousel/about_carousel.module.css"
-//! I have no idea what i'm doing.
-//swiper stuff
+import styles from "@/src/styles/about_carousel.module.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
 //css for swiper

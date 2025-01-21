@@ -1,3 +1,5 @@
+/* 404 Not Found page done by: Ryan Low Chee Yang & Tan Jun Wei */
+
 'use client'; 
 
 import React, { useEffect, useState } from "react";
