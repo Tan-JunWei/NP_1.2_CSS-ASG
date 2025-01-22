@@ -1,0 +1,68 @@
+/* Recipe gird CSS done by: Ryan Tan Jia Jun */
+
+
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-left: 25rem;
+    margin-right: 25rem;
+  }
+  
+  .recipeCard {
+    position: relative;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    transition: transform 0.3s;
+    text-decoration: none;
+  }
+  
+  .recipeCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.6); /* Adds a black shade with 60% opacity */
+    width: 100%;
+    height: 100%; /* Covers the entire card */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
+    text-align: center;
+    opacity: 1;
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: opacity 0.3s;
+  }
+  
+  .details {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s;
+  }
+  
+  .recipeCard:hover .details {
+    opacity: 1; /* Show on hover */
+  }
+  
+  
+  .info {
+    font-size: 14px;
+  }
+  
