@@ -5,6 +5,8 @@ const dishes = [
       id: 1,
       title: "Hainanese Chicken Rice",
       tags: ["Hard", "Chinese", "Hawker Favourites"],
+      image: "/food images/hainanese_chicken_rice.png", 
+      description: "Singapore's iconic dish featuring tender poached chicken served with fragrant rice. A must-try for all foodies!",
       ingredients: [
         "1 (4 pound) whole chicken",
         "3 cloves garlic",
@@ -26,13 +28,38 @@ const dishes = [
         "1 cucumber, thinly sliced",
         "2 fresh tomatoes, chopped"
       ], // Chicken Rice recipe: https://www.allrecipes.com/recipe/70667/singapore-chicken-rice
-      image: "/food images/hainanese_chicken_rice.png", 
-      description: "Singapore's iconic dish featuring tender poached chicken served with fragrant rice. A must-try for all foodies!"
+      calories: "970 kcal",
+      carbs: "103 g",
+      fat: "41 g",
+      protein: "45 g",
+      preptime: "20 mins",
+      cooktime: "40 mins",
+      totaltime: "1 hr",
+      servings: "5",
+      steps: [
+        "Bring a large pot of water to a boil.",
+        "Crush 3 cloves of garlic and 2 pieces of ginger, and place them into the cavity of the chicken.",
+        "Tie green onions into a knot, and place them into the chicken along with 1/2 teaspoon of salt.",
+        "Carefully submerge the chicken breast-side down into the boiling water.",
+        "Bring to a boil again, then cover the pot and remove from heat.",
+        "Let stand covered for 40 minutes, turning the chicken over halfway through.",
+        "While the chicken is cooking, heat vegetable oil and 1 tablespoon of sesame oil in a large saucepan over medium heat.",
+        "Fry shallots, ginger, and garlic in the oil until fragrant.",
+        "Add cilantro and rice to the saucepan, and cook, stirring until the rice is toasted.",
+        "Pour in chicken stock and season with salt. Bring to a boil.",
+        "Cover the saucepan and reduce heat to low. Simmer until rice is tender and steam holes appear in the surface of the rice, about 20 minutes.",
+        "When the chicken is cooked, remove it from the pot and place under cold running water to tighten the skin.",
+        "Rub the chicken skin with sesame oil and chop the chicken into pieces.",
+        "Place the chicken pieces on a serving platter and garnish with cilantro, green onion, cucumber, and tomato.",
+        "Serve the chicken with the cooked rice."
+      ]
   },
   {
       id: 2,
       title: "Char Kway Teow",
       tags: ["Medium", "Chinese", "Hawker Favourites", "Seafood"],
+      image: "/food images/char_kway_teow.jpg", 
+      description: "A stir-fried flat noodle dish, featuring a savory-sweet blend of soy sauce, garlic, and lard, traditionally served on betel or banana leaves.",
       ingredients: [
         "2 tablespoons (30g) vegetable oil, plus 1 extra tablespoon",
         "4 garlic cloves, roughly chopped",
@@ -55,13 +82,41 @@ const dishes = [
         "1 teaspoon (5g) sugar",
         "¼ teaspoon (1g) ground black pepper"
       ], // Char Kway Teow recipe: https://www.marionskitchen.com/char-kway-teow
-      image: "/food images/char_kway_teow.jpg", 
-      description: "A stir-fried flat noodle dish, featuring a savory-sweet blend of soy sauce, garlic, and lard, traditionally served on betel or banana leaves."
+      calories: "744 kcal", // Nutrition facts: https://www.healthxchange.sg/food-nutrition/food-tips/best-worst-singapore-hawker-chinese-food-dim-sum-char-kway-teow
+      carbs: "76 g",
+      fat: "38 g",
+      protein: "23 g",
+      preptime: "10 mins",
+      cooktime: "30 mins",
+      totaltime: "40 mins",
+      servings: "2",
+      steps: [
+        "Soak the dried red chillies in hot water for 15 minutes or until softened.",
+        "Use tongs to remove the chillies from the soaking liquid, reserving the liquid in case it's needed for blending.",
+        "Roughly chop the softened chillies and place them in the bowl of a food processor.",
+        "Add the fresh chillies, shallots, and salt to the food processor. Blend until smooth, adding a tablespoon of the chilli soaking liquid if needed.",
+        "Heat 4 tablespoons of vegetable oil in a frying pan over medium heat. Add the chilli paste and cook, stirring, for about 5 minutes.",
+        "Transfer the chilli paste to a jar and set aside.",
+        "Mix the stir-fry sauce ingredients in a small bowl and set aside for later.",
+        "Heat 2 tablespoons of vegetable oil in a wok or large frying pan over high heat.",
+        "Add the garlic and stir-fry for 5 seconds.",
+        "Add the Chinese sausage and stir-fry for another 10 seconds.",
+        "Add the fishcakes and prawns, stirring until the prawns are almost cooked.",
+        "Add 2 heaped tablespoons (or to taste) of the chilli paste. Toss to combine.",
+        "Push the ingredients out to the sides of the pan, creating space in the center.",
+        "Add 1 tablespoon of vegetable oil to the center of the pan. Pour in the eggs and spread them out using a spatula.",
+        "Once the eggs are set, toss them around with the other ingredients.",
+        "Add the noodles and the stir-fry sauce. Stir-fry until well combined.",
+        "Toss through the bean shoots and Chinese chives.",
+        "Remove from heat and serve immediately."
+      ]
   },
   {
       id: 3,
       title: "Nasi Lemak",
       tags: ["Easy", "Malaysian", "Hawker Favourites", "Spicy"],
+      image: "/food images/nasi_lemak.png", 
+      description: "A fragrant coconut rice dish served with sambal, crispy anchovies, peanuts, and accompaniments like fried chicken or egg.",
       ingredients: [
         "1½ cups (375g) jasmine rice",
         "1½ cups (375g) coconut milk",
@@ -81,13 +136,39 @@ const dishes = [
         "1 tablespoon (15g) brown sugar",
         "1 tablespoon (15g) tamarind puree"
       ], // Nasi Lemak recipe: https://www.marionskitchen.com/nasi-lemak/
-      image: "/food images/nasi_lemak.png", 
-      description: "A fragrant coconut rice dish served with sambal, crispy anchovies, peanuts, and accompaniments like fried chicken or egg."
+      calories: "494 kcal", // Nutrition facts: https://www.healthxchange.sg/food-nutrition/food-tips/best-worst-singapore-hawker-malay-breakfast-foods-nasi-lemak-mee-siam-soto
+      carbs: "80 g",
+      fat: "14 g",
+      protein: "13 g",
+      preptime: "20 mins",
+      cooktime: "50 mins",
+      totaltime: "1 hr 10 mins",
+      servings: "4",
+      steps: [
+        "Add the rice, coconut milk, and lemongrass into a saucepan.",
+        "Settle the rice evenly into the bottom of the saucepan.",
+        "Place your finger on top of the rice and add enough water so that the liquid comes up to your first knuckle.",
+        "Place the saucepan over medium-high heat and simmer for 10 minutes or until most of the liquid has evaporated.",
+        "Place a lid on the saucepan, reduce the heat to low, and cook for another 2 minutes.",
+        "Turn off the heat and allow the rice to sit, covered, for 10 minutes.",
+        "Soak the dried chillies in hot water for 15 minutes to soften. Drain the chillies, squeezing out the excess liquid, and reserve the soaking liquid.",
+        "Place the soaked chillies in the bowl of a small food processor along with the fresh chilli, shallot, garlic, and shrimp paste. Process until a coarse paste forms.",
+        "Heat the oil in a wok over high heat. Add the anchovies and cook, stirring often, for 5 minutes or until crisp.",
+        "Use a slotted spoon to transfer the anchovies to a plate lined with paper towel.",
+        "Add the onion to the pan and cook, stirring occasionally, for 5 minutes. Transfer to the plate with the anchovies.",
+        "Add the chilli mixture to the wok and reduce heat to low. Cook, stirring often, for 5 minutes or until the red oil rises to the surface.",
+        "Add the sugar, tamarind, and 2 tablespoons of the chilli soaking liquid. Simmer for 5 minutes or until reduced.",
+        "Stir in the anchovies and onion. Transfer the sambal to a bowl.",
+        "When ready to serve, use a fork to fluff up the coconut rice.",
+        "Serve the rice with the spicy ikan bilis sambal, peanuts, egg, cucumber, and ayam goreng (if using)."
+      ]
   },
   {
       id: 4,
       title: "Laksa",
       tags: ["Medium", "Peranakan", "Hawker Favourites", "Seafood", "Spicy"],
+      image: "/food images/laksa.jpg", 
+      description: "A popular soup noodle dish that harmoniously fuses the bold spices of Malay cuisine with the soulful flavors of Chinese tradition.",
       ingredients: [
         "4 king prawns, de-shelled",
         "½ tablespoon (8g) palm sugar",
@@ -117,13 +198,40 @@ const dishes = [
         "½ bunch laksa leaves",
         "1 tablespoon (15g) chilli paste"
       ], // Laksa recipe: https://tasty.co/recipe/singapore-laksa
-      image: "/food images/laksa.jpg", 
-      description: "A popular soup noodle dish that harmoniously fuses the bold spices of Malay cuisine with the soulful flavors of Chinese tradition."
+      calories: "613 kcal", // Nutrition facts: https://www.nutritionix.com/food/laksa
+      carbs: "64 g",
+      fat: "31 g",
+      protein: "23 g",
+      preptime: "30 mins",
+      cooktime: "1 hr 13 mins",
+      totaltime: "1 hr 43 mins",
+      servings: "2",
+      steps: [
+        "Remove the heads and shells from prawns and set aside in a bowl.",
+        "Devein the prawn meat and set it aside in a separate bowl.",
+        "Add cooking oil to a large saucepan over medium-high heat.",
+        "Add prawn heads and shells to the pan, then stir for 5 minutes, crushing the heads to release the flavor.",
+        "Add water and chicken stock, then simmer for 45 minutes to allow the stock to reduce.",
+        "Remove the prawn shells and strain the broth into a bowl through a sieve.",
+        "In a food processor, add dried chilli, red chilli, dried shrimp, shrimp paste (belacan), garlic, shallot, ginger, blue ginger (galangal), turmeric root, candle nuts, and lemongrass stalk.",
+        "Pulse the ingredients for 5 minutes until a thick paste forms.",
+        "Add cooking oil to a large saucepan and heat over medium heat.",
+        "Add the laksa paste and cook for 5 minutes until fragrant.",
+        "Add palm sugar, fish sauce, coconut milk, and prawn stock, stirring to combine.",
+        "Simmer the mixture for 15 minutes, then add the prawns and tofu puffs.",
+        "Cook for an additional 3 minutes to finish.",
+        "To serve, add vermicelli noodles to a bowl.",
+        "Top the noodles with bean sprouts, cockles, and slices of fish cake.",
+        "Ladle in scoops of the laksa, making sure to include tofu puffs and prawns.",
+        "Top with a handful of finely chopped laksa leaves and optional chilli paste."
+      ]
   },
   {
     id: 5,
     title: "Kaya Toast with Soft-Boiled Eggs",
     tags: ["Easy", "Hawker Favourites"],
+    image: "/food images/sg_breakfast.png", 
+    description: "A popular breakfast dish in Singapore consisting of crispy toasted bread with butter and kaya (coconut jam), commonly served with soft-boiled eggs and coffee.",
     ingredients: [
       "6 fresh eggs at room temperature",
       "6 cups (1500ml) water",
@@ -132,8 +240,14 @@ const dishes = [
       "Kaya spread (Coconut-Pandan-Egg Jam) - as needed",
       "Dark Soy Sauce, White Pepper Powder - as needed"
     ], // Kaya toast with soft-boiled eggs recipe: https://www.recipesaresimple.com/recipe/half-boiled-eggs-and-toast/
-    image: "/food images/sg_breakfast.png", 
-    description: "A popular breakfast dish in Singapore consisting of crispy toasted bread with butter and kaya (coconut jam), commonly served with soft-boiled eggs and coffee."
+    calories: "561 kcal", // Nutrition facts: https://www.healthguru.sg/learn-about-food/nutrition-info-kaya-toast-kopi-and-eggs-breakfast-set/
+    carbs: "59.2 g",
+    fat: "39 g",
+    protein: "15.7 g",
+    preptime: "11 mins",
+    cooktime: "9 mins",
+    totaltime: "20 mins",
+    servings: "3",
   },
   {
     id: 6,
