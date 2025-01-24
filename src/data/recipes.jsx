@@ -23,7 +23,7 @@ const dishes = [
         "4 cups chicken stock",
         "½ teaspoon (3g) salt",
         "3 cups (250g) long grain rice, rinsed and drained",
-        "cilantro sprigs",
+        "Cilantro sprigs for garnish",
         "1 sliced green onion",
         "1 cucumber, thinly sliced",
         "2 fresh tomatoes, chopped"
