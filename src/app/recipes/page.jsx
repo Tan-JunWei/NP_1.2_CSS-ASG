@@ -56,6 +56,10 @@ export default function Recipes() {
           <Link
             href={`/recipes/${recipe.title.toLowerCase().replace(/\s/g, "-")}`} // Create a URL slug from the recipe title
             key={recipe.id}
+            style={{ 
+              textDecoration: 'none',
+              color: 'inherit'
+            }}
           >
             <div key={recipe.id} className={styles.recipeCard}>
               <div className={styles.recipeText}>

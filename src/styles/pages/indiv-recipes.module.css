@@ -1,0 +1,208 @@
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    display: block;
+    margin: 0 auto 1.5rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.sectionHeader {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--highlight-color);
+    padding-bottom: 0.5rem;
+}
+
+.generalInfo {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 0.5rem 0;
+}
+
+.tags div {
+    display: inline-block;
+    background-color: var(--highlight-color);
+    color: #ffffff;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    margin: 0.2rem;
+    border-radius: 4px;
+}
+
+/* Ingredients styling */
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ingredients div{
+    font-size: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 2px solid #e6e8e8;
+    display: flex;
+    align-items: center;
+}
+
+.ingredients div:last-child {
+    border-bottom: none;
+}
+
+.ingredientItem{
+    display: flex;
+    align-items: baseline;
+}
+
+.ingredientNumber{
+    min-width: 30px;
+    text-align: right;
+    margin-right: 20px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.ingredientText{
+    color: var(--primary-font-color);
+    flex-grow: 1;
+}
+
+.nutritionalFacts {
+    margin-top: 20px; 
+}
+
+.nutritionGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; 
+}
+
+.nutritionItem {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0; 
+}
+
+.nutritionInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nutritionLabel {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nutritionValue {
+    color: var(--primary-font-color);
+}
+
+.progressBar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: visible;
+}
+  
+.progressFill {
+    height: 100%;
+    width: var(--progress-width);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    top: -25px; 
+    right: 0;
+    transform: translateX(50%); 
+    background: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+  
+.nutritionItem:hover .tooltip {
+    opacity: 1; 
+}
+
+.timeSection {
+    margin-top: 20px; /* Adjust spacing as needed */
+}
+
+.timeGrid {
+    display: flex;
+    gap: 20px; /* Spacing between items */
+}
+
+.timeItem {
+    text-align: center;
+}
+
+.timeLabel {
+    font-size: 14px;
+    color: #666;
+    display: block; /* Ensure the label is on its own line */
+}
+
+.timeValue {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.steps {
+    margin-top: 1.5rem;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: #f4f4f4;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.step-index {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--highlight-color);
+    margin-right: 0.5rem;
+}
+
+.step-item span:last-child {
+    flex: 1;
+    font-size: 1rem;
+}
