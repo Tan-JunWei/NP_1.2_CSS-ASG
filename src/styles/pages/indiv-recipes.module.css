@@ -29,12 +29,13 @@
 }
 
 .sectionHeader {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    position: relative;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid var(--highlight-color);
-    padding-bottom: 0.5rem;
 }
 
 .generalInfo {
@@ -106,6 +107,7 @@
     gap: 20px;
     padding: 10px;
     border-bottom: 1px solid #e0e0e0; 
+    transition: all 0.3s ease;
 }
 
 .nutritionInfo{
@@ -143,7 +145,7 @@
     top: -25px; 
     right: 0;
     transform: translateX(50%); 
-    background: #333;
+    background: rgb(89, 89, 89, 0.85);
     color: #fff;
     padding: 4px 8px;
     border-radius: 4px;
@@ -156,29 +158,8 @@
     opacity: 1; 
 }
 
-.timeSection {
-    margin-top: 20px; /* Adjust spacing as needed */
-}
-
-.timeGrid {
-    display: flex;
-    gap: 20px; /* Spacing between items */
-}
-
-.timeItem {
-    text-align: center;
-}
-
-.timeLabel {
-    font-size: 14px;
-    color: #666;
-    display: block; /* Ensure the label is on its own line */
-}
-
-.timeValue {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
+.nutritionItem:hover{
+    transform: translateY(-3px);
 }
 
 .steps {
