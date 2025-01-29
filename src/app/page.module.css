@@ -3,17 +3,39 @@
 }
 
 
-.rectitle{
-    margin-left: 25rem;
-    display: flex;
-    font-family:var(--primary-font);
-    font-size: 2rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.2rem;
+.rectitle {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.2rem;
+  text-align: center;
+  max-width: 50%; /* Adjust based on preference */
 }
 
-.line{
-    margin-left: 25rem;
-    margin-right: 25rem;
+/* Underline or separator */
+.line {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; 
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .rectitle {
+      font-size: 1.5rem;
+      max-width: 90%;
+  }
+  
+  .line {
+      width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .rectitle {
+      font-size: 1.2rem;
+  }
+}
