@@ -9,7 +9,7 @@
     --secondary-font: 'Lato', 'Arial';
     --primary-color: #1d6b6e; 
     /* --secondary-color: ; */
-    --primary-font-color: #474747; /* for color of any text, unless it's for a specific purpose/look */
+    --primary-font-color: #535353; /* for color of any text, unless it's for a specific purpose/look */
 }
 
 * {
