@@ -1,6 +1,7 @@
 import recipes from '@/src/data/recipes';
 import { notFound } from 'next/navigation';
 import styles from '@/src/styles/pages/indiv-recipes.module.css';
+import Image from 'next/image';
 
 export default async function RecipeInfo({ params }) {
   const { recipe } = await params; // Get the recipe name from the URL
@@ -110,22 +111,49 @@ export default async function RecipeInfo({ params }) {
         </div>
       </div>
 
+      <h3 className={styles.sectionHeader}>Time</h3>
       <div className={styles.timeSection}>
-        <h3 className={styles.sectionHeader}>Time</h3>
-        <div className={styles.timeGrid}>
-          <div className={styles.timeItem}>
-            <span className={styles.timeLabel}>Prep Time</span>
-            <span className={styles.timeValue}>15 mins</span>
-          </div>
-          <div className={styles.timeItem}>
-            <span className={styles.timeLabel}>Cook Time</span>
-            <span className={styles.timeValue}>30 mins</span>
-          </div>
-          <div className={styles.timeItem}>
-            <span className={styles.timeLabel}>Total Time</span>
-            <span className={styles.timeValue}>45 mins</span>
-          </div>
+      <div className={styles.timeCard}>
+        <Image
+          src="/individualrecipes/preparation.png"
+          alt="Prep Time Icon"
+          width={50}
+          height={50}
+          className={styles.icon}
+        />
+        <div className={styles.timeInfo}>
+          <span className={styles.timeLabel}>Prep time</span>
+          <span className={styles.timeValue}>{matchedRecipe.preptime}</span>
         </div>
+      </div>
+
+      <div className={styles.timeCard}>
+        <Image
+          src="/individualrecipes/cooking.png"
+          alt="Cooking Time Icon"
+          width={50}
+          height={50}
+          className={styles.icon}
+        />
+        <div className={styles.timeInfo}>
+          <span className={styles.timeLabel}>Cook time</span>
+          <span className={styles.timeValue}>{matchedRecipe.cooktime}</span>
+        </div>
+      </div>
+
+      <div className={styles.timeCard}>
+        <Image
+          src="/individualrecipes/total.png"
+          alt="Total Time Icon"
+          width={50}
+          height={50}
+          className={styles.icon}
+        />
+        <div className={styles.timeInfo}>
+          <span className={styles.timeLabel}>Total time</span>
+          <span className={styles.timeValue}>{matchedRecipe.totaltime}</span>
+        </div>
+      </div>
       </div>
 
       <h3 className={styles.sectionHeader}>Ingredients</h3>

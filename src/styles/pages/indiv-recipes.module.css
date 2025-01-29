@@ -23,18 +23,18 @@
 }
 
 .description {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
     text-align: justify;
+    color: var(--primary-font-color);
 }
 
 .sectionHeader {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--highlight-color);
-    padding-bottom: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    position: relative;
+    margin: 3rem 0 2rem 0;
 }
 
 .generalInfo {
@@ -62,7 +62,7 @@
 
 .ingredients div{
     font-size: 1rem;
-    padding: 0.6rem 0;
+    padding: 0.6rem;
     border-bottom: 2px solid #e6e8e8;
     display: flex;
     align-items: center;
@@ -104,8 +104,12 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
+    overflow: visible;
     padding: 10px;
-    border-bottom: 1px solid #e0e0e0; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 .nutritionInfo{
@@ -120,6 +124,7 @@
 
 .nutritionValue {
     color: var(--primary-font-color);
+    font-weight: 600;
 }
 
 .progressBar {
@@ -143,7 +148,7 @@
     top: -25px; 
     right: 0;
     transform: translateX(50%); 
-    background: #333;
+    background: rgb(89, 89, 89, 0.85);
     color: #fff;
     padding: 4px 8px;
     border-radius: 4px;
@@ -156,30 +161,80 @@
     opacity: 1; 
 }
 
+.nutritionItem:hover{
+    transform: translateY(-3px);
+    border: 1px solid #959595; 
+}
+
 .timeSection {
-    margin-top: 20px; /* Adjust spacing as needed */
-}
-
-.timeGrid {
     display: flex;
-    gap: 20px; /* Spacing between items */
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    align-items: stretch;
+    width: 100%;
 }
 
-.timeItem {
-    text-align: center;
+.timeCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    flex: 1 1 0; /* Allow shrinking to fit in one row */
+    min-width: 0; 
+    max-width: 50%;
+    height: 100%;
+}
+
+.timeCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.timeCard:hover .icon {
+    background-color: #e5f6f6;
+}
+
+.icon {
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.timeInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .timeLabel {
-    font-size: 14px;
-    color: #666;
-    display: block; /* Ensure the label is on its own line */
+    font-size: 0.9rem;
+    color: var(--primary-font-color);
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .timeValue {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 1rem;
     color: #333;
+    font-weight: 700;
 }
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+    .timeCard {
+        flex: 1 1 auto; /* Adjust to fit */
+    }
+    .timeIcon{
+        width: 30px;
+        height: 30px;
+    }
+}
+
 
 .steps {
     margin-top: 1.5rem;
