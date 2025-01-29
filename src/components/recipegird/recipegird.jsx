@@ -1,6 +1,7 @@
 /* Recipe gird done by: Ryan Tan Jia Jun */
 import React from 'react';
 import styles from "@/src/styles/recipegird.module.css";
+import { height } from '@mui/system';
 
 
 
@@ -41,9 +42,10 @@ const recipes = [
 
 const RecipeGrid = () => {
     return (
+      <div className={styles.items}>
       <div className={styles.gridContainer}>
         {recipes.map((recipe, index) => (
-          <a href={recipe.link} key={index} className={styles.recipeCard} style={{ backgroundImage: `url(${recipe.image})` }}>
+          <a href={recipe.link} key={index} className={styles.recipeCard} style={{ backgroundImage: `url(${recipe.image})`}}>
             <div className={styles.overlay}>
               <h2 className={styles.title}>{recipe.title}</h2>
               <div className={styles.details}>
@@ -54,6 +56,7 @@ const RecipeGrid = () => {
             </div>
           </a>
         ))}
+      </div>
       </div>
     );
   };
