@@ -1,5 +1,3 @@
-/* 'Top Picks' page done by: Ryan Low Chee Yang */
-
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -30,15 +28,67 @@ const Page = () => {
     "wanton_mee.jpg",
   ].map((filename) => `${imageFolder}/${filename}`);
 
-  const [shuffledImages, setShuffledImages] = useState(images);
+  const [shuffledImages, setShuffledImages] = useState([]);
   const [selectedImages, setSelectedImages] = useState([]);
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
 
   const columnsRef = useRef([]);
   const scrollVelocities = useRef(Array(columnCount).fill(0));
   const isScrolling = useRef(false);
+
+  // Shuffle images on load
+  useEffect(() => {
+    const shuffled = [...images].sort(() => Math.random() - 0.5);
+    setShuffledImages(shuffled);
+  }, []);
+
+  // Smooth scrolling logic
+  useEffect(() => {
+    const animateScroll = () => {
+      let active = false;
+      columnsRef.current.forEach((column, index) => {
+        if (column && Math.abs(scrollVelocities.current[index]) > 0.1) {
+          active = true;
+          scrollVelocities.current[index] *= 0.98; // Smooth decay
+          column.scrollTop += scrollVelocities.current[index];
+
+          // Reset scrolling at boundaries
+          if (column.scrollTop + column.clientHeight >= column.scrollHeight) {
+            column.scrollTop = 0;
+          } else if (column.scrollTop <= 0) {
+            column.scrollTop = column.scrollHeight;
+          }
+        }
+      });
+
+      if (active) {
+        requestAnimationFrame(animateScroll);
+      } else {
+        isScrolling.current = false;
+      }
+    };
+
+    const handleScroll = (e) => {
+      e.preventDefault();
+      const scrollDirection = e.deltaY > 0 ? 1 : -1;
+      columnsRef.current.forEach((_, index) => {
+        if (columnsRef.current[index]) {
+          scrollVelocities.current[index] += scrollDirection * scrollSpeeds[index];
+        }
+      });
+
+      if (!isScrolling.current) {
+        isScrolling.current = true;
+        animateScroll();
+      }
+    };
+
+    window.addEventListener("wheel", handleScroll, { passive: false });
+    return () => window.removeEventListener("wheel", handleScroll);
+  }, []);
 
   const selectImage = (image) => {
     if (selectedImages.length < 3 && !selectedImages.includes(image)) {
@@ -50,15 +100,16 @@ const Page = () => {
     setSelectedImages(selectedImages.filter((img) => img !== image));
   };
 
-  const askChatGPT = async () => {
+  const getRecommendations = async () => {
     if (selectedImages.length !== 3) {
-      alert("Please select exactly 3 images.");
+      alert("Please select exactly 3 dishes.");
       return;
     }
 
     setLoading(true);
     setError(null);
     setResponse(null);
+    setShowPopup(false);
 
     try {
       const res = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -79,19 +130,17 @@ const Page = () => {
               role: "user",
               content: `Here are the 3 selected dishes: ${selectedImages
                 .map((img) => img.replace(".jpg", "").replace("_", " "))
-                .join(", ")}. Please provide a review and suggest one additional dish.`,
+                .join(", ")}.`,
             },
           ],
         }),
       });
 
-      if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.error?.message || "Failed to call OpenAI API");
-      }
+      if (!res.ok) throw new Error("Failed to fetch recommendations.");
 
       const data = await res.json();
       setResponse(data.choices[0].message.content);
+      setShowPopup(true);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -99,55 +148,7 @@ const Page = () => {
     }
   };
 
-  useEffect(() => {
-    const shuffled = [...images].sort(() => Math.random() - 0.5);
-    setShuffledImages(shuffled);
-  }, []);
-
-  useEffect(() => {
-    const animateScroll = () => {
-      let active = false;
-
-      columnsRef.current.forEach((column, index) => {
-        if (column && Math.abs(scrollVelocities.current[index]) > 0.1) {
-          active = true;
-          scrollVelocities.current[index] *= 0.95;
-          column.scrollTop += scrollVelocities.current[index];
-
-          if (column.scrollTop + column.clientHeight >= column.scrollHeight) {
-            column.scrollTop = 0;
-          } else if (column.scrollTop <= 0) {
-            column.scrollTop = column.scrollHeight;
-          }
-        }
-      });
-
-      if (active) {
-        requestAnimationFrame(animateScroll);
-      } else {
-        isScrolling.current = false;
-      }
-    };
-
-    const handleScroll = (e) => {
-      e.preventDefault();
-      const scrollDirection = e.deltaY > 0 ? 1 : -1;
-
-      columnsRef.current.forEach((_, index) => {
-        if (columnsRef.current[index]) {
-          scrollVelocities.current[index] += scrollDirection * scrollSpeeds[index] * 5;
-        }
-      });
-
-      if (!isScrolling.current) {
-        isScrolling.current = true;
-        animateScroll();
-      }
-    };
-
-    window.addEventListener("wheel", handleScroll, { passive: false });
-    return () => window.removeEventListener("wheel", handleScroll);
-  }, []);
+  const closePopup = () => setShowPopup(false);
 
   return (
     <div className={styles.container}>
@@ -170,27 +171,43 @@ const Page = () => {
         ))}
       </div>
 
-      <div className={styles.cardHolder}>
-        <h3>Your Selection (3 Max):</h3>
+      <div className={styles.selectionPanel}>
+        <h3>Your Selection (3 Required):</h3>
         <div className={styles.selectedImages}>
           {selectedImages.map((image, index) => (
             <div key={index} className={styles.card}>
-              <img src={image} alt={`Selected ${index}`} />
-              <button onClick={() => removeImage(image)}>Remove</button>
+              <img
+                src={image}
+                alt={`Selected ${index}`}
+                onClick={() => removeImage(image)}
+              />
             </div>
           ))}
         </div>
-        <button onClick={askChatGPT} disabled={loading || selectedImages.length !== 3}>
-          {loading ? "Loading..." : "Ask ChatGPT"}
+        <button
+          className={styles.recommendationButton}
+          onClick={getRecommendations}
+          disabled={loading || selectedImages.length !== 3}
+        >
+          {loading ? "Analyzing..." : "Get Recommendations"}
         </button>
       </div>
 
-      {response && (
-        <div className={styles.response}>
-          <h3>ChatGPT's Response:</h3>
-          <p>{response}</p>
+      {showPopup && (
+        <div>
+          <div className={styles.popupOverlay} onClick={closePopup}></div>
+          <div className={styles.popupContent}>
+            <h3>🍽️ Recommendations For You</h3>
+            <div className={styles.responseText}>
+              {response}
+            </div>
+            <button className={styles.closeButton} onClick={closePopup}>
+              Close
+            </button>
+          </div>
         </div>
       )}
+
       {error && <div className={styles.error}>Error: {error}</div>}
     </div>
   );
