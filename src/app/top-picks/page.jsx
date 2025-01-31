@@ -199,7 +199,33 @@ const Page = () => {
           <div className={styles.popupContent}>
             <h3>🍽️ Recommendations For You</h3>
             <div className={styles.responseText}>
-              {response}
+              {response && (
+                <>
+                  <div className={styles.dishList}>
+                    {response.split("\n").map((line, index) => {
+                      if (line.match(/^\d+\.\*\*/)) {
+                        const [title, ...descParts] = line.replace(/^\d+\.\*\*/, "").split(/-/);
+                        return (
+                          <div key={index} className={styles.dishItem}>
+                            <h4 className={styles.dishTitle}>{title.trim()}</h4>
+                            <p className={styles.dishDescription}>{descParts.join(" ").trim()}</p>
+                          </div>
+                        );
+                      }
+                      if (line.includes("recommend trying")) {
+                        return (
+                          <div key={index} className={styles.recommendationBox}>
+                            <p className={styles.recommendationText}>
+                              {line.replace(/\*\*/g, "").replace("I recommend trying", "⭐ We Recommend:")}
+                            </p>
+                          </div>
+                        );
+                      }
+                      return <p key={index} className={styles.generalText}>{line}</p>;
+                    })}
+                  </div>
+                </>
+              )}
             </div>
             <button className={styles.closeButton} onClick={closePopup}>
               Close

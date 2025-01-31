@@ -14,6 +14,7 @@
   width: 100%;
   height: 100%;
   overflow-y: hidden;
+  margin-bottom: 200px; /* Add space for the selection panel */
 }
 
 .column {
@@ -47,7 +48,7 @@
 
 .selectionPanel {
   position: absolute;
-  bottom: 100px; /* Adjusted to move it higher */
+  bottom: 150px; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.95);
@@ -132,6 +133,55 @@
   max-height: 60vh;
   overflow-y: auto;
   padding-right: 1rem;
+}
+
+.introText {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.dishList {
+  margin: 1.5rem 0;
+}
+
+.dishItem {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #6a11cb;
+}
+
+.dishTitle {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.dishDescription {
+  margin: 0;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.recommendationBox {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.recommendationText {
+  margin: 0;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.generalText {
+  margin: 0.5rem 0;
 }
 
 .closeButton {
