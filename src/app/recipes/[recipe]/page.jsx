@@ -1,3 +1,5 @@
+/* Responsive individual recipe page done by: Tan Jun Wei */
+
 import recipes from '@/src/data/recipes';
 import { notFound } from 'next/navigation';
 import styles from '@/src/styles/pages/indiv-recipes.module.css';
@@ -113,68 +115,75 @@ export default async function RecipeInfo({ params }) {
 
       <h3 className={styles.sectionHeader}>Time</h3>
       <div className={styles.timeSection}>
-      <div className={styles.timeCard}>
-        <Image
-          src="/individualrecipes/preparation.png"
-          alt="Prep Time Icon"
-          width={50}
-          height={50}
-          className={styles.icon}
-        />
-        <div className={styles.timeInfo}>
-          <span className={styles.timeLabel}>Prep time</span>
-          <span className={styles.timeValue}>{matchedRecipe.preptime}</span>
-        </div>
-      </div>
-
-      <div className={styles.timeCard}>
-        <Image
-          src="/individualrecipes/cooking.png"
-          alt="Cooking Time Icon"
-          width={50}
-          height={50}
-          className={styles.icon}
-        />
-        <div className={styles.timeInfo}>
-          <span className={styles.timeLabel}>Cook time</span>
-          <span className={styles.timeValue}>{matchedRecipe.cooktime}</span>
-        </div>
-      </div>
-
-      <div className={styles.timeCard}>
-        <Image
-          src="/individualrecipes/total.png"
-          alt="Total Time Icon"
-          width={50}
-          height={50}
-          className={styles.icon}
-        />
-        <div className={styles.timeInfo}>
-          <span className={styles.timeLabel}>Total time</span>
-          <span className={styles.timeValue}>{matchedRecipe.totaltime}</span>
-        </div>
-      </div>
-      </div>
-
-      <h3 className={styles.sectionHeader}>Ingredients</h3>
-      <div className={styles.ingredients}>
-        {matchedRecipe.ingredients.map((ingredient, index) => (
-          <div key={index} className={styles.ingredientItem}>
-            <span className={styles.ingredientNumber}>{index + 1}.</span>
-            <span className={styles.ingredientText}>{ingredient}</span>
+        <div className={styles.timeCard}>
+          <div className={`${styles.spin} ${styles['spin-image-container']}`}>
+            <Image
+              src="/individualrecipes/preparation.jpg"
+              alt="Preparation Time Icon"
+              width={60}
+              height={60}
+              className={styles.icon}
+            />
           </div>
-        ))}
+          <div className={styles.timeInfo}>
+            <span className={styles.timeLabel}>Prep time</span>
+            <span className={styles.timeValue}>{matchedRecipe.preptime}</span>
+          </div>
+        </div>
+
+        <div className={styles.timeCard}>
+          <div className={`${styles.spin} ${styles['spin-image-container']}`}>
+              <Image
+                src="/individualrecipes/cooking.jpg"
+                alt="Cooking Time Icon"
+                width={60}
+                height={60}
+                className={styles.icon}
+              />
+          </div>
+          <div className={styles.timeInfo}>
+            <span className={styles.timeLabel}>Cook time</span>
+            <span className={styles.timeValue}>{matchedRecipe.cooktime}</span>
+          </div>
+        </div>
+
+        <div className={styles.timeCard}>
+          <div className={`${styles.spin} ${styles['spin-image-container']}`}>
+            <Image
+              src="/individualrecipes/total.jpg"
+              alt="Total Time Icon"
+              width={60}
+              height={60}
+              className={styles.icon}
+            />
+          </div>
+          <div className={styles.timeInfo}>
+            <span className={styles.timeLabel}>Total time</span>
+            <span className={styles.timeValue}>{matchedRecipe.totaltime}</span>
+          </div>
+        </div>
       </div>
 
-      <h3 className={styles.sectionHeader}>Steps</h3>
-      <div className={styles.steps}>
-        {matchedRecipe.steps.map((step, index) => (
-          <div className={styles.stepItem} key={index}>
-            <span className={styles.stepIndex}>{index + 1}.</span>
-            <span>{step}</span>
-          </div>
-        ))}
-      </div>
+        <h3 className={styles.sectionHeader}>Ingredients</h3>
+        <div className={styles.ingredients}>
+          {matchedRecipe.ingredients.map((ingredient, index) => (
+            <div key={index} className={styles.ingredientItem}>
+              <input type="checkbox" id={`ingredient-${index}`} className={styles.checkboxInput} />
+              <span className={styles.ingredientNumber}>{index + 1}.</span>
+              <span className={styles.ingredientText}>{ingredient}</span>
+            </div>
+          ))}
+        </div>
+
+        <h3 className={styles.sectionHeader}>Steps</h3>
+        <div className={styles.steps}>
+          {matchedRecipe.steps.map((step, index) => (
+            <div className={styles.stepItem} key={index}>
+              <span className={styles.stepIndex}>{index + 1}.</span>
+              <span className={styles.stepText}>{step}</span>
+            </div>
+          ))}
+        </div>
     </div>
   );
 }
