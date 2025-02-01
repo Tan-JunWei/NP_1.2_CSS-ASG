@@ -30,12 +30,23 @@ export default async function RecipeInfo({ params }) {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{matchedRecipe.title}</h1>
-      <img className={styles.image} src={matchedRecipe.image} alt={matchedRecipe.title} />
+      <Image
+        src={matchedRecipe.indivImage}
+        alt={matchedRecipe.title}
+        width={1600}
+        height={900}
+        className={styles.image}
+      />
+
+      <div className={styles.overlay}>
+        <h1 className={styles.title}>{matchedRecipe.title}</h1>
+      </div>
+
       <p className={styles.longDescription}>{matchedRecipe.longDescription}</p>
 
       <div className={styles.nutritionalFacts}>
-        <h3 className={styles.sectionHeader}>Nutritional Facts</h3>
+        <h3 className={`${styles.sectionHeader} ${styles.nutritionHeader}`}>Nutritional Facts</h3>
+        <p className={styles.dailyValue}>Based on recommended daily intake for an average adult</p>
         <div className={styles.nutritionGrid}>
 
           <div className={styles.nutritionItem}>

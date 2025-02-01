@@ -8,19 +8,11 @@
     box-shadow: var(--box-shadow);
 }
 
-.title {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
 .image {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-    display: block;
-    margin: 0 auto 1.5rem;
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 16 / 9; 
+    object-fit: fill; 
 }
 
 .longDescription {
@@ -28,7 +20,7 @@
     line-height: 1.7;
     color: var(--primary-font-color); 
     background-color: #ffffff;
-    padding: 1.8rem;
+    padding: 1.6rem;
     border-left: 8px solid #008B8B; 
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(142, 142, 142, 0.25); 
@@ -44,6 +36,18 @@
     text-align: center;
     position: relative;
     margin: 3rem 0 2rem 0;
+}
+
+.nutritionHeader{
+    margin: 3rem 0 0 0;
+}
+
+.dailyValue{
+    font-size: 1rem;
+    color: rgb(129, 129, 129);
+    font-weight: 500;
+    margin: 0.6rem 0 2rem 0;
+    text-align: center;
 }
 
 .generalInfo {

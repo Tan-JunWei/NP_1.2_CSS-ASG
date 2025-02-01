@@ -6,6 +6,7 @@ const dishes = [
     title: "Hainanese Chicken Rice",
     tags: ["Hard", "Chinese", "Hawker Favourites"],
     image: "/food images/hainanese_chicken_rice.png",
+    indivImage: "/food images/hainanese_chicken_rice.jpg",
     description: "Singapore's iconic dish featuring tender poached chicken served with fragrant rice. A must-try for all foodies!",
     longDescription: `Hainanese Chicken Rice is a beloved dish that originated from Hainan, China, but has become a staple in 
     Singaporean cuisine. The dish is known for its succulent poached chicken, which is cooked to perfection and served with fragrant 
@@ -64,6 +65,7 @@ const dishes = [
     title: "Char Kway Teow",
     tags: ["Medium", "Chinese", "Hawker Favourites", "Seafood"],
     image: "/food images/char_kway_teow.jpg",
+    indivImage: "/food images/char_kway_teow2.jpg",
     description: "A stir-fried flat noodle dish, featuring a savory-sweet blend of soy sauce, garlic, and lard, traditionally served on betel or banana leaves.",
     longDescription: `Char Kway Teow is a popular street food dish in Singapore and Malaysia, known for its rich and savory flavors. The
     dish is made by stir-frying flat rice noodles with a combination of ingredients such as shrimp, Chinese sausage, eggs, and bean 
@@ -127,6 +129,7 @@ const dishes = [
     title: "Nasi Lemak",
     tags: ["Easy", "Malaysian", "Hawker Favourites", "Spicy"],
     image: "/food images/nasi_lemak.png",
+    indivImage: "/food images/nasi_lemak.jpg",
     description: "A fragrant coconut rice dish served with sambal, crispy anchovies, peanuts, and accompaniments like fried chicken or egg.",
     longDescription: `Nasi Lemak is a traditional Malaysian dish that has become a beloved breakfast staple in Singapore. The dish is 
     centered around fragrant coconut rice, which is cooked with pandan leaves and coconut milk, giving it a rich and aromatic flavor. 
@@ -185,6 +188,7 @@ const dishes = [
     title: "Laksa",
     tags: ["Medium", "Peranakan", "Hawker Favourites", "Seafood", "Spicy"],
     image: "/food images/laksa.jpg",
+    indivImage: "/food images/laksa.png",
     description: "A popular soup noodle dish that harmoniously fuses the bold spices of Malay cuisine with the soulful flavors of Chinese tradition.",
     longDescription: `Laksa is a flavorful and aromatic noodle soup that is a staple in Peranakan cuisine, which blends Chinese and 
     Malay culinary traditions. The dish is known for its rich and spicy coconut-based broth, which is made from a blend of spices, 
@@ -254,6 +258,7 @@ const dishes = [
     title: "Kaya Toast with Soft-Boiled Eggs",
     tags: ["Easy", "Hawker Favourites"],
     image: "/food images/sg_breakfast.png",
+    indivImage: "/food images/kaya_toast_eggs.png",
     description: "A popular breakfast dish in Singapore consisting of crispy toasted bread with butter and kaya (coconut jam), commonly served with soft-boiled eggs and coffee.",
     longDescription: `Kaya Toast with Soft-Boiled Eggs is a classic Singaporean breakfast that is both simple and delicious. The dish 
     features crispy toasted bread spread with a generous layer of kaya, a sweet and creamy coconut jam made from coconut milk, eggs, and 
@@ -300,6 +305,7 @@ const dishes = [
     title: "Satay",
     tags: ["Medium", "Malaysian", "Hawker Favourites"],
     image: "/food images/satay.jpg",
+    indivImage: "/food images/satay2.jpg",
     description: "Grilled skewers of marinated meat served with peanut sauce, a staple in Southeast Asian street food.",
     longDescription: `Satay is a popular Southeast Asian dish consisting of skewered and grilled meat, typically served with a rich and 
     flavorful peanut sauce. The meat, which can be chicken, beef, or lamb, is marinated in a mixture of spices, including turmeric, 
@@ -348,6 +354,7 @@ const dishes = [
     title: "Roti Prata",
     tags: ["Easy", "Indian", "Hawker Favourites"],
     image: "/food images/prata.png",
+    indivImage: "/food images/prata2.png",
     description: "A local-favourite Indian flatbread dish, usually served with different types of curry.",
     longDescription: `Roti Prata is a popular Indian flatbread that is a staple in Singaporean cuisine. The dish is made by stretching 
     and flipping a dough made from flour, water, and ghee until it is thin and layered. The dough is then cooked on a hot griddle until 
@@ -399,6 +406,7 @@ const dishes = [
     title: "Chilli Crab",
     tags: ["Hard", "Seafood", "Spicy"],
     image: "/food images/chilli_crab.png",
+    indivImage: "/food images/chilli_crab.jpg",
     description: "A Singapore classic featuring crabs deep-fried in a sweet, savoury and spicy gravy. Best enjoyed with mantou buns.",
     longDescription: `Chilli Crab is one of Singapore's most iconic dishes, known for its rich and flavorful sauce that combines sweet, 
     savory, and spicy elements. The dish is made by stir-frying crabs in a thick, tomato-based sauce that is infused with chili, garlic, 
@@ -450,6 +458,7 @@ const dishes = [
     title: "Bak Chor Mee (Minced Pork Noodles)",
     tags: ["Easy", "Teochew", "Hawker Favourites"],
     image: "/food images/bak_chor_mee.png",
+    indivImage: "/food images/bakchormee.jpeg",
     description: "A savoury Singaporean noodle dish topped with minced pork, meatballs, and tangy vinegar sauce.",
     longDescription: `Bak Chor Mee is a popular noodle dish in Singapore that originated from the Teochew community. The dish features 
     springy egg noodles tossed in a flavorful sauce made from vinegar, soy sauce, and chili, and topped with minced pork, pork liver, 
@@ -508,6 +517,7 @@ const dishes = [
     title: "Chicken Tikka Masala",
     tags: ["Medium", "Indian"],
     image: "/food images/chicken_tikka_masala.jpg",
+    indivImage: "/food images/tikka.jpg",
     description: "A rich and creamy Indian curry featuring tender chicken pieces in a spiced tomato-based sauce.",
     longDescription: `Chicken Tikka Masala is a popular Indian dish that has gained international fame for its rich and creamy 
     tomato-based sauce. The dish is made by marinating chicken pieces in a mixture of yogurt and spices, including cumin, coriander, 
