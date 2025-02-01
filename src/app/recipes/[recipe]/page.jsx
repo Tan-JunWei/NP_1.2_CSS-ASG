@@ -32,7 +32,7 @@ export default async function RecipeInfo({ params }) {
     <div className={styles.container}>
       <h1 className={styles.title}>{matchedRecipe.title}</h1>
       <img className={styles.image} src={matchedRecipe.image} alt={matchedRecipe.title} />
-      <p className={styles.description}>{matchedRecipe.description}</p>
+      <p className={styles.longDescription}>{matchedRecipe.longDescription}</p>
 
       <div className={styles.nutritionalFacts}>
         <h3 className={styles.sectionHeader}>Nutritional Facts</h3>
