@@ -1,31 +1,32 @@
+/* Responsive individual recipe page styles done by: Tan Jun Wei */
+
 .container {
-    max-width: 800px;
+    max-width: 850px;
     margin: 2rem auto;
     padding: 1rem;
-    background-color: #ffffff;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
 
-.title {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
 .image {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-    display: block;
-    margin: 0 auto 1.5rem;
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 16 / 9; 
+    object-fit: fill; 
 }
 
-.description {
+.longDescription {
     font-size: 1rem;
+    line-height: 1.7;
+    color: var(--primary-font-color); 
+    background-color: #ffffff;
+    padding: 1.6rem;
+    border-left: 8px solid #008B8B; 
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(142, 142, 142, 0.25); 
+    margin: 1.8rem auto;
     text-align: justify;
-    color: var(--primary-font-color);
+    font-family: var(--secondary-font);
 }
 
 .sectionHeader {
@@ -37,47 +38,121 @@
     margin: 3rem 0 2rem 0;
 }
 
+.nutritionHeader{
+    margin: 3rem 0 0 0;
+}
+
+.dailyValue{
+    font-size: 1rem;
+    color: rgb(129, 129, 129);
+    font-weight: 500;
+    margin: 0.6rem 0 2rem 0;
+    text-align: center;
+}
+
 .generalInfo {
     font-size: 1.2rem;
     color: var(--secondary-color);
     margin: 0.5rem 0;
 }
 
-.tags div {
-    display: inline-block;
-    background-color: var(--highlight-color);
-    color: #ffffff;
-    font-size: 0.9rem;
-    padding: 0.3rem 0.6rem;
-    margin: 0.2rem;
-    border-radius: 4px;
+.ingredients {
+    max-width: 750px; 
+    margin: 0 auto; 
+    padding: 15px; 
+    background-color: #8bc2d1; 
+    border-radius: 8px; 
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1); 
 }
 
-/* Ingredients styling */
-.ingredients{
+.ingredientItem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px; 
+    padding: 12px 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.ingredientItem:hover {
+    transform: scale(1.005);
+}
+  
+.checkboxInput {
+    appearance: none;
+    min-width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative; 
+}
+  
+.checkboxInput:checked {
+    background-color: #0eb7da;
+    border-color: #0eb7da;
+}
+  
+.checkboxInput:checked::before {
+    content: '✔'; 
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: block; 
+}
+  
+.checkboxInput:checked ~ .ingredientText {
+    text-decoration: line-through;
+    color: #9c9c9c; 
+}
+  
+.ingredientNumber {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+  
+.ingredientText {
+    font-size: 1rem;
+    color: var(--primary-font-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    transition: color 0.4s ease, text-decoration 0.3s ease;
+}
+
+.steps{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: rgb(248, 248, 248);
 }
 
-.ingredients div{
+.steps div{
     font-size: 1rem;
-    padding: 0.6rem;
-    border-bottom: 2px solid #e6e8e8;
+    padding: 0.8rem;
+    border-bottom: 2px solid #e2e3e3;
     display: flex;
-    align-items: center;
 }
 
-.ingredients div:last-child {
+.steps div:last-child {
     border-bottom: none;
 }
 
-.ingredientItem{
+.stepItem{
     display: flex;
-    align-items: baseline;
+    line-height: 1.5;
 }
 
-.ingredientNumber{
+.stepIndex{
     min-width: 30px;
     text-align: right;
     margin-right: 20px;
@@ -85,9 +160,12 @@
     font-weight: bold;
 }
 
-.ingredientText{
+.stepText{
     color: var(--primary-font-color);
+    font-family: var(--secondary-font);
     flex-grow: 1;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .nutritionalFacts {
@@ -107,6 +185,7 @@
     position: relative;
     overflow: visible;
     padding: 10px;
+    background-color: white;
     border: 1px solid #e0e0e0; 
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -164,6 +243,7 @@
 .nutritionItem:hover{
     transform: translateY(-3px);
     border: 1px solid #959595; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
 }
 
 .timeSection {
@@ -178,6 +258,7 @@
 
 .timeCard {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
@@ -195,14 +276,57 @@
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
-.timeCard:hover .icon {
-    background-color: #e5f6f6;
+  
+.timeCard:hover .spin-image-container::before {
+    border-top-color: #0eb7da;
+    border-right-color: #0eb7da;
+    border-bottom-color: #0eb7da;
+    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.10s, border-bottom-color 0.15s linear 0.20s;
 }
 
+.timeCard:hover .spin-image-container::after {
+    border-top: 2px solid #0eb7da;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    transform: rotate(270deg);
+    transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
+}
+
+.spin-image-container {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    aspect-ratio: 1 / 1;  
+    overflow: hidden;
+}
+  
+.spin-image-container::before,
+.spin-image-container::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%; 
+}
+  
+.spin-image-container::before {
+    border: 2px solid transparent;
+}
+  
+.spin-image-container::after {
+    border: 0 solid transparent;
+}
+  
 .icon {
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
+    transition: background-color 0.3s ease; 
+    object-fit: contain;   
+    object-position: center; 
 }
 
 .timeInfo {
@@ -235,29 +359,3 @@
     }
 }
 
-
-.steps {
-    margin-top: 1.5rem;
-}
-
-.step-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    background-color: #f4f4f4;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-}
-
-.step-index {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--highlight-color);
-    margin-right: 0.5rem;
-}
-
-.step-item span:last-child {
-    flex: 1;
-    font-size: 1rem;
-}

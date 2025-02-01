@@ -1,27 +1,20 @@
-/* 'Top Pick' page styles done by: Ryan Low Chee Yang */
-
 .container {
-  position: relative;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Keep card holder towards the bottom */
   align-items: center;
-  background-color: #f4f4f4;
+  background-color: #f8f9fa;
+  overflow: hidden;
+  position: relative;
 }
 
 .scrollContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
-  z-index: 1; /* Behind the card holder */
-  opacity: 0.8; /* More visible scrolling images */
-  filter: brightness(0.9); /* Adjust brightness for contrast */
+  overflow-y: hidden;
+  margin-bottom: 200px; /* Add space for the selection panel */
 }
 
 .column {
@@ -29,9 +22,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: scroll;
+  gap: 20px;
+  overflow-y: auto;
   scrollbar-width: none;
-  gap: 40px;
 }
 
 .column::-webkit-scrollbar {
@@ -40,79 +33,181 @@
 
 .column img {
   width: 80%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .column img:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.cardHolder {
-  position: relative;
-  z-index: 2; /* Above the scrollContainer */
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.selectionPanel {
+  position: absolute;
+  bottom: 150px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: 16px;
   width: 90%;
   max-width: 800px;
-  margin-bottom: 80px; /* Adjust height above the bottom */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
   text-align: center;
+  z-index: 10;
 }
 
 .selectedImages {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 10px;
 }
 
 .card img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+  width: 80px;
+  height: 80px;
   border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.card button {
-  padding: 5px 10px;
-  font-size: 12px;
   cursor: pointer;
-  border: none;
-  background: #e74c3c;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.recommendationButton {
+  margin-top: 1rem;
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: white;
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-.card button:hover {
-  background: #c0392b;
-}
-
-.response {
-  position: relative;
-  z-index: 2;
-  margin-top: 20px;
-  padding: 20px;
-  background: white;
+  border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.recommendationButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+}
+
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.popupContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+  text-align: left;
+}
+
+.responseText {
+  margin: 1.5rem 0;
+  line-height: 1.6;
+  color: #444;
+  font-size: 1rem;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.introText {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.dishList {
+  margin: 1.5rem 0;
+}
+
+.dishItem {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #6a11cb;
+}
+
+.dishTitle {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.dishDescription {
+  margin: 0;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.recommendationBox {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.recommendationText {
+  margin: 0;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.generalText {
+  margin: 0.5rem 0;
+}
+
+.closeButton {
+  padding: 8px 24px;
+  background: #f0f0f0;
+  color: #444;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background: #e0e0e0;
+  color: #222;
 }
 
 .error {
-  position: relative;
-  z-index: 2;
-  margin-top: 10px;
-  color: red;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff6b6b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 1200;
 }
