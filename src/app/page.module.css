@@ -12,21 +12,31 @@
   padding-top: 0.5rem;
   padding-bottom: 0.2rem;
   text-align: center;
-  max-width: 50%; /* Adjust based on preference */
+  width: 35%; /* Adjust based on preference */
 }
 
 /* Underline or separator */
 .line {
   margin-left: auto;
   margin-right: auto;
-  width: 50%; 
+  width: 35%; 
+}
+
+
+@media (max-width: 1200px) {
+  .rectitle{
+    width: 55%;
+  }
+  .line{
+    width: 55%;
+  }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .rectitle {
       font-size: 1.5rem;
-      max-width: 90%;
+      width: 90%;
   }
   
   .line {
@@ -36,6 +46,12 @@
 
 @media (max-width: 480px) {
   .rectitle {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+
+      display: flex;
+      margin-left: 15px;
+      
   }
+
+
 }
