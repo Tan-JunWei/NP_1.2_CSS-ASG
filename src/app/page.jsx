@@ -7,9 +7,12 @@ import RecipeGrid from "../components/recipegird/recipegird";
 export default function Home() {
   return (
       <div className={styles.container}>
-        <h1 className={styles.header}>Home</h1>
-        <div>
-          <h3 className={styles.rectitle}>Recipes</h3>
+        <div className={styles.hero}>
+          <h1 className={styles.header}>Welcome to Singapore's Food Paradise</h1>
+          <p className={styles.subheader}>Discover the rich flavors and diverse culinary heritage of Singapore</p>
+        </div>
+        <div className={styles.content}>
+          <h2 className={styles.rectitle}>Popular Recipes</h2>
           <hr className={styles.line}/>
           <RecipeGrid></RecipeGrid>
         </div>
