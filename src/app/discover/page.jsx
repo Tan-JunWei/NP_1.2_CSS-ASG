@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import styles from "@/src/styles/pages/top-picks.module.css";
+import styles from "@/src/styles/pages/discover.module.css";
 
 const Page = () => {
   const API_KEY = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
@@ -52,7 +52,7 @@ const Page = () => {
       columnsRef.current.forEach((column, index) => {
         if (column && Math.abs(scrollVelocities.current[index]) > 0.1) {
           active = true;
-          scrollVelocities.current[index] *= 0.98; // Smooth decay
+          scrollVelocities.current[index] *= 0.95; // Smoother decay
           column.scrollTop += scrollVelocities.current[index];
 
           // Reset scrolling at boundaries
@@ -86,9 +86,59 @@ const Page = () => {
       }
     };
 
+    const handleTouchStart = (e) => {
+      const touch = e.touches[0];
+      columnsRef.current.forEach((_, index) => {
+        scrollVelocities.current[index] = 0;
+      });
+      return touch.clientY;
+    };
+
+    const handleTouchMove = (e, startY) => {
+      e.preventDefault();
+      const touch = e.touches[0];
+      const deltaY = startY - touch.clientY;
+      const scrollDirection = deltaY > 0 ? 1 : -1;
+      
+      columnsRef.current.forEach((_, index) => {
+        if (columnsRef.current[index]) {
+          scrollVelocities.current[index] += scrollDirection * scrollSpeeds[index] * 0.3;
+        }
+      });
+
+      if (!isScrolling.current) {
+        isScrolling.current = true;
+        animateScroll();
+      }
+    };
+
+    let touchStartY = 0;
+    window.addEventListener("touchstart", (e) => {
+      touchStartY = handleTouchStart(e);
+    });
+    window.addEventListener("touchmove", (e) => {
+      handleTouchMove(e, touchStartY);
+    });
     window.addEventListener("wheel", handleScroll, { passive: false });
-    return () => window.removeEventListener("wheel", handleScroll);
+
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
+    };
   }, []);
+
+  // Prevent background scrolling when popup is open
+  useEffect(() => {
+    if (showPopup) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [showPopup]);
 
   const selectImage = (image) => {
     if (selectedImages.length < 3 && !selectedImages.includes(image)) {
@@ -124,13 +174,13 @@ const Page = () => {
             {
               role: "system",
               content:
-                "The user likes the 3 selected dishes, please provide a review of their taste and recommend a dish similar to the 3.",
+                "You are a culinary taste profiler. First provide a brief analysis of the user's food preferences based on their selected dishes (spiciness level, cuisine types, flavor profiles). Then, in a separate section, recommend TWO dishes that align with their taste profile. Format your response with clear section headers for 'Your Taste Profile' and 'Recommended Dishes', using markdown for better readability.",
             },
             {
               role: "user",
-              content: `Here are the 3 selected dishes: ${selectedImages
+              content: `Analyze my taste preferences and suggest dishes based on these 3 selections: ${selectedImages
                 .map((img) => img.replace(".jpg", "").replace("_", " "))
-                .join(", ")}.`,
+                .join(", ")}`,
             },
           ],
         }),
@@ -149,6 +199,38 @@ const Page = () => {
   };
 
   const closePopup = () => setShowPopup(false);
+
+  // Handle popup scroll
+  useEffect(() => {
+    if (!showPopup) return;
+
+    const handleWheelEvent = (e) => {
+      e.stopPropagation();
+      const popup = document.querySelector(`.${styles.popupContent}`);
+      if (!popup) return;
+
+      const scrollTop = popup.scrollTop;
+      const scrollHeight = popup.scrollHeight;
+      const clientHeight = popup.clientHeight;
+
+      // Prevent scrolling when at boundaries
+      if ((scrollTop <= 0 && e.deltaY < 0) || 
+          (scrollTop + clientHeight >= scrollHeight && e.deltaY > 0)) {
+        e.preventDefault();
+      }
+    };
+
+    const popup = document.querySelector(`.${styles.popupContent}`);
+    if (popup) {
+      popup.addEventListener('wheel', handleWheelEvent, { passive: false });
+    }
+
+    return () => {
+      if (popup) {
+        popup.removeEventListener('wheel', handleWheelEvent);
+      }
+    };
+  }, [showPopup]);
 
   return (
     <div className={styles.container}>
@@ -202,27 +284,27 @@ const Page = () => {
               {response && (
                 <>
                   <div className={styles.dishList}>
-                    {response.split("\n").map((line, index) => {
-                      if (line.match(/^\d+\.\*\*/)) {
-                        const [title, ...descParts] = line.replace(/^\d+\.\*\*/, "").split(/-/);
-                        return (
-                          <div key={index} className={styles.dishItem}>
-                            <h4 className={styles.dishTitle}>{title.trim()}</h4>
-                            <p className={styles.dishDescription}>{descParts.join(" ").trim()}</p>
-                          </div>
-                        );
-                      }
-                      if (line.includes("recommend trying")) {
-                        return (
-                          <div key={index} className={styles.recommendationBox}>
-                            <p className={styles.recommendationText}>
-                              {line.replace(/\*\*/g, "").replace("I recommend trying", "⭐ We Recommend:")}
-                            </p>
-                          </div>
-                        );
-                      }
-                      return <p key={index} className={styles.generalText}>{line}</p>;
-                    })}
+                    <div className={styles.analysisSection}>
+                      <h4>Your Taste Profile</h4>
+                      {response.split("Recommended Dishes")[0].trim().split("\n").map((line, index) => (
+                        <p key={index} className={styles.analysisText}>{line}</p>
+                      ))}
+                    </div>
+                    <div className={styles.recommendationsSection}>
+                      <h4>Recommended Dishes</h4>
+                      {response.split("Recommended Dishes")[1].trim().split("\n").map((line, index) => {
+                        if (line.match(/^\d+\./)) {
+                          const [name, ...desc] = line.substring(3).split(":");
+                          return (
+                            <div key={index} className={styles.recommendedDish}>
+                              <h5>{name.trim()}</h5>
+                              <p>{desc.join(":").trim()}</p>
+                            </div>
+                          );
+                        }
+                        return null;
+                      })}
+                    </div>
                   </div>
                 </>
               )}

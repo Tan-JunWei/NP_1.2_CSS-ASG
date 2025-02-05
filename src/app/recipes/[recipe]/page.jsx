@@ -4,6 +4,7 @@ import recipes from '@/src/data/recipes';
 import { notFound } from 'next/navigation';
 import styles from '@/src/styles/pages/indiv-recipes.module.css';
 import Image from 'next/image';
+import CopyButton from '@/src/components/copytoclipboard/CopyButton'
 
 export default async function RecipeInfo({ params }) {
   const { recipe } = await params; // Get the recipe name from the URL
@@ -16,6 +17,23 @@ export default async function RecipeInfo({ params }) {
   if (!matchedRecipe) {
     notFound(); // Redirect to 404 page if recipe is not found
   }
+
+  const fullRecipe = `Title: ${matchedRecipe.title}\n\n` +
+                     `Description:\n${
+                        matchedRecipe.longDescription
+                        .replace(/\n/g, ' ') // Replace all newlines with a space to keep it on one line
+                        .replace(/\s{2,}/g, ' ') // Replace any multiple spaces with a single space
+                        .trim() // Remove any leading or trailing spaces
+                     }\n\n` +
+                     `Prep Time: ${matchedRecipe.preptime}\n` +
+                     `Cook Time: ${matchedRecipe.cooktime}\n` +
+                     `Total Time: ${matchedRecipe.totaltime}\n\n` +
+                     `Calories: ${matchedRecipe.calories}\n` +
+                     `Carbs: ${matchedRecipe.carbs}\n` +
+                     `Protein: ${matchedRecipe.protein}\n` +
+                     `Fat: ${matchedRecipe.fat}\n\n` +
+                     `Ingredients:\n${matchedRecipe.ingredients.map((ing, i) => `${i + 1}. ${ing}`).join('\n')}\n\n` +
+                     `Steps:\n${matchedRecipe.steps.map((step, i) => `${i + 1}. ${step}`).join('\n')}`;
 
   // Recommended daily values for an average adult
   const proteinMax = 60; 
@@ -175,26 +193,29 @@ export default async function RecipeInfo({ params }) {
         </div>
       </div>
 
-        <h3 className={styles.sectionHeader}>Ingredients</h3>
-        <div className={styles.ingredients}>
-          {matchedRecipe.ingredients.map((ingredient, index) => (
-            <div key={index} className={styles.ingredientItem}>
-              <input type="checkbox" id={`ingredient-${index}`} className={styles.checkboxInput} />
-              <span className={styles.ingredientNumber}>{index + 1}.</span>
-              <span className={styles.ingredientText}>{ingredient}</span>
-            </div>
-          ))}
-        </div>
+      <h3 className={styles.sectionHeader}>Ingredients</h3>
+      <div className={styles.ingredients}>
+        {matchedRecipe.ingredients.map((ingredient, index) => (
+          <div key={index} className={styles.ingredientItem}>
+            <input type="checkbox" id={`ingredient-${index}`} className={styles.checkboxInput} />
+            <span className={styles.ingredientNumber}>{index + 1}.</span>
+            <span className={styles.ingredientText}>{ingredient}</span>
+          </div>
+        ))}
+      </div>
 
-        <h3 className={styles.sectionHeader}>Steps</h3>
-        <div className={styles.steps}>
-          {matchedRecipe.steps.map((step, index) => (
-            <div className={styles.stepItem} key={index}>
-              <span className={styles.stepIndex}>{index + 1}.</span>
-              <span className={styles.stepText}>{step}</span>
-            </div>
-          ))}
-        </div>
+      {/* ✅ Client Component */}
+      <CopyButton text={fullRecipe} />
+
+      <h3 className={styles.sectionHeader}>Steps</h3>
+      <div className={styles.steps}>
+        {matchedRecipe.steps.map((step, index) => (
+          <div className={styles.stepItem} key={index}>
+            <span className={styles.stepIndex}>{index + 1}.</span>
+            <span className={styles.stepText}>{step}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -45,8 +45,8 @@ export default function Navbar() {
           <FaHistory /> History
         </Link>
 
-        <Link className={styles.navitem} href="/top-picks">
-          <PiChefHatBold /> Top Picks
+        <Link className={styles.navitem} href="/discover">
+          <PiChefHatBold /> Discover
         </Link>
 
         <Link className={styles.navitem} href="/about">
