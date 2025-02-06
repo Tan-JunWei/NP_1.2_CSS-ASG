@@ -4,7 +4,7 @@ import recipes from '@/src/data/recipes';
 import { notFound } from 'next/navigation';
 import styles from '@/src/styles/pages/indiv-recipes.module.css';
 import Image from 'next/image';
-import CopyButton from '@/src/components/copytoclipboard/CopyButton'
+import CopyButton from '@/src/components/copytoclipboard/copybutton';
 
 export default async function RecipeInfo({ params }) {
   const { recipe } = await params; // Get the recipe name from the URL
