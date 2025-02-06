@@ -15,7 +15,6 @@
     color: var(--primary-font-color);
     font-family: var(--primary-font);
     text-align: left;
-    padding-left: 100px;
     margin-top: 50px; /* Adds more space above the subheader */
     margin-bottom: 20px;
     
@@ -23,7 +22,7 @@
 }
 /* Scoped styles for ul and li */
 .list {
-    padding-left: 100px;
+    padding: 100px;
     margin: 0 0 20px;
     list-style-type: disc; /* You can use circle, square, or none if needed */
 }
@@ -36,7 +35,7 @@
 
 .pageWrapper {
     display: flex; /* Aligns the vertical bar and content side by side */
-    margin-left: 40px; 
+    margin-left: 40px;  
 }
 
 .verticalBar {
@@ -47,16 +46,71 @@
 
 .contentWrapper {
     flex: 1; /* Makes the content take up the remaining width */
+    width: 70%;
+    margin: 0 auto;
 }
 .section {
     margin-bottom: 40px; /* Adds spacing between sections */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px; /* Space between image and text */
+    padding: 40px 20px;
 }
+/* Alternate sections */
+.section:nth-child(even) {
+    flex-direction: row-reverse; /* Flips the order for even sections */
+}
+
 .image {
+    width: 50%; /* Ensures images are responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 800px; /* Limits image width */
+    margin: 10px auto 20px; /* Adds spacing above and below the image */
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Adds a subtle shadow */
+    padding: 50px;
+    
+}
+.image2 {
     width: 100%; /* Ensures images are responsive */
     height: auto; /* Maintains aspect ratio */
     max-width: 800px; /* Limits image width */
-    display: block;
     margin: 10px auto 20px; /* Adds spacing above and below the image */
     border-radius: 8px; /* Adds rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Adds a subtle shadow */
+    
+}
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline dotted;
+    color: blue;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip); /* Fetch tooltip text from data-tooltip attribute */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+.text-content {
+    width: 50%;
 }

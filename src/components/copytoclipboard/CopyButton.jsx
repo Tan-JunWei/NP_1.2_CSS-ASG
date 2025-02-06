@@ -25,7 +25,7 @@ export default function CopyButton({ text }) {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // Resets the copied state after 2 seconds to provide user feedback
+      setTimeout(() => setCopied(false), 5000); // Resets the copied state after 5 seconds to provide user feedback
     } catch (error) {
       console.error("Copy failed:", error);
     }
@@ -34,10 +34,10 @@ export default function CopyButton({ text }) {
   return (
     <StyledButton 
       variant="contained" 
-      sx={{ backgroundColor: '#1976d2', '&:hover': { backgroundColor: '#1565c0' }, width: '130px'}} // sx prop can be used to override default style
+      sx={{ backgroundColor: '#1976d2', '&:hover': { backgroundColor: '#1565c0' }, width: '240px'}} // sx prop can be used to override default style
       onClick={copyToClipboard}
     >
-      {copied ? "Copied!" : "Copy Recipe"}
+      {copied ? "Recipe Copied to Clipboard!" : "Copy Recipe to Clipboard"}
     </StyledButton>
   );
 }
