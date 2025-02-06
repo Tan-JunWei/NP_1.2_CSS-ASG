@@ -38,9 +38,10 @@
 }
 
 .verticalBar {
-    width: 10px; /* Thickness of the vertical bar */
+    width: 15px; /* Thickness of the vertical bar */
     background-color: #2aacb1; /* Color of the bar */
     margin-right: 20px; /* Space between the bar and the content */
+    border-radius: 6px;
 }
 
 .contentWrapper {
