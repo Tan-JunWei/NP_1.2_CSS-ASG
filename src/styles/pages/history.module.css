@@ -1,8 +1,6 @@
 /* 'History' page styles done by: Jo Hanson Mok */
 
-.header {
-    color: var(--secondary-color)
-}
+
 .main
 {
     display: flex;
@@ -12,11 +10,12 @@
     margin-top: 50px;
 }
 .subheader {
-    color: var(--primary-font-color);
+    color: #145355; 
     font-family: var(--primary-font);
     text-align: left;
     margin-top: 50px; /* Adds more space above the subheader */
     margin-bottom: 20px;
+    font-size: 1.8rem; /* Increases the font size */
     
 
 }
@@ -45,17 +44,17 @@
 }
 
 .contentWrapper {
-    flex: 1; /* Makes the content take up the remaining width */
-    width: 70%;
-    margin: 0 auto;
+    
+    width: 80%;
+    margin: 10px auto;
 }
 .section {
-    margin-bottom: 40px; /* Adds spacing between sections */
+    margin-bottom: 30px; /* Adds spacing between sections */
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0px; /* Space between image and text */
-    padding: 40px 20px;
+    padding:20px;
 }
 /* Alternate sections */
 .section:nth-child(even) {
@@ -114,3 +113,4 @@
 .text-content {
     width: 50%;
 }
+
