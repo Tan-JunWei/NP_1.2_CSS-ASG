@@ -55,8 +55,17 @@
     width: 100%; /* Ensures images are responsive */
     height: auto; /* Maintains aspect ratio */
     max-width: 800px; /* Limits image width */
-    display: block;
     margin: 10px auto 20px; /* Adds spacing above and below the image */
     border-radius: 8px; /* Adds rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Adds a subtle shadow */
+    padding-left: 100px;
+}
+.image2 {
+    width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 800px; /* Limits image width */
+    margin: 10px auto 20px; /* Adds spacing above and below the image */
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Adds a subtle shadow */
+    
 }

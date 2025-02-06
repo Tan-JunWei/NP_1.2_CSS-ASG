@@ -23,7 +23,7 @@ export default function History() {
                     <li className={styles.listItem}>
                         Evidence of early cooking (e.g., roasting meat over fire) dates back approximately 1.5 million years.
                     </li>
-                    <img src="/history/transition.png" alt="Ancient Civilization Food" className={styles.image} />
+                    <img src="/history/transition.png" alt="Ancient Civilization Food" className={styles.image2} />
                     <li className={styles.listItem}>
                         The transition from nomadic to settled life marked the domestication of animals and plants.
                     </li>
@@ -45,6 +45,7 @@ export default function History() {
 
             <section className={styles.section}>
                 <h2 className={styles.subheader}>~500–1500 CE</h2>
+                <img src="/history/medieval.png" alt="Ancient Civilization Food" className={styles.image} />
                 <ul className={styles.list}>
                     <li className={styles.listItem}>
                         During the Medieval period, many countries developed unique food traditions.
@@ -57,6 +58,7 @@ export default function History() {
 
             <section className={styles.section}>
                 <h2 className={styles.subheader}>~1500–1800 CE</h2>
+                <img src="/history/exploration.png" alt="Ancient Civilization Food" className={styles.image} />
                 <ul className={styles.list}>
                     <li className={styles.listItem}>
                         Known as the Age of Exploration, global spice trades formed around the world.
@@ -72,6 +74,7 @@ export default function History() {
 
             <section className={styles.section}>
                 <h2 className={styles.subheader}>19th Century</h2>
+                <img src="/history/industrial.png" alt="Ancient Civilization Food" className={styles.image} />
                 <ul className={styles.list}>
                     <li className={styles.listItem}>
                         The Industrial Revolution brought advances in agriculture, such as mechanized plows and fertilizers, boosting food production.
@@ -87,6 +90,7 @@ export default function History() {
 
             <section className={styles.section}>
                 <h2 className={styles.subheader}>20th Century</h2>
+                <img src="/history/.png" alt="Ancient Civilization Food" className={styles.image} />
                 <ul className={styles.list}>
                     <li className={styles.listItem}>
                         This period saw globalization and innovation in food, with the development of processed foods like frozen, pre-packaged, and convenience foods.
