@@ -255,7 +255,7 @@ const dishes = [
   },
   {
     id: 5,
-    title: "Kaya Toast with Soft-Boiled Eggs",
+    title: "Kaya Toast with Eggs",
     tags: ["Easy", "Hawker Favourites"],
     image: "/food images/sg_breakfast.png",
     indivImage: "/food images/kaya_toast_eggs.png",
@@ -455,15 +455,15 @@ const dishes = [
   },
   {
     id: 9,
-    title: "Bak Chor Mee (Minced Pork Noodles)",
+    title: "Bak Chor Mee",
     tags: ["Easy", "Teochew", "Hawker Favourites"],
     image: "/food images/bak_chor_mee.png",
     indivImage: "/food images/bakchormee.jpeg",
     description: "A savoury Singaporean noodle dish topped with minced pork, meatballs, and tangy vinegar sauce.",
-    longDescription: `Bak Chor Mee is a popular noodle dish in Singapore that originated from the Teochew community. The dish features 
-    springy egg noodles tossed in a flavorful sauce made from vinegar, soy sauce, and chili, and topped with minced pork, pork liver, 
-    and meatballs. The dish is often garnished with crispy fried shallots, sliced green onions, and a sprinkle of white pepper, which 
-    add layers of flavor and texture. Bak Chor Mee is typically served dry, with a side of soup made from pork bones and ikan bilis 
+    longDescription: `Bak Chor Mee (Minced Pork Noodles) is a popular noodle dish in Singapore that originated from the Teochew community. 
+    The dish features springy egg noodles tossed in a flavorful sauce made from vinegar, soy sauce, and chili, and topped with minced pork, 
+    pork liver, and meatballs. The dish is often garnished with crispy fried shallots, sliced green onions, and a sprinkle of white pepper, 
+    which add layers of flavor and texture. Bak Chor Mee is typically served dry, with a side of soup made from pork bones and ikan bilis 
     (dried anchovies). The dish is a favorite among locals for its rich and savory flavors, and it is often enjoyed as a quick and 
     satisfying meal at hawker centers and food courts.`,
     ingredients: [

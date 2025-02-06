@@ -2,10 +2,54 @@
 
 .container {
     max-width: 850px;
-    margin: 2rem auto;
-    padding: 1rem;
+    margin: 0 auto 2rem auto;
+    padding: 0 1rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+}
+
+.scrollWatcher{
+    height: 10px;
+    position: fixed;
+    top: 73px;
+    z-index: 1000;
+    background: #65dec3;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll(y);
+}
+
+@keyframes scroll-watcher {
+    to {scale: 1 1;}
+}
+
+.backButtonContainer {
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;
+    width: 100%;  /* Ensure the container is full width */
+    position: relative;  /* Make the container a reference for absolute positioning */
+    padding: 10px 0;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    position: absolute;  /* Allow it to be positioned independently */
+    left: 50%;  /* Position it at the horizontal center of the container */
+    transform: translateX(-50%);  /* Offset it by half its width to center it */
+    text-align: center;  
+}
+
+.imageContainer{
+    width: 818px;
+    height: 460px;
+    overflow: hidden;
 }
 
 .image {
@@ -13,6 +57,11 @@
     height: auto; 
     aspect-ratio: 16 / 9; 
     object-fit: fill; 
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.image:hover {
+    transform: scale(1.1); /* Apply smooth zoom */
 }
 
 .longDescription {
