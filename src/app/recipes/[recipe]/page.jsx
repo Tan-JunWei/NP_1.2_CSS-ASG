@@ -76,7 +76,7 @@ export default async function RecipeInfo({ params }) {
               <div
                 className={styles.progressFill}
                 style={{
-                  '--progress-width': `${caloriesPercentage}%`, 
+                  '--progress-width': `${caloriesPercentage}%`, // width of progress bar is based on the percentage of daily recommended intake
                   backgroundColor: '#EF476F',
                 }}
               >
@@ -204,9 +204,6 @@ export default async function RecipeInfo({ params }) {
         ))}
       </div>
 
-      {/* ✅ Client Component */}
-      <CopyButton text={fullRecipe} />
-
       <h3 className={styles.sectionHeader}>Steps</h3>
       <div className={styles.steps}>
         {matchedRecipe.steps.map((step, index) => (
@@ -215,6 +212,10 @@ export default async function RecipeInfo({ params }) {
             <span className={styles.stepText}>{step}</span>
           </div>
         ))}
+      </div>
+
+      <div className={styles.cta}>
+        <CopyButton text={fullRecipe} />
       </div>
     </div>
   );
