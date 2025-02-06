@@ -4,6 +4,7 @@ import styles from "@/src/styles/pages/history.module.css"
 
 export default function History() {
     return (
+        
 <div className={styles.container}>
     <h1 className={styles.header}>The History of Food</h1>
 
@@ -18,7 +19,10 @@ export default function History() {
                         Early humans relied on hunting, fishing, and gathering wild plants. Diets were regional, based on local flora and fauna.
                     </li>
                     <li className={styles.listItem}>
-                        Tools for hunting and food preparation emerged, such as flint knives and grinding stones.
+                        Tools for hunting and food preparation emerged, such as <span className={styles.tooltip} data-tooltip="A tool used in ancient times which looked sort of like small, rectangular saws.They were mostly used for cutting, but serrated knives may have been used like saws for cutting wood specifically.">flint knives</span>
+                        and <span className={styles.tooltip} data-tooltip="A tool used in ancient times to grind food.">grinding stones</span>
+                        .
+                        
                     </li>
                     <li className={styles.listItem}>
                         Evidence of early cooking (e.g., roasting meat over fire) dates back approximately 1.5 million years.
@@ -120,6 +124,7 @@ export default function History() {
                 </ul>
             </section>
         </div>
+        
     </div>
 </div>
         

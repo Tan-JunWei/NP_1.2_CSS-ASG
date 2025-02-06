@@ -69,3 +69,32 @@
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Adds a subtle shadow */
     
 }
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline dotted;
+    color: blue;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip); /* Fetch tooltip text from data-tooltip attribute */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
