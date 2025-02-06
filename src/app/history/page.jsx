@@ -90,7 +90,7 @@ export default function History() {
 
             <section className={styles.section}>
                 <h2 className={styles.subheader}>20th Century</h2>
-                <img src="/history/.png" alt="Ancient Civilization Food" className={styles.image} />
+                <img src="/history/20th.png" alt="Ancient Civilization Food" className={styles.image} />
                 <ul className={styles.list}>
                     <li className={styles.listItem}>
                         This period saw globalization and innovation in food, with the development of processed foods like frozen, pre-packaged, and convenience foods.
@@ -106,6 +106,7 @@ export default function History() {
 
             <section className={styles.section}>
                 <h2 className={styles.subheader}>21st Century</h2>
+                <img src="/history/21st.png" alt="Ancient Civilization Food" className={styles.image} />
                 <ul className={styles.list}>
                     <li className={styles.listItem}>
                         Focus on food sustainability, such as organic farming and reduction of food waste.
