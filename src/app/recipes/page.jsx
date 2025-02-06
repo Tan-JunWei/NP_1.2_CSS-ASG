@@ -35,7 +35,10 @@ export default function Recipes() {
 
   return (
     <div className={styles.container}>
-      <h1>Recipe List</h1>
+      <div className={styles.intro}>
+        Find Your Perfect Recipe!
+        <span>Use filters or search by title or description to discover new flavors!</span>
+      </div>
 
       <div className={styles.filterContainer}>
         <input 
