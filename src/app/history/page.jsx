@@ -23,6 +23,7 @@ export default function History() {
                     <li className={styles.listItem}>
                         Evidence of early cooking (e.g., roasting meat over fire) dates back approximately 1.5 million years.
                     </li>
+                    <img src="/public/history/transition.png" alt="Ancient Civilization Food" className={styles.image} />
                     <li className={styles.listItem}>
                         The transition from nomadic to settled life marked the domestication of animals and plants.
                     </li>
@@ -31,6 +32,7 @@ export default function History() {
 
             <section className={styles.section}>
                 <h2 className={styles.subheader}>~3000 BCE–500 CE</h2>
+                <img src="/public/history/3000bce.png" alt="Ancient Civilization Food" className={styles.image} />
                 <ul className={styles.list}>
                     <li className={styles.listItem}>
                         Humans of ancient civilizations developed food further, with bread and beer made using wheat and barley becoming common.
