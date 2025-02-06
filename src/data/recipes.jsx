@@ -45,7 +45,7 @@ const dishes = [
     steps: [
       "Bring a large pot of water to a boil.",
       "Crush 3 cloves of garlic and 2 pieces of ginger, and place them into the cavity of the chicken.",
-      "Tie green onions into a knot, and place them into the chicken along with 1/2 teaspoon of salt.",
+      "Tie green onions into a knot, and place them into the chicken along with ½ teaspoon of salt.",
       "Carefully submerge the chicken breast-side down into the boiling water.",
       "Bring to a boil again, then cover the pot and remove from heat.",
       "Let stand covered for 40 minutes, turning the chicken over halfway through.",

@@ -12,6 +12,7 @@ export default function History() {
         <div className={styles.contentWrapper}>
             <section className={styles.section}>
                 <h2 className={styles.subheader}>Before 10,000 BCE</h2>
+                <img src="/public/history/before.png" alt="Ancient Civilization Food" className={styles.image} />
                 <ul className={styles.list}>
                     <li className={styles.listItem}>
                         Early humans relied on hunting, fishing, and gathering wild plants. Diets were regional, based on local flora and fauna.

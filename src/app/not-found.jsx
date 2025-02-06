@@ -17,7 +17,7 @@ const items = [
     Guess you’ll have to snack on your hopes and dreams for now!`
   },
   { image: "/404/broken-egg.png", 
-    message: `This is egg-straordinary broken... in a bad way. Seems like someone didn't handle things with care. Now we're just left with a scrambled
+    message: `This is egg-straordinarily broken... in a bad way. Seems like someone didn't handle things with care. Now we're just left with a scrambled
     situation.`
   }
 ];

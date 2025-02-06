@@ -36,8 +36,8 @@ export default function Footer() {
 							<p>All recipes</p>
 						</a>
 
-						<a href="/top-picks">
-							<p>Top Picks</p>
+						<a href="/discover">
+							<p>Discover</p>
 						</a>
 
 					</div>
@@ -60,15 +60,15 @@ export default function Footer() {
 								<BsGithub />
 							</a>
 
-							<a href="#">
+							<a href="https://www.facebook.com/plateful.anz">
 								<FaFacebook />
 							</a>
 
-							<a href="#">
+							<a href="https://x.com/nashplateful">
 								<FaSquareXTwitter />
 							</a>
 
-							<a href="#">
+							<a href="https://www.linkedin.com/company/plateful-uk">
 								<FaLinkedin />
 							</a>
 						</div>
@@ -76,10 +76,10 @@ export default function Footer() {
 
 				</div>
 
-				{/* Divider */}
 				<div className={styles.footerHR}/>
 
 				<div className={styles.footerCopyright}>
+					{/* Ensures that the year is updated to the current one instead of a static value */}
 					<p>
 						&copy; {new Date().getFullYear()} Plateful. All rights reserved.
 					</p>
