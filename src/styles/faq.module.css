@@ -1,0 +1,103 @@
+
+/* Container styling */
+.container {
+    width: 850px;
+    background: white;
+    color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: var(--secondary-font);
+}
+  
+/* Header styling */
+.header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+  
+.title {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+}
+  
+/* FAQ Item container */
+.faqItem {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #e0efef;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out;
+}
+  
+.questionText{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.faqItem:hover {
+    transform: translateY(-5px);
+}
+
+.faqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+}
+  
+/* Answer text styling */
+.faqAnswer {
+    font-size: 20px;
+    color: var(--primary-font-color);
+    margin-top: 10px;
+    font-weight: 400;
+    display: none; 
+    overflow: hidden;
+    height: 0; /* Start with the answer hidden */
+    opacity: 0;    /* Start with the answer invisible */
+    visibility: hidden;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease 0.3s;
+}
+  
+/* When the FAQ is open, apply this class */
+.faqAnswer.open {
+    display: block;
+    height: auto;  
+    visibility: visible;
+    opacity: 1;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease 0s;
+}
+  
+.icon {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--clr-dark-blue);
+    transition: transform 0.3s ease;
+}
+  
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    .title {
+        font-size: 26px;
+    }
+    
+    .questionText {
+        font-size: 20px;
+    }
+    
+    .faqAnswer {
+        font-size: 18px;
+    }
+}
+  

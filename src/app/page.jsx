@@ -1,8 +1,8 @@
 'use client';
 import React from "react";
 import styles from "./page.module.css";
-import RecipeGrid from "../components/recipegrid/recipegrid";
-
+import RecipeGrid from "@/src/components/recipegrid/recipegrid";
+import FAQ from "@/src/components/FAQ/faq";
 
 export default function Home() {
   return (
@@ -11,10 +11,15 @@ export default function Home() {
           <h1 className={styles.header}>Welcome to Singapore's Food Paradise</h1>
           <p className={styles.subheader}>Discover the rich flavors and diverse culinary heritage of Singapore</p>
         </div>
+
         <div className={styles.content}>
           <h2 className={styles.rectitle}>Popular Recipes</h2>
           <hr className={styles.line}/>
           <RecipeGrid></RecipeGrid>
+        </div>
+
+        <div className={styles.FAQSection}>
+          <FAQ></FAQ>
         </div>
       </div>
   );

@@ -104,3 +104,9 @@
         height: 40vh;
     }
 }
+
+.FAQSection {
+    display: flex;
+    justify-content: center;
+}
+  
