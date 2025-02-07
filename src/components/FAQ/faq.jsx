@@ -3,25 +3,27 @@ import styles from '@/src/styles/faq.module.css';
 
 const faqData = [
   {
-    question: "What is Frontend Mentor, and how will it help me?",
+    question: "What is Plateful?",
     answer:
-      "Frontend Mentor offers real coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for building a portfolio."
+      "Plateful is a platform dedicated to exploring and celebrating various cuisines and recipes. We aim to provide a diverse culinary experience for food enthusiasts or just the average person looking for a new  to eat."
+  },
+
+  {
+    question: "Can I use your recipes on my website or social media?",
+    answer:
+      "You’re welcome to share links to my recipes, but please do not copy and paste the full recipe onto another website or social media. If you'd like to share, please give proper credit and link back to the original post."
   },
   {
-    question: "How do I start coding with Frontend Mentor?",
+    question: "Do you provide nutritional information for your recipes?",
     answer:
-      "You simply sign up on the platform, select a challenge based on your skill level, and start coding. You’ll receive feedback from other users and mentors to help you grow."
+      "Some recipes may include nutritional information, but these values are estimates. I always recommend using a nutrition calculator with the exact ingredients you use to get the most accurate data."
   },
   {
-    question: "What happens after completing a challenge?",
+    question: "Can I request a specific recipe?",
     answer:
-      "Once you complete a challenge, you can submit it for review. You'll get constructive feedback and can also showcase your work in your portfolio."
+      "Yes! We love hearing what my readers want to see. Feel free to contact us at info.plateful@hotmail.com, and We'll do our best to create a recipe for it."
   },
-  {
-    question: "Can I use React for these challenges?",
-    answer:
-      "Yes! You are encouraged to use any tools or frameworks you like, including React, to complete the challenges and enhance your learning experience."
-  }
+
 ];
 
 function App() {

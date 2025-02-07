@@ -2,11 +2,11 @@
 /* Container styling */
 .container {
     width: 850px;
-    background: white;
+    /* background: white; */
     color: var(--primary-color);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); */
     position: relative;
     font-family: var(--secondary-font);
 }
@@ -31,7 +31,7 @@
     padding: 1rem;
     background-color: #e0efef;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease-in-out;
 }
   
@@ -60,20 +60,39 @@
     font-weight: 400;
     display: none; 
     overflow: hidden;
-    height: 0; /* Start with the answer hidden */
+    max-height: 0; /* Start with the answer hidden */
     opacity: 0;    /* Start with the answer invisible */
     visibility: hidden;
-    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease 0.3s;
+    transition: max-height 1.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0s ease 0.4s;
+    animation: fade 0.5s ease-in-out;
 }
+
   
 /* When the FAQ is open, apply this class */
 .faqAnswer.open {
     display: block;
-    height: auto;  
+    max-height: 500px;  
     visibility: visible;
     opacity: 1;
-    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease 0s;
+    transition: max-height 1.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0s ease 0s;
+    animation: fade 0.5s ease-in-out;
 }
+
+
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
   
 .icon {
     font-size: 2rem;
@@ -81,6 +100,8 @@
     color: var(--clr-dark-blue);
     transition: transform 0.3s ease;
 }
+
+
   
 /* Responsive for smaller devices */
 @media (max-width: 768px) {

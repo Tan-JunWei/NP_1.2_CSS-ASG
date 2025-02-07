@@ -18,6 +18,14 @@ export default function Home() {
           <RecipeGrid></RecipeGrid>
         </div>
 
+        <div className={styles.button}>
+
+
+          
+        </div>
+
+
+
         <div className={styles.FAQSection}>
           <FAQ></FAQ>
         </div>
