@@ -34,7 +34,7 @@
     padding: 1.5rem;
     border-radius: 3rem;
     border-color: rgba(255,255,255 /0.5);
-    background-color: antiquewhite; 
+    background-color: var(--primary-color); 
     align-items: center;
 }
 
@@ -118,11 +118,11 @@
     }
 
     .username {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     .user_description {
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
 
     .carditem {

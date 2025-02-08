@@ -10,7 +10,7 @@ import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/m
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { fill } from 'three/src/extras/TextureUtils';
+
 
 
 
@@ -34,9 +34,9 @@ const CarouselSlider = () => {
           <div className={styles.carditem}>
             <img
             className={styles.images}
-            src="/about/rjj.png" //! To be replaced!
-            width={500}
-            height={500}
+            src="/about/rjj.png" 
+            width={250}
+            height={250}
             alt="Ryan Tan"
             />
             <div className="cardtext">
@@ -54,7 +54,7 @@ const CarouselSlider = () => {
             <div className={styles.carditem}>
             <img
             className={styles.images}
-            src="/about/jx.png"  //! To be replaced
+            src="/about/jx.png"  
             width={500}
             height={500}
             alt="Jun Wei"
@@ -70,7 +70,7 @@ const CarouselSlider = () => {
           <SwiperSlide><div className={styles.carditem}>
             <img
             className={styles.images}
-            src="/about/Jh.jpeg" //! To be replaced
+            src="/about/Jh.jpeg" 
             width={500}
             height={500}
             alt="Jo Hanson"
@@ -85,7 +85,7 @@ const CarouselSlider = () => {
           <div className={styles.carditem}>
             <img
             className={styles.images}
-            src=""
+            src="/about/rl.png"
             width={500}
             height={500}
             alt="Ryan Low"
