@@ -41,7 +41,10 @@
     width: 15px; /* Thickness of the vertical bar */
     background-color: #2aacb1; /* Color of the bar */
     margin-right: 20px; /* Space between the bar and the content */
+    margin-left: 10px;
     border-radius: 6px;
+    background: linear-gradient(to bottom, #067579, #a5eaec ); /* Adds a nice gradient */
+    margin-bottom: 30px;
 }
 
 .contentWrapper {
@@ -166,4 +169,12 @@
     .listItem {
         font-size: 0.9rem; /* Reduce text size slightly */
     }
+
+    
+}
+
+.image:hover {
+    transform: scale(1.2); /* Slightly enlarges the image */
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
