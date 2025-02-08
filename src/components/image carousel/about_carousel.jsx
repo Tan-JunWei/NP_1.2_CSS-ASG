@@ -35,8 +35,8 @@ const CarouselSlider = () => {
             <img
             className={styles.images}
             src="/about/rjj.png" 
-            width={500}
-            height={500}
+            width={250}
+            height={250}
             alt="Ryan Tan"
             />
             <div className="cardtext">
