@@ -1,0 +1,131 @@
+/* FAQ Section styles done by: Tan Jun Wei & Ryan Tan Jia Jun */
+
+/* Container styling */
+.container {
+    width: 850px;
+    color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 12px;
+    position: relative;
+    font-family: var(--secondary-font);
+    min-height: 600px; /* Adjust based on expected FAQ height */
+    overflow: hidden; /* Prevent content from pushing below */
+}
+
+/* Header styling */
+.header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+  
+.title {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+}
+  
+/* FAQ Item container */
+.faqItem {
+    position: relative;
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    background-color: #e0efef;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+  
+.questionText{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.faqItem:hover {
+    transform: translateY(-5px);
+}
+
+.faqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+  
+/* Answer text styling */
+.faqAnswer {
+    font-size: 20px;
+    color: var(--primary-font-color);
+    margin-top: 10px;
+    max-width: 700px;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 0; /* Start with the answer hidden */
+    opacity: 0;    /* Start with the answer invisible */
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    animation: fade 0.5s ease-in-out;
+}
+
+/* When the FAQ is open, apply this class */
+.faqAnswer.open {
+    margin: 20px 20px 20px 0px;
+    max-height: 500px;  
+    visibility: visible;
+    opacity: 1;
+    transition: max-height 1.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0s ease 0s;
+    animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.icon {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.icon {
+    font-size: 2rem;
+    transition: transform 0.6s ease; 
+    transform: rotate(0deg); 
+}
+  
+.icon.open {
+    transform: rotate(180deg); /* Flip the icon to minus */
+    font-size: 2.5rem;
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    .title {
+        font-size: 26px;
+    }
+    
+    .questionText {
+        font-size: 20px;
+    }
+    
+    .faqAnswer {
+        font-size: 18px;
+    }
+}
+  

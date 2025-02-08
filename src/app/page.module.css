@@ -1,21 +1,31 @@
+/* Hero Section styles done by: Ryan Low Chee Yang & Tan Jun Wei */
+
 .container {
-    overflow-x: hidden;
-    padding: 0 20px;
+    overflow: hidden;
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/food images/chilli_crab.png');
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
+    position: relative;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    margin: -20px -20px 40px -20px;
     padding: 0 20px;
+    overflow: hidden;  /* Prevent image overflow */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 2; 
 }
 
 .header {
@@ -24,6 +34,7 @@
     font-weight: bold;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;  /* Places the text in front of the image */
 }
 
 .subheader {
@@ -31,7 +42,183 @@
     font-size: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.55);
+    z-index: 2;  /* Places the text in front of the image */
+}
+
+.parallaxImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Maintains the aspect ratio of the image */
+    object-position: center;  /* Centers the image */
+    position: absolute; /* Keeps image contained within hero */
+    top: 0;
+    left: 0;
+    z-index: 0;  /* Places the image behind the text */
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Adds space for smaller screens */
+    z-index: 2;
+}
+
+/* Improved Button Styling */
+.scrollButton {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and icon */
+    transition: all 0.3s ease;
+}
+
+.bounceIcon {
+    animation: bounce 1.5s infinite ease-in-out;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .scrollButton {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .bounceIcon{
+        font-size: 14px;
+    }
+
+    .buttonWrapper {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scrollButton {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .bounceIcon{
+        font-size: 12px;
+    }
+}
+
+/* Bounce Animation for Icon */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-2.5px);
+    }
+    50% {
+        transform: translateY(2.5px);
+    }
+}
+
+.contentSection{
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.foodSection {
+    padding: 80px;
+}
+  
+.foodSection h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+  
+.foodItem {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+  
+.left {
+    flex-direction: row;
+}
+  
+.right {
+    flex-direction: row-reverse;
+}
+  
+.foodImage {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+  
+.foodText {
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--primary-font-color);
+    font-family: var(--secondary-font);
+    max-width: 650px;
+    text-align: justify;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .foodItem {
+      gap: 30px; 
+    }
+  
+    .foodImage {
+      width: 350px; 
+      height: 250px; 
+    }
+  
+    .foodText {
+      font-size: 20px; 
+      max-width: 700px; 
+    }
+  
+    .foodSection {
+      padding: 40px; 
+    }
+  
+    .foodSection h2 {
+      font-size: 2.2rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    .foodItem {
+      flex-direction: column; 
+      align-items: flex-start; /* Align items to the left when stacking vertically */
+      gap: 15px;
+    }
+  
+    .foodImage {
+      width: 100%; 
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .foodText {
+      max-width: 100%; 
+    }
+
+    .foodSection {
+        padding: 60px; 
+    }
+  
+    .foodSection h2 {
+      font-size: 2rem; 
+    }
 }
 
 .content {
@@ -63,6 +250,22 @@
     background-color: #333;
     margin-bottom: 2rem;
 }
+
+.button {
+    background-color: var(--primary-color);
+    padding: 100px;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
     .header {
@@ -104,3 +307,9 @@
         height: 40vh;
     }
 }
+
+.FAQSection {
+    display: flex;
+    justify-content: center;
+}
+  
