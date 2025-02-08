@@ -3,13 +3,13 @@
 /* Container styling */
 .container {
     width: 850px;
-    /* background: white; */
     color: var(--primary-color);
     padding: 2rem;
     border-radius: 12px;
-    /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); */
     position: relative;
     font-family: var(--secondary-font);
+    min-height: 600px; /* Adjust based on expected FAQ height */
+    overflow: hidden; /* Prevent content from pushing below */
 }
 
 /* Header styling */
