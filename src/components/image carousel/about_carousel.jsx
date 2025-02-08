@@ -10,7 +10,7 @@ import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/m
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { fill } from 'three/src/extras/TextureUtils';
+
 
 
 
