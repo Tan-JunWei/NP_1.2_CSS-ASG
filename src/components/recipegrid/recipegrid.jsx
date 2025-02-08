@@ -1,8 +1,6 @@
 /* Recipe gird done by: Ryan Tan Jia Jun */
 import React from 'react';
 import styles from "@/src/styles/recipegrid.module.css";
-import { height } from '@mui/system';
-
 
 
 const recipes = [
