@@ -7,7 +7,7 @@ import TypingAni from '@/src/components/typing animation/typingAni';
 
 export default function About() {
     return (
-        <div>
+        <div className={styles.container}>
             <p className={styles.main}>
             Discover the Flavors of Singapore!
             </p>

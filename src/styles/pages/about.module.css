@@ -1,7 +1,6 @@
 /* 'about' page styles done by: Ryan Tan Jia Jun */
 
 
-
 .header{
     display: flex;
     justify-content: center;
@@ -28,6 +27,7 @@
 }
 
 
+
 #mainimage {
     display: flex;
     justify-content: center;
@@ -50,8 +50,8 @@
     font-family: var(--secondary-font);
     font-size: 20px;
     padding-bottom: 20px ;
-    margin-left: 60px;
-    margin-right: 60px;
+    max-width: 900px;
+    margin: 2rem auto;
     text-align: justify;
 }
 
@@ -59,8 +59,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 50px;
-    margin-right: 50px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    color: white;
 }
 
 

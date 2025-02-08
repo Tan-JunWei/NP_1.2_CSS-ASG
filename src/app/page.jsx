@@ -38,7 +38,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        
+
         <div id="contentSection" className={styles.contentSection}>
           <section className={styles.foodSection}>
             <h2>The Heart of Singapore: A Melting Pot of Culinary Cultures</h2>
