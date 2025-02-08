@@ -1,23 +1,71 @@
 /* Hero Section done by: Ryan Low Chee Yang & Tan Jun Wei */
 
 'use client';
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import RecipeGrid from "@/src/components/recipegrid/recipegrid";
 import FAQ from "@/src/components/FAQ/faq";
-import SimpleParallax from "simple-parallax-js";
+import Loading from "@/src/app/loading";
 import { FaChevronDown, FaUtensils, FaRobot, FaCompass } from "react-icons/fa";
 import HomeButton from "@/src/components/homebutton/index";
 import { useRouter } from 'next/navigation';
 
-const ParallaxHeroSection = ({ imageSrc = "/home/singapore.jpg" }) => (
-  <SimpleParallax orientation="up" scale={1.4}>
-    <img src={imageSrc} alt="image" className={styles.parallaxImage} />
-  </SimpleParallax>
-);
+const ParallaxHeroSection = ({ imageSrc = "/home/singapore.jpg" }) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const parallaxElements = document.querySelectorAll('.parallax-image');
+      parallaxElements.forEach(element => {
+        const speed = 0.5;
+        const yPos = -(scrolled * speed);
+        element.style.transform = `translateY(${yPos}px)`;
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className={styles.parallaxContainer}>
+      <img src={imageSrc} alt="image" className={`${styles.parallaxImage} parallax-image`} />
+    </div>
+  );
+};
 
 export default function Home() {
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(true);
+  const [imagesLoaded, setImagesLoaded] = useState(0);
+  const totalImages = 5; // Total number of images in the component
+
+  useEffect(() => {
+    const loadImage = (src) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+          setImagesLoaded(prev => prev + 1);
+          resolve();
+        };
+        img.onerror = reject;
+      });
+    };
+
+    Promise.all([
+      loadImage('/home/singapore.jpg'),
+      loadImage('/home/cultures.png'),
+      loadImage('/home/variety.png'),
+      loadImage('/home/marinabay.png'),
+      loadImage('/home/discover.jpeg')
+    ]).finally(() => {
+      setIsLoading(false);
+    });
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
       <div className={styles.container}>

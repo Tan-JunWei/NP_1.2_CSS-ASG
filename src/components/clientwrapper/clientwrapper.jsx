@@ -3,30 +3,41 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 import Navbar from "@/src/components/navbar/navbar";
 import Loading from "@/src/app/loading"; 
 
 export default function ClientWrapper({ children }) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
-    // Only run this on the client side
-    if (isLoading) {
+    // This will run on mount and whenever the route changes
+    const handleRouteChange = () => {
+      setIsLoading(true);
       document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+      
+      // Use requestAnimationFrame to wait for the next paint
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setIsLoading(false);
+          document.body.style.overflow = "auto";
+        });
+      });
+    };
 
-    // Cleanup function to reset the overflow style when the component is unmounted
+    handleRouteChange();
+
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isLoading]);
-  
+  }, [pathname, searchParams]); // Re-run when the route changes
+
   return (
     <>
       <Navbar setLoading={setIsLoading} />
-      {isLoading && <Loading />}  {/* Show Loading component when isLoading is true */}
+      {isLoading && <Loading />}
       <main className="main-content">{children}</main>
     </>
   );

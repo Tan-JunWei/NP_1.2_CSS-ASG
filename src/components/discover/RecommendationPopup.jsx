@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+// Import the specific animation functions we need from react-spring
+import { animated, useSpring } from '@react-spring/web';
 import { TwitterShareButton, FacebookShareButton, TwitterIcon, FacebookIcon } from "react-share";
 import { marked } from "marked";
 import styles from "./RecommendationPopup.module.css";
@@ -177,14 +179,6 @@ const RecommendationPopup = ({ isOpen, onClose, response, selectedImages }) => {
                 </>
               )}
             </motion.div>
-            <motion.button
-              className={styles.closeButton}
-              onClick={onClose}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Close
-            </motion.button>
           </motion.div>
         </motion.div>
       </motion.div>

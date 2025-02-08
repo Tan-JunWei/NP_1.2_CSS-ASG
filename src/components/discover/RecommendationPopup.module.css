@@ -165,7 +165,7 @@
     padding: 1.5rem 2rem;
     border-top: 1px solid #edf2f7;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background: white;
     border-radius: 0 0 24px 24px;
@@ -242,8 +242,6 @@
   
     .actions {
       padding: 1rem;
-      flex-direction: column;
-      gap: 1rem;
     }
   
     .shareButtons {
@@ -270,4 +268,3 @@
       transition: none;
     }
   }
-  
