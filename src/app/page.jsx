@@ -7,7 +7,7 @@ import RecipeGrid from "@/src/components/recipegrid/recipegrid";
 import FAQ from "@/src/components/FAQ/faq";
 import SimpleParallax from "simple-parallax-js";
 import { FaChevronDown } from "react-icons/fa";
-
+import HomeButton from "@/src/components/homebutton/index";
 const ParallaxHeroSection = () => (
   <SimpleParallax orientation="up" scale={1.4}>
     <img src="/home/singapore.jpg" alt="image" className={styles.parallaxImage} />
@@ -70,8 +70,8 @@ export default function Home() {
         </div>
 
         <div className={styles.button}>
-
-
+            <HomeButton/>
+            
           
         </div>
 
