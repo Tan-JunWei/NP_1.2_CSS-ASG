@@ -22,7 +22,7 @@
 /* Scoped styles for ul and li */
 .list {
     padding: 100px;
-    margin: 0 0 20px;
+    margin: 20 0 20px;
     list-style-type: disc; /* You can use circle, square, or none if needed */
 }
 
@@ -46,13 +46,16 @@
 
 .contentWrapper {
     
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 10px auto;
 }
 .section {
     margin-bottom: 30px; /* Adds spacing between sections */
     display: flex;
     align-items: center;
+    
+    max-width: 1200px;
     justify-content: space-between;
     gap: 0px; /* Space between image and text */
     padding:20px;
@@ -65,7 +68,7 @@
 .image {
     width: 50%; /* Ensures images are responsive */
     height: auto; /* Maintains aspect ratio */
-    max-width: 800px; /* Limits image width */
+    max-width: 600px; /* Limits image width */  
     margin: 10px auto 20px; /* Adds spacing above and below the image */
     border-radius: 8px; /* Adds rounded corners */
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Adds a subtle shadow */
@@ -113,5 +116,54 @@
 
 .text-content {
     width: 50%;
+    max-width: 600px;
 }
 
+@media screen and (max-width: 768px) {
+    .section {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center align text */
+    }
+    .section:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image, .text-content {
+        width: 100%; /* Make images and text take full width */
+        max-width: 100%;
+    }
+
+    .list {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .subheader {
+        font-size: 1.5rem; /* Decrease header size */
+    }
+}
+
+/* 📌 Responsive Design for Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    .contentWrapper {
+        width: 95%; /* More compact width */
+        padding: 10px;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    .image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .subheader {
+        font-size: 1.2rem; /* Smaller font for mobile */
+    }
+
+    .listItem {
+        font-size: 0.9rem; /* Reduce text size slightly */
+    }
+}

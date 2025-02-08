@@ -136,7 +136,7 @@ export default function History() {
                         This period saw globalization and innovation in food, with the development of processed foods like frozen, pre-packaged, and convenience foods.
                     </li>
                     <li className={styles.listItem}>
-                        The World Wars accelerated the development of canned food and <span classname={styles.tooltip} data-tooltip="MRE stands for meal ready-to-eat. MREs are pre-cooked meals that are packaged in a lightweight container for later consumption.">MREs</span>.
+                        The World Wars accelerated the development of canned food and <span className={styles.tooltip} data-tooltip="MRE stands for meal ready-to-eat. MREs are pre-cooked meals that are packaged in a lightweight container for later consumption.">MREs</span>.
                     </li>
                     <li className={styles.listItem}>
                         The Green Revolution introduced high-yield crops and modern farming techniques.
@@ -156,7 +156,7 @@ export default function History() {
                 <ul className={styles.list}>
                 <h2 className={styles.subheader}>21st Century</h2>
                     <li className={styles.listItem}>
-                        Focus on food sustainability, such as <span classname={styles.tooltip} data-tooltip="Organic farming is a method of agriculture that uses natural processes to grow healthy food and protect the environment. ">organic farming</span> and reduction of food waste.
+                        Focus on food sustainability, such as <span className={styles.tooltip} data-tooltip="Organic farming is a method of agriculture that uses natural processes to grow healthy food and protect the environment. ">organic farming</span> and reduction of food waste.
                     </li>
                     <li className={styles.listItem}>
                         Development of global fusion cuisine as technology and transport blend traditional and modern cultures.
@@ -164,9 +164,9 @@ export default function History() {
                     <li className={styles.listItem}>
                         Integration of technology into food, including food delivery, AI-driven nutrition plans, and vertical farming.
                     </li>
-                    <li className={styles.listItem}> Singapore's iconic hawker culture was inscribed on <span classname={styles.tooltip} data-tooltip="UNESCO: United Nations Educational, Scientific and Cultural Organization">UNESCO's</span> Representative List of the Intangible Cultural Heritage of Humanity in 2020.
+                    <li className={styles.listItem}> Singapore's iconic hawker culture was inscribed on <span className={styles.tooltip} data-tooltip="UNESCO: United Nations Educational, Scientific and Cultural Organization">UNESCO's</span> Representative List of the Intangible Cultural Heritage of Humanity in 2020.
                     </li>
-                    <li className={styles.listItem}> Singapore became a <span classname={styles.tooltip} data-tooltip="MICHELIN Stars are awarded when the personality and talent of the chef are evident in their expertly crafted dishes; their food is refined and inspired.">Michelin-starred</span> city in 2016, with both hawker stalls and fine-dining establishments earning accolades.
+                    <li className={styles.listItem}> Singapore became a <span className={styles.tooltip} data-tooltip="MICHELIN Stars are awarded when the personality and talent of the chef are evident in their expertly crafted dishes; their food is refined and inspired.">Michelin-starred</span> city in 2016, with both hawker stalls and fine-dining establishments earning accolades.
                     </li>
                 </ul>
                 </div>
