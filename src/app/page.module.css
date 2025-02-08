@@ -1,3 +1,5 @@
+/* Hero Section styles done by: Ryan Low Chee Yang & Tan Jun Wei */
+
 .container {
     overflow: hidden;
 }
@@ -117,6 +119,105 @@
     }
     50% {
         transform: translateY(2.5px);
+    }
+}
+
+.contentSection{
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.foodSection {
+    padding: 80px;
+}
+  
+.foodSection h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+  
+.foodItem {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+  
+.left {
+    flex-direction: row;
+}
+  
+.right {
+    flex-direction: row-reverse;
+}
+  
+.foodImage {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+  
+.foodText {
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--primary-font-color);
+    font-family: var(--secondary-font);
+    max-width: 650px;
+    text-align: justify;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .foodItem {
+      gap: 30px; 
+    }
+  
+    .foodImage {
+      width: 350px; 
+      height: 250px; 
+    }
+  
+    .foodText {
+      font-size: 20px; 
+      max-width: 700px; 
+    }
+  
+    .foodSection {
+      padding: 40px; 
+    }
+  
+    .foodSection h2 {
+      font-size: 2.2rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    .foodItem {
+      flex-direction: column; 
+      align-items: flex-start; /* Align items to the left when stacking vertically */
+      gap: 15px;
+    }
+  
+    .foodImage {
+      width: 100%; 
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .foodText {
+      max-width: 100%; 
+    }
+
+    .foodSection {
+        padding: 60px; 
+    }
+  
+    .foodSection h2 {
+      font-size: 2rem; 
     }
 }
 

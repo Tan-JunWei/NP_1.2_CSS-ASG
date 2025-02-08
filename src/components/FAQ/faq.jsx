@@ -1,3 +1,5 @@
+/* FAQ Section done by: Tan Jun Wei & Ryan Tan Jia Jun */
+
 import React, { useState } from 'react';
 import styles from '@/src/styles/faq.module.css';
 
