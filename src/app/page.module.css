@@ -52,7 +52,72 @@
     position: absolute; /* Keeps image contained within hero */
     top: 0;
     left: 0;
-    z-index: 1;  /* Places the image behind the text */
+    z-index: 0;  /* Places the image behind the text */
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Adds space for smaller screens */
+    z-index: 2;
+}
+
+/* Improved Button Styling */
+.scrollButton {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and icon */
+    transition: all 0.3s ease;
+}
+
+.bounceIcon {
+    animation: bounce 1.5s infinite ease-in-out;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .scrollButton {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .bounceIcon{
+        font-size: 14px;
+    }
+
+    .buttonWrapper {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scrollButton {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .bounceIcon{
+        font-size: 12px;
+    }
+}
+
+/* Bounce Animation for Icon */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-2.5px);
+    }
+    50% {
+        transform: translateY(2.5px);
+    }
 }
 
 .content {
