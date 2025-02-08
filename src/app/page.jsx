@@ -10,9 +10,9 @@ import { FaChevronDown, FaUtensils, FaRobot, FaCompass } from "react-icons/fa";
 import HomeButton from "@/src/components/homebutton/index";
 import { useRouter } from 'next/navigation';
 
-const ParallaxHeroSection = () => (
+const ParallaxHeroSection = ({ imageSrc = "/home/singapore.jpg" }) => (
   <SimpleParallax orientation="up" scale={1.4}>
-    <img src="/home/singapore.jpg" alt="image" className={styles.parallaxImage} />
+    <img src={imageSrc} alt="image" className={styles.parallaxImage} />
   </SimpleParallax>
 );
 
@@ -78,7 +78,7 @@ export default function Home() {
         </div>
 
         <div className={styles.tasteExplorer}>
-          <ParallaxHeroSection />
+          <ParallaxHeroSection imageSrc="/home/discover.jpeg" />
           <div className={styles.tasteExplorerContent}>
             <h2 className={styles.tasteExplorerTitle}>Discover Your Next Favorite Dish</h2>
             <p className={styles.tasteExplorerSubtitle}>
