@@ -1,11 +1,9 @@
 "use client";
 /* History page done by: Jo Hanson Mok */
-
+"use client"
 
 import { useEffect, useState } from "react";
 import styles from "@/src/styles/pages/history.module.css"
-
-
 
 
 
@@ -41,8 +39,6 @@ export default function History() {
 
     
     return (
-        
-        
         <div className={styles.container}>
             <h1 className={styles.header}>The History of Food</h1>
 
@@ -213,13 +209,14 @@ export default function History() {
             </div>
             <button>Test Button</button>
             {/* Back to Top Button */}
-            <button
-                className={`${styles.backToTop} ${showButton ? styles.show : ""}`}
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-                ↑
-            </button>
-
+            <>
+                <button
+                    className={`${styles.backToTop} ${showButton ? styles.show : ""}`}
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                >
+                    ↑
+                </button>
+            </>
         
         </div>
         

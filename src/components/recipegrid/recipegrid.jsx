@@ -1,22 +1,19 @@
-/* Recipe gird done by: Ryan Tan Jia Jun */
+/* Recipe grid done by: Ryan Tan Jia Jun */
 import React from 'react';
 import styles from "@/src/styles/recipegrid.module.css";
-import { height } from '@mui/system';
-
-
 
 const recipes = [
     {
       title: 'Hainanese Chicken Rice',
       image: 'top-picks/hainanese-chicken-rice.jpg', 
-      servings: '4 Servings',
-      time: '40 Minutes',
+      servings: '5 Servings',
+      time: '1 Hr',
       link: '/recipes/hainanese-chicken-rice',
     },
     {
       title: 'Char Kway Teow',
       image: 'top-picks/char_kway_teow.jpg', 
-      servings: '4 Servings',
+      servings: '2 Servings',
       time: '40 Minutes',
       link: '/recipes/char-kway-teow',
     },
@@ -24,17 +21,17 @@ const recipes = [
       title: 'Nasi Lemak',
       image: 'top-picks/nasi_lemak.jpeg', 
       servings: '4 Servings',
-      time: '40 Minutes',
+      time: '1 Hr 10 Minutes',
       link: '/recipes/nasi-lemak',
     },
     {
       title: 'Roti Prata',
       image: 'top-picks/roti_prata.jpg', 
       servings: '4 Servings',
-      time: '40 Minutes',
+      time: '35 Minutes',
       link: '/recipes/roti-prata',
     },
-  ];
+];
 
 const RecipeGrid = () => {
     return (
