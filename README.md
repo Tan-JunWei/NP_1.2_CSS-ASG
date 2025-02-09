@@ -12,10 +12,10 @@ This GitHub repository contains the codebase developed for the module's assignme
 3. [📂 Project Structure](#-project-structure)
 4. [Contribution Details](#contribution-details)
     1. [📌 Individual Contributions](#-individual-contributions)
-        1. [Tan Jun Wei](#-tan-jun-wei)
-        2. [Ryan Low Chee Yang](#-ryan-low-chee-yang)
-        3. [Ryan Tan Jia Jun](#-ryan-tan-jia-jun)
-        4. [Jo Hanson Mok](#-jo-hanson-mok)
+        1. [Tan Jun Wei](#tan-jun-wei)
+        2. [Ryan Low Chee Yang](#ryan-low-chee-yang)
+        3. [Ryan Tan Jia Jun](#ryan-tan-jia-jun)
+        4. [Jo Hanson Mok](#jo-hanson-mok)
     2. [🔄 Shared Contributions](#-shared-contributions)
 5. [🌐 Website Screenshots](#-website-screenshots)
 
@@ -67,6 +67,7 @@ The development of this web application involved a collaborative effort. Below i
 
 ---
 
+<a id="tan-jun-wei"></a>
 ### 🍽️ Tan Jun Wei  
 **📜 Pages:**  
 - **Recipes Page** → `src/app/recipes/page.jsx`, `src/styles/pages/recipes.module.css`  
@@ -86,6 +87,7 @@ The development of this web application involved a collaborative effort. Below i
 
 ---
 
+<a id="ryan-low-chee-yang"></a>
 ### 🍽️ Ryan Low Chee Yang  
 **📜 Pages:**  
 - **Discover Page** → `src/app/discover/page.jsx`, `src/styles/pages/discover.module.css`
@@ -98,6 +100,7 @@ The development of this web application involved a collaborative effort. Below i
 
 ---
 
+<a id="ryan-tan-jia-jun"></a>
 ### 🍽️ Ryan Tan Jia Jun  
 **📜 Pages:**  
 - **About Page** → `src/app/about/page.jsx`, `src/styles/pages/about.module.css`
@@ -110,6 +113,7 @@ The development of this web application involved a collaborative effort. Below i
 
 ---
 
+<a id="jo-hanson-mok"></a>
 ### 🍽️ Jo Hanson Mok  
 **📜 Pages:**  
 - **History Page** → `src/app/history/page.jsx`, `src/styles/pages/history.module.css`  
