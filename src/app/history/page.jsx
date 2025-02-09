@@ -207,7 +207,7 @@ export default function History() {
                 </div>
                 
             </div>
-            <button>Test Button</button>
+            
             {/* Back to Top Button */}
             <>
                 <button

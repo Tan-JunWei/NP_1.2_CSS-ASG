@@ -188,12 +188,20 @@
     right: 30px;
     background: #2aacb1;
     color: white;
-    padding: 10px 15px;
+    padding: 50px 50px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 18px;
-    display: flex;
+    font-size: 40px;
+    width: 60px;  /* Increase width */
+    height: 60px;
+    display: none;
     z-index: 1000;
+    line-height: 60px; 
+}
+.back-to-top:hover {
+    background: #198d94;
+    transform: scale(1.5); /* Slightly enlarge on hover */
+    transition: transform 0.2s ease-in-out;
 }
 
 .back-to-top.show {
