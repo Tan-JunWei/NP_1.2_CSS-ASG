@@ -8,7 +8,7 @@
     border-radius: 12px;
     position: relative;
     font-family: var(--secondary-font);
-    min-height: 600px; /* Adjust based on expected FAQ height */
+    min-height: 600px; 
     overflow: hidden; /* Prevent content from pushing below */
 }
 

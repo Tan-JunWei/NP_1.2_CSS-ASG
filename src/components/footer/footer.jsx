@@ -20,7 +20,7 @@ export default function Footer() {
 							<p>About Us</p>
 						</a>
 
-						<a href="/">
+						<a href="/#faq">
 							<p>FAQ</p>
 						</a>
 
@@ -46,10 +46,6 @@ export default function Footer() {
 						<h4>Food History</h4>
 						<a href="/history">
 							<p>SG Food History</p>
-						</a>
-
-						<a href="/history">
-							<p>Culinary Traditions</p>
 						</a>
 					</div>
 
