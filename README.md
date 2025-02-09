@@ -8,7 +8,7 @@ This GitHub repository contains the codebase developed for the module's assignme
 
 # Table of Contents
 1. [CSS (Client-Side-Scripting)](#css-client-side-scripting)
-2. [😙🤌 Plateful: An Overview](#-plateful-an-overview)
+2. [Plateful: An Overview](#plateful-an-overview)
 3. [📂 Project Structure](#-project-structure)
 4. [Contribution Details](#contribution-details)
     1. [📌 Individual Contributions](#-individual-contributions)
@@ -20,9 +20,15 @@ This GitHub repository contains the codebase developed for the module's assignme
 
 ---
 
-## 😙🤌 Plateful: An Overview
+## Plateful: An Overview
 
-"Plateful" is a web platform that celebrates Singapore’s vibrant food culture, offering a curated collection of authentic local dishes inspired by the country’s diverse cultural heritage. The site allows users to explore traditional recipes, while also providing a personalized experience: by selecting three dishes, the AI recommends a food item with a similar flavor profile, introducing users to new and exciting culinary discoveries.
+> [!INFO]  
+> "Plateful" is a web platform that celebrates Singapore’s vibrant food culture, offering a curated collection of authentic local dishes inspired by the country’s diverse cultural heritage.  
+>
+> The site allows users to explore traditional recipes, while also providing a personalized experience: by selecting three dishes, the AI recommends a food item with a similar flavor profile, introducing users to new and exciting culinary discoveries.  
+> With its interactive features and easy-to-navigate interface, "Plateful" offers a seamless way for food enthusiasts to dive into Singapore’s rich culinary landscape and discover new favorites along the way.
+
+---
 
 ## 📂 Project Structure
 
@@ -48,6 +54,8 @@ The project is organized in the following way:
 
 - **`src/styles/`**: Contains all the CSS styles for the project  
     - **`src/styles/pages/`**: CSS styles specific to individual pages
+
+---
 
 ## Contribution Details
 This website is built by: Tan Jun Wei, Ryan Low Chee Yang, Ryan Tan Jia Jun and Jo Hanson Mok as part of our CSS final assessment.
