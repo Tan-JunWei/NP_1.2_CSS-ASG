@@ -1,5 +1,28 @@
 /* Recipes data done by: Tan Jun Wei */
 
+/* 
+  This file contains authentic recipes of iconic Singaporean dishes, along with their ingredients, nutritional information, and cooking instructions.
+  
+  Each recipe is represented as an object with the following properties:
+  - id: A unique identifier for the recipe.
+  - title: The name of the dish.
+  - tags: An array of categories that the dish belongs to.
+  - image: The image file path for the dish.
+  - indivImage: The individual image file path for the dish.
+  - description: A brief description of the dish.
+  - longDescription: A detailed description of the dish.
+  - ingredients: An array of ingredients required to make the dish.
+  - calories: The total calories per serving.
+  - carbs: The total carbohydrates per serving.
+  - fat: The total fat per serving.
+  - protein: The total protein per serving.
+  - preptime: The preparation time for the dish.
+  - cooktime: The cooking time for the dish.
+  - totaltime: The total time required to make the dish.
+  - servings: The number of servings the recipe yields.
+  - steps: An array of cooking steps to prepare the dish.
+*/
+
 const dishes = [
   {
     id: 1,

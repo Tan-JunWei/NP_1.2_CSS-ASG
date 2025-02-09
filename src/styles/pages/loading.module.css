@@ -1,4 +1,4 @@
-/* Loading gif styles done by: Ryan Low Chee Yang */
+/* Loading gif styles done by: Tan Jun Wei & Ryan Low Chee Yang */
 
 .loaderContainer {
     display: flex;
@@ -7,10 +7,10 @@
     height: 100vh;
     background-color: #f9f9f9;
     flex-direction: column;
-  }
+}
   
-  .loaderGif {
+.loaderGif {
     width: 100px; /* Adjust size as needed */
     height: auto;
-  }
+}
   

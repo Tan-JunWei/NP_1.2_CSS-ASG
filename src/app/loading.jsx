@@ -1,4 +1,4 @@
-/* Loading animation done by: Tan Jun Wei and Ryan Low Chee Yang */
+/* Loading animation done by: Tan Jun Wei & Ryan Low Chee Yang */
 
 'use client';
 

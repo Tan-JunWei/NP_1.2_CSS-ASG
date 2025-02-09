@@ -1,6 +1,5 @@
 /* 'History' page styles done by: Jo Hanson Mok */
 
-
 .main
 {
     display: flex;
@@ -21,9 +20,8 @@
     margin-top: 50px; /* Adds more space above the subheader */
     margin-bottom: 20px;
     font-size: 1.8rem; /* Increases the font size */
-    
-
 }
+
 /* Scoped styles for ul and li */
 .list {
     padding: 100px;

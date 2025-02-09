@@ -1,3 +1,5 @@
+/* Discover page done by: Ryan Low Chee Yang */
+
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";

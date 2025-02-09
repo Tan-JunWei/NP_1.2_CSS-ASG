@@ -1,10 +1,9 @@
 /* History page done by: Jo Hanson Mok */
+
 "use client"
 
 import { useEffect, useState } from "react";
 import styles from "@/src/styles/pages/history.module.css"
-
-
 
 export default function History() {
     const [showButton, setShowButton] = useState(false);
@@ -24,8 +23,6 @@ export default function History() {
 
     
     return (
-        
-        
         <div className={styles.container}>
             <h1 className={styles.header}>The History of Food</h1>
 
@@ -203,9 +200,6 @@ export default function History() {
                     ↑
                 </button>
             </>
-        
-        </div>
-        
-                
+        </div> 
             );
         }

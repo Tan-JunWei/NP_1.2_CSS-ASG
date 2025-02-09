@@ -1,3 +1,5 @@
+/* Discover page done by: Ryan Low Chee Yang */
+
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
