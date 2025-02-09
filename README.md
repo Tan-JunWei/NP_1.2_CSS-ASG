@@ -8,17 +8,21 @@ This GitHub repository contains the codebase developed for the module's assignme
 
 # Table of Contents
 1. [CSS (Client-Side-Scripting)](#css-client-side-scripting)
-2. [📂 Project Structure](#-project-structure)
-3. [Contribution Details](#contribution-details)
-    1. [🍽️ Individual Contributions](#-individual-contributions)
-        1. [Tan Jun Wei](#tan-jun-wei)
-        2. [Ryan Low Chee Yang](#ryan-low-chee-yang)
-        3. [Ryan Tan Jia Jun](#ryan-tan-jia-jun)
-        4. [Jo Hanson Mok](#jo-hanson-mok)
-    2. [🔄 Group Contributions](#-group-contributions)
+2. [😙🤌 Plateful: An Overview](#-plateful-an-overview)
+3. [📂 Project Structure](#-project-structure)
+4. [Contribution Details](#contribution-details)
+    1. [📌 Individual Contributions](#-individual-contributions)
+        1. [Tan Jun Wei](#-tan-jun-wei)
+        2. [Ryan Low Chee Yang](#-ryan-low-chee-yang)
+        3. [Ryan Tan Jia Jun](#-ryan-tan-jia-jun)
+        4. [Jo Hanson Mok](#-jo-hanson-mok)
+    2. [🔄 Shared Contributions](#-shared-contributions)
 
 ---
 
+## 😙🤌 Plateful: An Overview
+
+"Plateful" is a web platform that celebrates Singapore’s vibrant food culture, offering a curated collection of authentic local dishes inspired by the country’s diverse cultural heritage. The site allows users to explore traditional recipes, while also providing a personalized experience: by selecting three dishes, the AI recommends a food item with a similar flavor profile, introducing users to new and exciting culinary discoveries.
 
 ## 📂 Project Structure
 
