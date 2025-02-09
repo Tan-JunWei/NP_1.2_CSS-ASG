@@ -24,11 +24,7 @@ export default function Navbar({ setLoading }) {
 
   // Function to handle link clicks and trigger loading
   const handleLinkClick = () => {
-    setLoading(true);  // Show loading spinner
-    // Simulate page loading (you can replace this with actual logic)
-    setTimeout(() => {
-      setLoading(false);  // Hide loading spinner after loading is complete
-    }, 2000);
+    setLoading(true);  // Show loading spinner when navigation starts
   };
 
   return (
