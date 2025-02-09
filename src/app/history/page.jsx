@@ -1,5 +1,6 @@
+"use client";
 /* History page done by: Jo Hanson Mok */
-"use client"
+
 
 import { useEffect, useState } from "react";
 import styles from "@/src/styles/pages/history.module.css"
@@ -11,28 +12,40 @@ export default function History() {
 
     useEffect(() => {
         const checkScroll = () => {
-            if (window.scrollY > 300) {
-                setShowButton(true);
-            } else {
-                setShowButton(false);
-            }
+            setShowButton(window.scrollY > 300);
+            console.log("Scroll Y:", window.scrollY, "Show Button:", showButton);
         };
-
+    
         window.addEventListener("scroll", checkScroll);
         return () => window.removeEventListener("scroll", checkScroll);
+    }, [showButton]); 
+
+    useEffect(() => {
+        const hiddenElements = document.querySelectorAll(".hidden");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, { threshold: 0.1 });
+
+        hiddenElements.forEach(el => observer.observe(el));
+
+        return () => hiddenElements.forEach(el => observer.unobserve(el));
     }, []);
+
 
     
     return (
-        
-        
         <div className={styles.container}>
             <h1 className={styles.header}>The History of Food</h1>
 
             <div className={styles.pageWrapper}>
                 <div className={styles.verticalBar}></div>
                 <div className={styles.contentWrapper}>
-                    <section className={styles.section}>
+                    <section className={`hidden ${styles.section}`}>
                         
                         <img src="/history/before.png" alt="Ancient Civilization Food" className={styles.image} />
                         <div className={styles.textContent}>
@@ -58,7 +71,7 @@ export default function History() {
                         </div>
                     </section>
 
-                    <section className={styles.section}>
+                    <section className={`hidden ${styles.section}`}>
                         
                         <img src="/history/3000bce.png" alt="Ancient Civilization Food" className={styles.image} />
                         <div className={styles.textContent}>
@@ -79,7 +92,7 @@ export default function History() {
                         </div>
                     </section>
 
-                    <section className={styles.section}>
+                    <section className={`hidden ${styles.section}`}>
                         
                         <img src="/history/medieval.png" alt="Ancient Civilization Food" className={styles.image} />
                         <div className={styles.textContent}>
@@ -103,7 +116,7 @@ export default function History() {
                         </div>
                     </section>
 
-                    <section className={styles.section}>
+                    <section className={`hidden ${styles.section}`}>
                         
                         <img src="/history/exploration.png" alt="Ancient Civilization Food" className={styles.image} />
                         <div className={styles.textContent}>
@@ -124,7 +137,7 @@ export default function History() {
                         </div>
                     </section>
 
-                    <section className={styles.section}>
+                    <section className={`hidden ${styles.section}`}>
                         
                         <img src="/history/industrial.png" alt="Ancient Civilization Food" className={styles.image} />
                         <div className={styles.textContent}>
@@ -146,7 +159,7 @@ export default function History() {
                         </div>
                     </section>
 
-                    <section className={styles.section}>
+                    <section className={`hidden ${styles.section}`}>
                         
                         <img src="/history/20th.png" alt="Ancient Civilization Food" className={styles.image} />
                         <div className={styles.textContent}>
@@ -169,7 +182,7 @@ export default function History() {
                         </div>
                     </section>
 
-                    <section className={styles.section}>
+                    <section className={`hidden ${styles.section}`}>
                         
                         <img src="/history/21st.png" alt="Ancient Civilization Food" className={styles.image} />
                         <div className={styles.textContent}>
@@ -194,6 +207,7 @@ export default function History() {
                 </div>
                 
             </div>
+            
             {/* Back to Top Button */}
             <>
                 <button

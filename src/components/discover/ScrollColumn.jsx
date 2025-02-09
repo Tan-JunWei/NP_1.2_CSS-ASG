@@ -1,3 +1,5 @@
+/* Discover page done by: Ryan Low Chee Yang */
+
 "use client";
 import React, { forwardRef } from 'react';
 import styles from './ScrollColumn.module.css';

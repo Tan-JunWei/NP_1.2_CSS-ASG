@@ -1,3 +1,5 @@
+/* Discover page done by: Ryan Low Chee Yang */
+
 "use client";
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

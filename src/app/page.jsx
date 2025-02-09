@@ -1,3 +1,15 @@
+/* Hero Section done by: Tan Jun Wei & Ryan Low Chee Yang */
+
+/* Introduction Section done by: Tan Jun Wei */
+
+/* Popular Recipes Grid Section done by: Ryan Tan Jia Jun */
+
+/* Redirection Button to History page done by: Ryan Tan Jia Jun */
+
+/* Taste Explorer Section done by: Ryan Low Chee Yang */
+
+/* FAQ Section done by: Tan Jun Wei & Ryan Tan Jia Jun */
+
 'use client';
 import React from "react";
 import styles from "./page.module.css";

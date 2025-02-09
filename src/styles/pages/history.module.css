@@ -1,6 +1,5 @@
 /* 'History' page styles done by: Jo Hanson Mok */
 
-
 .main
 {
     display: flex;
@@ -21,9 +20,8 @@
     margin-top: 50px; /* Adds more space above the subheader */
     margin-bottom: 20px;
     font-size: 1.8rem; /* Increases the font size */
-    
-
 }
+
 /* Scoped styles for ul and li */
 .list {
     padding: 100px;
@@ -190,13 +188,34 @@
     right: 30px;
     background: #2aacb1;
     color: white;
-    padding: 10px 15px;
+    padding: 50px 50px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 40px;
+    width: 60px;  /* Increase width */
+    height: 60px;
     display: none;
+    z-index: 1000;
+    line-height: 60px; 
+}
+.back-to-top:hover {
+    background: #198d94;
+    transform: scale(1.5); /* Slightly enlarge on hover */
+    transition: transform 0.2s ease-in-out;
 }
 
 .back-to-top.show {
     display: block;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px); /* Move down slightly */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When element enters viewport */
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }

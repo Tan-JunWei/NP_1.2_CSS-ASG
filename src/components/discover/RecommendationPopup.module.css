@@ -1,19 +1,21 @@
+/* Discover page styles done by: Ryan Low Chee Yang */
+
 /* Overlay styles to cover the viewport with a semi-transparent background */
 .overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: flex-start;  /* Align to the top rather than center */
-  justify-content: center;
-  z-index: 1000;
-  backdrop-filter: blur(5px);
-  padding: 20px;
-  padding-top: 50px; /* Adjust this value to move the popup higher */
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: flex-start;  /* Align to the top rather than center */
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    padding-top: 50px; /* Adjust this value to move the popup higher */
 }
   
-  /* The content box for the popup */
-  .content {
+/* The content box for the popup */
+.content {
     background: white;
     border-radius: 24px;
     width: 90%;
@@ -24,11 +26,10 @@
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 2rem; /* Extra space at the bottom so content isn’t cut off */
-  }
+}
   
-  
-  /* Header area for the popup */
-  .header {
+/* Header area for the popup */
+.header {
     padding: 1.5rem 2rem;
     border-bottom: 1px solid #edf2f7;
     display: flex;
@@ -39,17 +40,17 @@
     background: white;
     z-index: 2;
     border-radius: 24px 24px 0 0;
-  }
+}
   
-  .header h3 {
+.header h3 {
     margin: 0;
     font-size: 1.5rem;
     color: #2d3748;
     font-weight: 600;
-  }
+}
   
-  /* Close button styling */
-  .closeButton {
+/* Close button styling */
+.closeButton {
     background: transparent;
     border: none;
     color: #718096;
@@ -63,14 +64,14 @@
     width: 32px;
     height: 32px;
     transition: all 0.2s ease;
-  }
+}
   
-  .closeButton:hover {
+.closeButton:hover {
     background: #f7fafc;
     color: #4a5568;
-  }
+}
   
-  /* Styles for the preview of selected images */
+/* Styles for the preview of selected images */
   .selectedPreview {
     padding: 1.5rem 2rem;
     display: flex;
@@ -78,90 +79,90 @@
     justify-content: center;
     background: #f8f9fa;
     border-bottom: 1px solid #edf2f7;
-  }
+}
   
-  .previewImage {
+.previewImage {
     width: 80px;
     height: 80px;
     border-radius: 12px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  /* Container for the taste profile and recommendations sections */
-  .tasteProfile {
+/* Container for the taste profile and recommendations sections */
+.tasteProfile {
     padding: 2rem;
-  }
+}
   
-  .section {
+.section {
     margin-bottom: 2rem;
-  }
+}
   
-  .section h4 {
+.section h4 {
     color: #2d3748;
     font-size: 1.2rem;
     margin: 0 0 1rem 0;
     font-weight: 600;
-  }
+}
   
-  /* Styling for the taste profile text */
-  .profileText {
+/* Styling for the taste profile text */
+.profileText {
     color: #4a5568;
     line-height: 1.6;
-  }
+}
   
-  .profileText p {
+.profileText p {
     margin: 0.5rem 0;
     font-size: 1rem;
-  }
+}
   
-  .profileText ul {
+.profileText ul {
     margin: 0.5rem 0;
     padding-left: 1.5rem;
-  }
+}
   
-  .profileText li {
+.profileText li {
     margin: 0.25rem 0;
-  }
+}
   
-  /* Grid layout for recommendations */
-  .recommendations {
+/* Grid layout for recommendations */
+.recommendations {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+}
   
-  /* Card styling for individual recommendation entries */
-  .recommendationCard {
+/* Card styling for individual recommendation entries */
+.recommendationCard {
     background: white;
     padding: 1.5rem;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     border: 1px solid #edf2f7;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
+}
   
-  .recommendationCard:hover {
+.recommendationCard:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  .recommendationCard h5 {
+.recommendationCard h5 {
     color: #2d3748;
     margin: 0 0 0.5rem 0;
     font-size: 1.1rem;
     font-weight: 600;
-  }
+}
   
-  .recommendationCard p {
+.recommendationCard p {
     color: #4a5568;
     margin: 0;
     line-height: 1.5;
     font-size: 0.95rem;
-  }
+}
   
-  /* Actions container at the bottom for share buttons and close action */
-  .actions {
+/* Actions container at the bottom for share buttons and close action */
+.actions {
     padding: 1.5rem 2rem;
     border-top: 1px solid #edf2f7;
     display: flex;
@@ -169,25 +170,25 @@
     align-items: center;
     background: white;
     border-radius: 0 0 24px 24px;
-  }
+}
   
-  /* Share buttons container */
-  .shareButtons {
+/* Share buttons container */
+.shareButtons {
     display: flex;
     gap: 1rem;
-  }
+}
   
-  /* Styling for the share buttons */
-  .shareButton {
+/* Styling for the share buttons */
+.shareButton {
     background: #f7fafc !important;
     border-radius: 8px !important;
     cursor: pointer;
     transition: all 0.2s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     padding: 0 !important;
-  }
+}
   
-  .shareButtonContent {
+.shareButtonContent {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -195,76 +196,76 @@
     font-size: 0.9rem;
     font-weight: 500;
     color: #4a5568;
-  }
+}
   
-  .shareButton:hover {
+.shareButton:hover {
     background: #edf2f7 !important;
     transform: translateY(-1px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  .shareButton:active {
+.shareButton:active {
     transform: translateY(0);
-  }
+}
   
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 768px) {
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
     .overlay {
-      padding: 10px;
+        padding: 10px;
     }
     
     .content {
-      width: 95%;
-      max-width: 500px;
+        width: 95%;
+        max-width: 500px;
     }
   
     .header {
-      padding: 1rem;
+        padding: 1rem;
     }
   
     .selectedPreview {
-      padding: 1rem;
-      gap: 10px;
+        padding: 1rem;
+        gap: 10px;
     }
   
     .previewImage {
-      width: 60px;
-      height: 60px;
+        width: 60px;
+       height: 60px;
     }
   
     .tasteProfile {
-      padding: 1rem;
+       padding: 1rem;
     }
   
     .recommendations {
-      grid-template-columns: 1fr;
+       grid-template-columns: 1fr;
     }
   
     .actions {
-      padding: 1rem;
+        padding: 1rem;
     }
   
     .shareButtons {
-      width: 100%;
-      justify-content: center;
+        width: 100%;
+        justify-content: center;
     }
   
     .shareButton {
-      flex: 1;
+        flex: 1;
     }
   
     .shareButtonContent {
-      justify-content: center;
-      padding: 6px 12px;
-      font-size: 0.85rem;
+        justify-content: center;
+        padding: 6px 12px;
+        font-size: 0.85rem;
     }
-  }
+}
   
-  /* Disable transitions for users who prefer reduced motion */
-  @media (prefers-reduced-motion: reduce) {
+/* Disable transitions for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
     .content,
     .recommendationCard,
     .shareButton {
-      transition: none;
+        transition: none;
     }
-  }
+}

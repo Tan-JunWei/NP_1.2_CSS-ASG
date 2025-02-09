@@ -11,9 +11,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
-
-
 const CarouselSlider = () => {
     return (
         <>
@@ -54,7 +51,7 @@ const CarouselSlider = () => {
             <div className={styles.carditem}>
             <img
             className={styles.images}
-            src="/about/jx.png"  
+            src="/about/jw.png"  
             width={500}
             height={500}
             alt="Jun Wei"
