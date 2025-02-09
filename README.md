@@ -22,10 +22,11 @@ This GitHub repository contains the codebase developed for the module's assignme
 
 ## Plateful: An Overview
 
-> [!INFO]  
+> [!NOTE]  
 > "Plateful" is a web platform that celebrates Singapore’s vibrant food culture, offering a curated collection of authentic local dishes inspired by the country’s diverse cultural heritage.  
 >
 > The site allows users to explore traditional recipes, while also providing a personalized experience: by selecting three dishes, the AI recommends a food item with a similar flavor profile, introducing users to new and exciting culinary discoveries.  
+>
 > With its interactive features and easy-to-navigate interface, "Plateful" offers a seamless way for food enthusiasts to dive into Singapore’s rich culinary landscape and discover new favorites along the way.
 
 ---
