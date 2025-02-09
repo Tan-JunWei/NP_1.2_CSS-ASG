@@ -4,7 +4,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "@/src/styles/pages/history.module.css"
-import History from "@/src/app/history/page"; 
+
 
 
 
