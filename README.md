@@ -17,6 +17,7 @@ This GitHub repository contains the codebase developed for the module's assignme
         3. [Ryan Tan Jia Jun](#-ryan-tan-jia-jun)
         4. [Jo Hanson Mok](#-jo-hanson-mok)
     2. [🔄 Shared Contributions](#-shared-contributions)
+5. [🌐 Website Screenshots](#-website-screenshots)
 
 ---
 
@@ -127,3 +128,46 @@ Some parts of the web application were developed collaboratively:
 - **FAQ Section** → *(Tan Jun Wei & Ryan Tan Jia Jun)*  
   - `src/components/FAQ/faq.jsx`, `src/styles/faq.module.css`  
 
+---
+
+## 🌐 Website Screenshots
+
+Below are the full-page screenshots of our website:
+
+<div align="center">
+    <img src="screenshots/home.png" alt="Screenshot of Home Page" width="800"/>
+    <h4>Home Page</h4>
+</div>
+
+> [!IMPORTANT]  
+> Since the call-to-action that links to the History page relies on GSAP's ScrollTrigger, it is only represented as a empty rectangle in the above screenshot.
+
+<div align="center">
+    <img src="screenshots/recipes.png" alt="Screenshot of Recipes Page" width="800"/>
+    <h4>Recipes Page</h4>
+</div>
+
+<div align="center">
+    <img src="screenshots/individualrecipe.png" alt="Screenshot of Example Individual Recipe Page" width="800"/>
+    <h4>Individual Recipe Page (Hainanese Chicken Rice)</h4>
+</div>
+
+<div align="center">
+    <img src="screenshots/history.png" alt="Screenshot of History Page" width="800"/>
+    <h4>History Page</h4>
+</div>
+
+<div align="center">
+    <img src="screenshots/discover.png" alt="Screenshot of Discover Page" width="800"/>
+    <h4>Discover Page</h4>
+</div>
+
+<div align="center">
+    <img src="screenshots/recommendation.png" alt="Screenshot of Recommendation Popup" width="800"/>
+    <h4>AI Recommedation Popup (Discover Page)</h4>
+</div>
+
+<div align="center">
+    <img src="screenshots/about.png" alt="Screenshot of About Popup" width="800"/>
+    <h4>About Page</h4>
+</div>
