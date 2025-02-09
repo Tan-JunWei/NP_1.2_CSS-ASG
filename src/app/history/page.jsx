@@ -1,6 +1,6 @@
 "use client";
 /* History page done by: Jo Hanson Mok */
-"use client"
+
 
 import { useEffect, useState } from "react";
 import styles from "@/src/styles/pages/history.module.css"
