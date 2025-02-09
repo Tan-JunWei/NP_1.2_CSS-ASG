@@ -71,13 +71,9 @@ export default function Home() {
 
         <div className={styles.button}>
             <HomeButton/>
-            
-          
         </div>
 
-
-
-        <div className={styles.FAQSection}>
+        <div className={styles.FAQSection} id="faq">
           <FAQ></FAQ>
         </div>
       </div>
