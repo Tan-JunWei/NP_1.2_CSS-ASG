@@ -194,9 +194,22 @@
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
-    display: none;
+    display: flex;
+    z-index: 1000;
 }
 
 .back-to-top.show {
     display: block;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px); /* Move down slightly */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When element enters viewport */
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
